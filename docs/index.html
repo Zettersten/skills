@@ -82,10 +82,37 @@
       top: 0;
       z-index: 100;
       padding: 14px 0;
-      backdrop-filter: blur(24px) saturate(1.4);
-      -webkit-backdrop-filter: blur(24px) saturate(1.4);
-      border-bottom: 1px solid var(--border);
+      overflow: hidden;        /* clip glass layers */
+      border-bottom: 1px solid rgba(255,255,255,0.10);
     }
+
+    /* Layer 0 — Refraction (feDisplacementMap via SVG backdrop-filter, Chrome only) */
+    .nav-glass {
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(20px) url(#nav-filter) brightness(1.06) saturate(1.5);
+      -webkit-backdrop-filter: blur(20px) url(#nav-filter) brightness(1.06) saturate(1.5);
+      isolation: isolate;   /* required stacking context */
+    }
+
+    /* Layer 1 — Translucent dark tint (nav sits over page content) */
+    .nav-glass-tint {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 8, 16, 0.45);
+    }
+
+    /* Layer 2 — Specular rim: bottom edge light catch, top edge subtle */
+    .nav-glass-specular {
+      position: absolute;
+      inset: 0;
+      box-shadow:
+        inset 0 -1px 0 rgba(255,255,255,0.18),
+        inset 0  1px 0 rgba(255,255,255,0.05);
+    }
+
+    /* Nav content must sit above all glass layers */
+    nav > .container { position: relative; z-index: 10; }
     .nav-inner {
       display: flex;
       align-items: center;
@@ -517,6 +544,26 @@
 <!-- Hidden SVG filters -->
 <svg class="demo-filter-svg" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!--
+      Nav filter: feImage dimensions are set dynamically by updateNavFilter() in JS.
+      The displacement map is regenerated on load and window resize so it always
+      matches the actual rendered nav width × height.
+    -->
+    <filter id="nav-filter" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
+      <feImage id="nav-feimage" result="navMap"
+        x="0" y="0" width="1" height="1"
+        preserveAspectRatio="none"
+        href=""
+      />
+      <!-- scale=-20: subtle inward lensing along top/bottom edges -->
+      <feDisplacementMap
+        in="SourceGraphic" in2="navMap"
+        scale="-20"
+        xChannelSelector="R"
+        yChannelSelector="G"
+      />
+    </filter>
+
     <!-- Pill filter (200×52) -->
     <filter id="demo-filter" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
       <feImage result="dm" x="0" y="0" width="200" height="52" preserveAspectRatio="none"
@@ -536,6 +583,12 @@
 
 <!-- Nav -->
 <nav>
+  <!-- Glass layers (drawn first = behind content) -->
+  <div class="nav-glass" aria-hidden="true"></div>
+  <div class="nav-glass-tint" aria-hidden="true"></div>
+  <div class="nav-glass-specular" aria-hidden="true"></div>
+
+  <!-- Content: z-index:10 via nav > .container rule -->
   <div class="container">
     <div class="nav-inner">
       <a class="nav-brand" href="/">
@@ -851,6 +904,70 @@ python scripts/generate-displacement-map.py \
 </footer>
 
 <script>
+  // ─── Nav SVG refraction filter ──────────────────────────────────────────────
+  //
+  // The nav is full-width, so we can't pre-bake a fixed-size displacement map.
+  // Instead we measure the nav's rendered pixel dimensions and generate an SVG
+  // displacement map data URI dynamically, then update <feImage> in place.
+  //
+  // The map uses the same gradient technique as the bundled templates:
+  //   • X gradient: black→red (left→right) — encodes horizontal edge warp
+  //   • Y gradient: black→green (top→bottom) — encodes vertical edge warp
+  //   • Blurred gray mask overlaid to neutralize the center
+  //
+  // For a rectangular nav bar the stdDeviation controls bezel thickness;
+  // half the nav height gives a soft top/bottom edge warp with a clean center.
+
+  function buildNavDisplacementMap(w, h) {
+    const blur = Math.round(h * 0.55); // bezel zone ≈ 55% of nav height
+    const svg = [
+      `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'>`,
+      `<defs>`,
+      `<linearGradient id='gx' x1='0%' y1='0%' x2='100%' y2='0%'>`,
+      `<stop offset='0%' stop-color='#000'/>`,
+      `<stop offset='100%' stop-color='#f00'/>`,
+      `</linearGradient>`,
+      `<linearGradient id='gy' x1='0%' y1='0%' x2='0%' y2='100%'>`,
+      `<stop offset='0%' stop-color='#000'/>`,
+      `<stop offset='100%' stop-color='#0f0'/>`,
+      `</linearGradient>`,
+      `<filter id='b'><feGaussianBlur stdDeviation='${blur}'/></filter>`,
+      `</defs>`,
+      // X gradient layer (screen blend — adds to whatever's below)
+      `<rect width='${w}' height='${h}' fill='url(#gx)' style='mix-blend-mode:screen'/>`,
+      // Y gradient layer
+      `<rect width='${w}' height='${h}' fill='url(#gy)' style='mix-blend-mode:screen'/>`,
+      // Blurred neutral gray mask — neutralizes the center region
+      `<rect width='${w}' height='${h}' fill='#808080' filter='url(#b)'/>`,
+      `</svg>`
+    ].join('');
+    return 'data:image/svg+xml,' + encodeURIComponent(svg);
+  }
+
+  function updateNavFilter() {
+    const nav = document.querySelector('nav');
+    if (!nav) return;
+    const rect = nav.getBoundingClientRect();
+    const w = Math.round(rect.width);
+    const h = Math.round(rect.height);
+    if (w < 1 || h < 1) return;
+
+    const feImg = document.getElementById('nav-feimage');
+    if (!feImg) return;
+    feImg.setAttribute('width', w);
+    feImg.setAttribute('height', h);
+    feImg.setAttribute('href', buildNavDisplacementMap(w, h));
+  }
+
+  // Run after layout is stable, then on resize (debounced)
+  document.addEventListener('DOMContentLoaded', updateNavFilter);
+  let _navResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(_navResizeTimer);
+    _navResizeTimer = setTimeout(updateNavFilter, 80);
+  });
+
+  // ─── Install copy button ─────────────────────────────────────────────────────
   function copyInstall() {
     const cmd = document.getElementById('install-cmd').textContent;
     const btn = document.getElementById('copy-btn');
@@ -861,6 +978,7 @@ python scripts/generate-displacement-map.py \
     });
   }
 
+  // ─── Code tabs ───────────────────────────────────────────────────────────────
   function showTab(name) {
     document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.code-panel').forEach(p => p.classList.remove('active'));
