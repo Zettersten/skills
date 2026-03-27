@@ -90,8 +90,8 @@
     .nav-glass {
       position: absolute;
       inset: 0;
-      backdrop-filter: blur(20px) url(#nav-filter) brightness(1.06) saturate(1.5);
-      -webkit-backdrop-filter: blur(20px) url(#nav-filter) brightness(1.06) saturate(1.5);
+      backdrop-filter: blur(8px) url(#nav-filter) brightness(1.04) saturate(1.4);
+      -webkit-backdrop-filter: blur(8px) url(#nav-filter) brightness(1.04) saturate(1.4);
       isolation: isolate;   /* required stacking context */
     }
 
@@ -555,10 +555,10 @@
         preserveAspectRatio="none"
         href=""
       />
-      <!-- scale=-20: subtle inward lensing along top/bottom edges -->
+      <!-- scale=-30: visible edge lensing along top/bottom of nav bar -->
       <feDisplacementMap
         in="SourceGraphic" in2="navMap"
-        scale="-20"
+        scale="-30"
         xChannelSelector="R"
         yChannelSelector="G"
       />
@@ -918,30 +918,54 @@ python scripts/generate-displacement-map.py \
   // For a rectangular nav bar the stdDeviation controls bezel thickness;
   // half the nav height gives a soft top/bottom edge warp with a clean center.
 
-  function buildNavDisplacementMap(w, h) {
-    const blur = Math.round(h * 0.55); // bezel zone ≈ 55% of nav height
-    const svg = [
-      `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'>`,
-      `<defs>`,
-      `<linearGradient id='gx' x1='0%' y1='0%' x2='100%' y2='0%'>`,
-      `<stop offset='0%' stop-color='#000'/>`,
-      `<stop offset='100%' stop-color='#f00'/>`,
-      `</linearGradient>`,
-      `<linearGradient id='gy' x1='0%' y1='0%' x2='0%' y2='100%'>`,
-      `<stop offset='0%' stop-color='#000'/>`,
-      `<stop offset='100%' stop-color='#0f0'/>`,
-      `</linearGradient>`,
-      `<filter id='b'><feGaussianBlur stdDeviation='${blur}'/></filter>`,
-      `</defs>`,
-      // X gradient layer (screen blend — adds to whatever's below)
-      `<rect width='${w}' height='${h}' fill='url(#gx)' style='mix-blend-mode:screen'/>`,
-      // Y gradient layer
-      `<rect width='${w}' height='${h}' fill='url(#gy)' style='mix-blend-mode:screen'/>`,
-      // Blurred neutral gray mask — neutralizes the center region
-      `<rect width='${w}' height='${h}' fill='#808080' filter='url(#b)'/>`,
-      `</svg>`
-    ].join('');
-    return 'data:image/svg+xml,' + encodeURIComponent(svg);
+  // Builds a 1×64 canvas displacement map, stretched to full nav dimensions by feImage.
+  // Using 1-pixel width is valid: displacement is uniform across the full width
+  // (the nav has no left/right border — only top/bottom edges matter).
+  //
+  // G channel profile (R stays 128 = no horizontal warp):
+  //   top edge (y≈0):    G > 128  → scale negative → samples from above → top-edge lensing
+  //   bottom edge (y≈h): G < 128  → scale negative → samples from below → bottom-edge lensing
+  //   center:            G = 128  → no displacement
+  //
+  // Why not SVG gradients? For a rectangular full-width bar the blurred gray
+  // neutralising mask ends up covering everything to ~128, killing the effect.
+  // Canvas lets us write the exact pixel values we need.
+  function buildNavDisplacementMap() {
+    const ch = 64; // 64 rows is enough resolution for a smooth falloff
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = ch;
+    const ctx = canvas.getContext('2d');
+    const img = ctx.createImageData(1, ch);
+    const d = img.data;
+
+    function smoothstep(lo, hi, x) {
+      const t = Math.max(0, Math.min(1, (x - lo) / (hi - lo)));
+      return t * t * (3 - 2 * t);
+    }
+
+    const bezel = 0.38; // top and bottom 38% of height = active refraction zone
+
+    for (let y = 0; y < ch; y++) {
+      const ny  = y / (ch - 1);                         // 0=top, 1=bottom
+      const distEdge = Math.min(ny, 1 - ny);            // 0 at edges, 0.5 at centre
+      let G = 128;                                       // neutral (no displacement)
+
+      if (distEdge < bezel) {
+        const t   = smoothstep(bezel, 0, distEdge);     // 1 at edge, 0 at bezel boundary
+        const dir = ny < 0.5 ? 1 : -1;                 // top: +, bottom: −
+        G = Math.round(128 + dir * t * 108);            // ±108 → max ~12.7 px at scale=-30
+      }
+
+      const i = y * 4;
+      d[i]   = 128; // R — neutral (no horizontal warp)
+      d[i+1] = G;   // G — drives vertical lensing
+      d[i+2] = 0;
+      d[i+3] = 255;
+    }
+
+    ctx.putImageData(img, 0, 0);
+    return canvas.toDataURL('image/png');
   }
 
   function updateNavFilter() {
