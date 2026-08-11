@@ -222,6 +222,7 @@ http --stream api.example.com/events
 - When piping output to another command, HTTPie suppresses color/formatting and prints only the response body. Use `-b` explicitly if you also need that behavior interactively.
 - `--verify=no` skips SSL entirely — only use in development/trusted networks.
 - Named sessions are per-host; `--session=dev` for `api.example.com` and `api2.example.com` are stored separately.
+- In zsh, arguments containing `[` or `]` (e.g. jq paths like `.items[0]`) must be single-quoted or zsh treats them as glob patterns: `'--json-key=.items[0]'` not `--json-key=.items[0]`.
 
 ## Scripts
 

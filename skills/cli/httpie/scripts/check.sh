@@ -83,11 +83,14 @@ info() { [[ "$QUIET" -eq 0 ]] && printf "${DIM}   %s${RESET}\n" "$*" || true; }
 
 # Portable millisecond timer
 now_ms() {
-  if date +%s%3N &>/dev/null 2>&1; then
-    date +%s%3N
+  # macOS (BSD date) doesn't support %N — detect by checking output is numeric
+  local t
+  t=$(date +%s%3N 2>/dev/null)
+  if [[ "$t" =~ ^[0-9]+$ ]]; then
+    echo "$t"
   else
-    # macOS fallback: python3 for sub-second timing
-    python3 -c "import time; print(int(time.time() * 1000))" 2>/dev/null || echo 0
+    python3 -c "import time; print(int(time.time() * 1000))" 2>/dev/null \
+      || echo "$(date +%s)000"
   fi
 }
 
