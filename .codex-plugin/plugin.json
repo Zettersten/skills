@@ -1,0 +1,35 @@
+{
+  "name": "zettersten-skills",
+  "version": "1.0.0",
+  "description": "A curated collection of AI agent skills for CLI tools and developer workflows.",
+  "author": {
+    "name": "Erik Zettersten",
+    "url": "https://github.com/Zettersten"
+  },
+  "homepage": "https://github.com/Zettersten/skills",
+  "repository": "https://github.com/Zettersten/skills",
+  "license": "MIT",
+  "keywords": [
+    "httpie",
+    "cli",
+    "http",
+    "api",
+    "developer-tools"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Zettersten Skills",
+    "shortDescription": "CLI tools, API clients, and developer workflow skills",
+    "longDescription": "A curated collection of AI agent skills covering CLI tools and developer workflows. Includes HTTPie for expressive HTTP requests, with more skills added regularly.",
+    "developerName": "Erik Zettersten",
+    "category": "Coding",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/Zettersten/skills",
+    "defaultPrompt": [
+      "Make a POST request with HTTPie",
+      "Upload a file with httpie",
+      "Use HTTPie with bearer token auth",
+      "Download a file with httpie"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "zettersten-skills",
+  "owner": {
+    "name": "Erik Zettersten",
+    "url": "https://github.com/Zettersten"
+  },
+  "metadata": {
+    "description": "A curated collection of AI agent skills for CLI tools and developer workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "cli",
+      "description": "CLI tool skills: HTTPie and other command-line developer tools",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/cli/httpie"
+      ]
+    }
+  ]
+}
