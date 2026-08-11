@@ -1,6 +1,6 @@
 ---
 name: httpie
-description: Make HTTP requests using the HTTPie CLI (`http` and `https` commands). Use this skill whenever the user wants to send HTTP requests from the terminal, test or debug APIs, upload files, use bearer/basic/digest authentication, download files, manage sessions, or convert curl commands to HTTPie syntax. Also triggers for tasks like "call this API from the terminal", "make a POST request with JSON", "send a request with an auth token", or "test this endpoint".
+description: Make HTTP requests using the HTTPie CLI (`http` and `https` commands). Use this skill whenever the user wants to send HTTP requests from the terminal, test or debug APIs, scrape HTML or web content, upload files, use bearer/basic/digest authentication, download files, manage sessions, watch/poll an endpoint, or convert curl commands to HTTPie syntax. Also triggers for tasks like "call this API from the terminal", "make a POST request with JSON", "send a request with an auth token", "fetch the HTML from this page", "check if this endpoint is up", or "test this endpoint".
 license: MIT
 compatibility: Requires httpie >= 3.0. Install with `brew install httpie` (macOS) or `pip install httpie`.
 metadata:
@@ -222,6 +222,67 @@ http --stream api.example.com/events
 - When piping output to another command, HTTPie suppresses color/formatting and prints only the response body. Use `-b` explicitly if you also need that behavior interactively.
 - `--verify=no` skips SSL entirely — only use in development/trusted networks.
 - Named sessions are per-host; `--session=dev` for `api.example.com` and `api2.example.com` are stored separately.
+
+## Scripts
+
+Three scripts are bundled in `scripts/`. Run them directly with `bash scripts/<name>.sh` from the skill directory, or copy them into your project.
+
+### `scripts/install.sh` — Install httpie without admin rights
+
+Use when: httpie is not installed, or you need a user-scoped install that doesn't require `sudo`.
+
+Detects the platform and picks the best no-admin installer:
+- macOS: Homebrew → pipx → pip --user
+- Linux: pipx → pip --user → snap
+- Windows/Git Bash: pip --user
+
+Always prints a PATH hint when the binary lands somewhere that might not be in `$PATH` yet.
+
+```bash
+bash scripts/install.sh
+bash scripts/install.sh --force   # reinstall even if already present
+```
+
+### `scripts/scrape.sh` — Fetch URLs with browser-like defaults
+
+Use when: the user wants to scrape or retrieve HTML/content from a URL — especially when a bare `curl` or plain `http` call returns a 403, 429, or degraded content.
+
+The core value: it sets the full suite of headers a real Chrome browser sends (User-Agent, Accept, Accept-Language, Cache-Control). Omitting these is the #1 reason servers block or serve different content to scripts.
+
+```bash
+bash scripts/scrape.sh https://example.com                    # raw HTML
+bash scripts/scrape.sh https://example.com --text             # readable text, no tags
+bash scripts/scrape.sh https://example.com --save             # save to auto-named file
+bash scripts/scrape.sh https://example.com --save=page.html   # save to specific file
+bash scripts/scrape.sh https://example.com --status           # just the status code
+bash scripts/scrape.sh https://example.com --headers          # response headers only
+bash scripts/scrape.sh https://api.example.com --json         # request JSON instead of HTML
+bash scripts/scrape.sh https://example.com --session=NAME     # reuse cookies
+bash scripts/scrape.sh https://example.com --no-verify        # skip SSL check
+
+# Pipe into other tools
+bash scripts/scrape.sh https://api.example.com/data --json | jq '.items[]'
+bash scripts/scrape.sh https://example.com --text | grep -i 'error'
+```
+
+### `scripts/check.sh` — Endpoint health check and testing
+
+Use when: the user wants to verify an endpoint is up, assert a specific status code or JSON value, measure response time, or watch an endpoint during a deploy/restart.
+
+```bash
+bash scripts/check.sh https://api.example.com/health
+bash scripts/check.sh https://api.example.com/users --expect=201 --method=POST
+bash scripts/check.sh https://api.example.com/admin --auth="Bearer $TOKEN"
+bash scripts/check.sh https://api.example.com/status --json-key=.status --json-val=ok
+bash scripts/check.sh https://api.example.com/health --watch          # poll every 5s
+bash scripts/check.sh https://api.example.com/health --watch=10        # poll every 10s
+bash scripts/check.sh https://api.example.com/health --quiet           # exit 0/1, no output
+bash scripts/check.sh https://api.example.com/health --verbose         # include response body
+```
+
+Timing is color-coded: green < 200ms, yellow < 1s, red ≥ 1s. The `--json-key` assertion uses `jq` (optional — skipped gracefully if not installed).
+
+---
 
 ## Common patterns
 
