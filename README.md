@@ -42,6 +42,12 @@ git clone https://github.com/Zettersten/skills ~/.agents/skills/zettersten
 |-------|------|--------------|
 | `httpie` | HTTPie CLI | Make HTTP requests with expressive, human-friendly syntax |
 
+### UI & Visual Effects
+
+| Skill | Tool | What It Does |
+|-------|------|--------------|
+| `liquid-glass` | CSS / SVG | Implement Apple's Liquid Glass UI effect (iOS 26 / macOS 26) using SVG displacement filters and backdrop-filter |
+
 ## Repository Structure
 
 ```
@@ -54,16 +60,20 @@ skills/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── skills/
-│   └── cli/
-│       └── httpie/
-│           └── SKILL.md
+│   ├── httpie/
+│   │   └── SKILL.md
+│   └── liquid-glass/
+│       ├── SKILL.md
+│       ├── assets/
+│       ├── references/
+│       └── scripts/
 ├── LICENSE
 └── README.md
 ```
 
 ## Contributing
 
-Contributions welcome. Each skill lives in its own directory under `skills/<category>/<skill-name>/` and requires a `SKILL.md` with valid frontmatter per the [Agent Skills spec](https://agentskills.io/specification.md).
+Contributions welcome. Each skill lives in its own directory under `skills/<skill-name>/` and requires a `SKILL.md` with valid frontmatter per the [Agent Skills spec](https://agentskills.io/specification.md).
 
 ## Request a Skill
 

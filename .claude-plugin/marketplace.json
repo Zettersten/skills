@@ -10,12 +10,13 @@
   },
   "plugins": [
     {
-      "name": "cli",
+      "name": "httpie",
       "description": "CLI tool skills: HTTPie and other command-line developer tools",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/cli/httpie"
+        "./skills/httpie",
+        "./skills/liquid-glass"
       ]
     }
   ]
