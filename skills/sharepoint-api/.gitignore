@@ -1,0 +1,16 @@
+# SharePoint API Skill - Git Ignore
+
+# Profile directory (contains authenticated browser session)
+profile/
+
+# Configuration file (may contain tenant-specific details)
+.config
+
+# Temporary files
+*.har
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
