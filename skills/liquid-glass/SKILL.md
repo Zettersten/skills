@@ -1,6 +1,12 @@
 ---
 name: liquid-glass
 description: Implement Apple's Liquid Glass UI effect (iOS 26 / macOS 26) using CSS and SVG displacement filters. Use this skill when asked to create liquid glass effects, frosted glass components, iOS 26 glass UI, glassmorphism with refraction, glass buttons/cards/navbars, feDisplacementMap refraction effects, or any UI that needs realistic glass-like distortion of background content. Teaches the full technique from physics (Snell's law, SDF) to ready-to-use HTML/React/CSS templates.
+license: MIT
+compatibility: Works in Chrome/Chromium browsers (76+) for full effect. Firefox/Safari support blur fallback.
+metadata:
+  author: Zettersten
+  version: "1.0"
+  docs: https://github.com/Zettersten/skills/tree/main/skills/liquid-glass
 ---
 
 # Liquid Glass

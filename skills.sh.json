@@ -1,0 +1,21 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "API & Automation",
+      "description": "Skills for HTTP APIs, web scraping, and SharePoint/OneDrive automation.",
+      "skills": [
+        "httpie",
+        "sharepoint-api"
+      ]
+    },
+    {
+      "title": "Design & UI",
+      "description": "Skills for building modern, beautiful user interfaces.",
+      "skills": [
+        "liquid-glass"
+      ]
+    }
+  ]
+}

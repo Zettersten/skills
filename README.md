@@ -6,6 +6,10 @@ A curated collection of AI agent skills following the [Agent Skills](https://age
 
 Skills follow the [Agent Skills](https://agentskills.io/) format and work across Warp, Claude Code, Codex, Cursor, Gemini CLI, and other compatible agents.
 
+## Browse Skills
+
+View all skills with documentation and examples at [skills.sh](https://skills.sh/Zettersten/skills).
+
 ## Install
 
 ### Agent Skills (npx)

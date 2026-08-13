@@ -18,13 +18,18 @@
     "sharepoint",
     "onedrive",
     "automation",
-    "browser-automation"
+    "browser-automation",
+    "ui",
+    "design",
+    "glass-effect",
+    "glassmorphism",
+    "css"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Zettersten Skills",
-    "shortDescription": "CLI tools, automation, and developer workflow skills",
-    "longDescription": "A curated collection of AI agent skills covering CLI tools, automation, and developer workflows. Includes HTTPie for HTTP requests, SharePoint/OneDrive automation, UI effects, and more.",
+    "shortDescription": "CLI tools, automation, UI effects, and developer workflows",
+    "longDescription": "A curated collection of AI agent skills covering CLI tools, automation, UI effects, and developer workflows. Includes HTTPie for HTTP requests, Liquid Glass UI effects, SharePoint/OneDrive automation, and more.",
     "developerName": "Erik Zettersten",
     "category": "Coding",
     "capabilities": ["Read", "Write"],
@@ -34,6 +39,8 @@
       "Upload a file with httpie",
       "Use HTTPie with bearer token auth",
       "Download a file with httpie",
+      "Create a liquid glass button component",
+      "Implement iOS 26 glass effect",
       "List my SharePoint files",
       "Download document from OneDrive",
       "Upload file to SharePoint library"

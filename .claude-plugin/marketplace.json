@@ -10,8 +10,8 @@
   },
   "plugins": [
     {
-      "name": "httpie",
-      "description": "CLI tool skills: HTTPie and other command-line developer tools",
+      "name": "zettersten-skills",
+      "description": "CLI tools, automation, UI effects, and developer workflow skills",
       "source": "./",
       "strict": false,
       "skills": [
