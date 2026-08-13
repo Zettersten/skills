@@ -1,7 +1,7 @@
 {
   "name": "zettersten-skills",
   "version": "1.0.0",
-  "description": "A curated collection of AI agent skills for CLI tools and developer workflows.",
+  "description": "A curated collection of AI agent skills for CLI tools, automation, and developer workflows.",
   "author": {
     "name": "Erik Zettersten",
     "url": "https://github.com/Zettersten"
@@ -14,13 +14,17 @@
     "cli",
     "http",
     "api",
-    "developer-tools"
+    "developer-tools",
+    "sharepoint",
+    "onedrive",
+    "automation",
+    "browser-automation"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Zettersten Skills",
-    "shortDescription": "CLI tools, API clients, and developer workflow skills",
-    "longDescription": "A curated collection of AI agent skills covering CLI tools and developer workflows. Includes HTTPie for expressive HTTP requests, with more skills added regularly.",
+    "shortDescription": "CLI tools, automation, and developer workflow skills",
+    "longDescription": "A curated collection of AI agent skills covering CLI tools, automation, and developer workflows. Includes HTTPie for HTTP requests, SharePoint/OneDrive automation, UI effects, and more.",
     "developerName": "Erik Zettersten",
     "category": "Coding",
     "capabilities": ["Read", "Write"],
@@ -29,7 +33,10 @@
       "Make a POST request with HTTPie",
       "Upload a file with httpie",
       "Use HTTPie with bearer token auth",
-      "Download a file with httpie"
+      "Download a file with httpie",
+      "List my SharePoint files",
+      "Download document from OneDrive",
+      "Upload file to SharePoint library"
     ]
   }
 }

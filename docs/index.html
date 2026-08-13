@@ -152,7 +152,7 @@
   <!-- ── Meta bar ──────────────────────────────────────────────── -->
   <div class="border-y border-[#161616]">
     <div class="max-w-3xl mx-auto px-6 py-3 flex items-center gap-5 text-[11px] text-[#3d3d3d]">
-      <span><span class="text-[#888]">2</span>&nbsp;skills</span>
+      <span><span class="text-[#888]">3</span>&nbsp;skills</span>
       <span class="text-[#1e1e1e]">·</span>
       <span>MIT license</span>
       <span class="text-[#1e1e1e]">·</span>
@@ -295,6 +295,76 @@
               class="copy-btn text-[#2a2a2a] hover:text-[#a3e635] shrink-0"
               title="Copy"
               aria-label="Copy liquid-glass install command">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Automation & APIs -->
+    <section>
+      <h2 class="text-[10px] text-[#3a3a3a] uppercase tracking-widest mb-5 flex items-center gap-3">
+        Automation &amp; APIs
+        <span class="h-px flex-1 bg-[#161616]"></span>
+      </h2>
+
+      <article class="skill-card border border-[#1a1a1a] rounded-lg bg-[#0b0b0b] overflow-hidden">
+        <div class="p-5">
+          <!-- skill header -->
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div class="flex items-center gap-3">
+              <span class="text-[#2a2a2a] text-xs select-none tabular-nums">#3</span>
+              <div>
+                <h3 class="text-sm font-medium text-[#e0e0e0] mb-1.5">sharepoint-api</h3>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="text-[10px] border border-[#222] text-[#4a4a4a] rounded px-1.5 py-px">sharepoint</span>
+                  <span class="text-[10px] border border-[#222] text-[#4a4a4a] rounded px-1.5 py-px">onedrive</span>
+                  <span class="text-[10px] border border-[#222] text-[#4a4a4a] rounded px-1.5 py-px">automation</span>
+                  <span class="text-[10px] border border-[#222] text-[#4a4a4a] rounded px-1.5 py-px">rest-api</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/Zettersten/skills/tree/main/skills/sharepoint-api"
+               target="_blank" rel="noopener noreferrer"
+               class="text-[#2a2a2a] hover:text-[#888] transition-colors duration-150 shrink-0 mt-0.5"
+               aria-label="View sharepoint-api on GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- description -->
+          <p class="text-[#555] text-xs leading-relaxed mb-5">
+            Automate SharePoint and OneDrive for Business operations using
+            <code class="text-[#777]">agent-browser</code> with SharePoint REST APIs.
+            List files, download/upload documents, filter with CAML queries, discover APIs via
+            HAR capture. Works with Commercial, GCC, and GCC High tenants. Integrated profile
+            provisioning wizard for first-time setup.
+          </p>
+
+          <!-- compat note -->
+          <p class="text-[10px] text-[#333] mb-4">
+            Requires agent-browser ≥ 2.0 &nbsp;·&nbsp;
+            <code class="text-[#3a3a3a]">npm install -g agent-browser</code>
+          </p>
+
+          <!-- install command -->
+          <div class="border border-[#1a1a1a] rounded bg-[#080808] px-4 py-2.5 flex items-center justify-between gap-4">
+            <code class="text-xs text-[#666] overflow-x-auto whitespace-nowrap">
+              <span class="text-[#2a2a2a] select-none">$ </span>npx skills add Zettersten/skills/sharepoint-api
+            </code>
+            <button
+              onclick="copyCmd(this, 'npx skills add Zettersten/skills/sharepoint-api')"
+              class="copy-btn text-[#2a2a2a] hover:text-[#a3e635] shrink-0"
+              title="Copy"
+              aria-label="Copy sharepoint-api install command">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2"/>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>

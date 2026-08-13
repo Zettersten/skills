@@ -16,7 +16,8 @@
       "strict": false,
       "skills": [
         "./skills/httpie",
-        "./skills/liquid-glass"
+        "./skills/liquid-glass",
+        "./skills/sharepoint-api"
       ]
     }
   ]

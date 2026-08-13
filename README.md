@@ -42,6 +42,12 @@ git clone https://github.com/Zettersten/skills ~/.agents/skills/zettersten
 |-------|------|--------------|
 | `httpie` | HTTPie CLI | Make HTTP requests with expressive, human-friendly syntax |
 
+### Automation & APIs
+
+| Skill | Tool | What It Does |
+|-------|------|--------------|
+| `sharepoint-api` | agent-browser + SharePoint REST API | Automate SharePoint/OneDrive operations — list files, download/upload documents, filter with CAML queries, discover APIs via HAR capture |
+
 ### UI & Visual Effects
 
 | Skill | Tool | What It Does |
@@ -62,11 +68,15 @@ skills/
 ├── skills/
 │   ├── httpie/
 │   │   └── SKILL.md
-│   └── liquid-glass/
+│   ├── liquid-glass/
+│   │   ├── SKILL.md
+│   │   ├── assets/
+│   │   ├── references/
+│   │   └── scripts/
+│   └── sharepoint-api/
 │       ├── SKILL.md
-│       ├── assets/
-│       ├── references/
-│       └── scripts/
+│       ├── scripts/
+│       └── references/
 ├── LICENSE
 └── README.md
 ```
