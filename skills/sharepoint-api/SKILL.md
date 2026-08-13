@@ -21,6 +21,35 @@ Automate SharePoint and OneDrive for Business operations using agent-browser wit
 
 **Works across tenant types** → Commercial, GCC, GCC High with URL configuration only.
 
+## ⚠️ Critical: Browser JavaScript Context
+
+**agent-browser executes JavaScript in Chromium browser, NOT Node.js.**
+
+Browser JavaScript does NOT have `process.env`. All scripts use bash template substitution to pass variables.
+
+**✅ Correct Pattern (used throughout skill):**
+```bash
+VAR="value"
+cat <<EOF | agent-browser eval --stdin
+const myVar = "$VAR";  // Bash substitutes before sending to browser
+EOF
+```
+
+**❌ Wrong Pattern (will fail):**
+```bash
+export VAR="value"
+cat <<'EOF' | agent-browser eval --stdin
+const myVar = process.env.VAR;  // ERROR: process not defined in browser
+EOF
+```
+
+**Key differences:**
+- Use `<<EOF` (no quotes) to enable bash variable substitution
+- Use `<<'EOF'` (with quotes) to prevent substitution
+- Escape template literals: `\`\${variable}\`` in heredoc
+- Browser has `fetch()`, `window`, `document` 
+- Browser lacks `process`, `require()`, `Buffer`, `fs`
+
 ## Prerequisites
 
 1. **agent-browser** installed and in PATH
@@ -138,6 +167,51 @@ cat <<'EOF' | agent-browser --session "$SESSION" eval --stdin
     }, null, 2);
   }
   return JSON.stringify(await response.json(), null, 2);
+})();
+EOF
+```
+
+### Microsoft Graph API (Recommended)
+
+**Endpoint**: `/_api/v2.0/me/drive/*`
+
+Graph API is simpler and more reliable than SharePoint REST for file operations.
+
+**Advantages:**
+- No personal path construction needed (uses `/me` endpoint)
+- Simpler URL structure
+- Better error messages
+- Consistent across tenant types
+- Modern JSON responses
+
+**List files:**
+```bash
+bash scripts/list-files-graph.sh
+bash scripts/list-files-graph.sh "Documents/Subfolder"
+```
+
+**Direct API calls:**
+```bash
+# List root
+cat <<EOF | agent-browser --session "$SESSION" eval --stdin
+(async () => {
+  const response = await fetch("$SP_TENANT_URL/_api/v2.0/me/drive/root/children");
+  const data = await response.json();
+  return JSON.stringify(data.value.map(item => ({
+    name: item.name,
+    type: item.folder ? 'folder' : 'file',
+    size: item.size,
+    modified: item.lastModifiedDateTime
+  })), null, 2);
+})();
+EOF
+
+# List specific folder
+cat <<EOF | agent-browser --session "$SESSION" eval --stdin
+(async () => {
+  const response = await fetch("$SP_TENANT_URL/_api/v2.0/me/drive/root:/Documents/Project:/children");
+  const data = await response.json();
+  return JSON.stringify(data.value, null, 2);
 })();
 EOF
 ```

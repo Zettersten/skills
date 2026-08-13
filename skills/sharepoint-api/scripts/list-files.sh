@@ -201,26 +201,23 @@ build_viewxml() {
 
 VIEW_XML=$(build_viewxml)
 
-# Export environment for JavaScript
-export SP_TENANT_URL
-export SP_USER_PATH
-export SP_RENDER_OPTIONS
-export FOLDER
-export VIEW_XML
+# Strip trailing slash from tenant URL
+SP_TENANT_URL="${SP_TENANT_URL%/}"
 
 # Execute API call via agent-browser
-RESULT=$(cat <<'EOF' | agent-browser --session "$SESSION" eval --stdin
+# Note: Using heredoc without quotes (<<EOF not <<'EOF') to enable bash variable substitution
+RESULT=$(cat <<EOF | agent-browser --session "$SESSION" eval --stdin
 (async () => {
-  const SP_TENANT_URL = process.env.SP_TENANT_URL;
-  const SP_USER_PATH = process.env.SP_USER_PATH;
-  const SP_RENDER_OPTIONS = parseInt(process.env.SP_RENDER_OPTIONS);
-  const FOLDER = process.env.FOLDER || '';
-  const VIEW_XML = process.env.VIEW_XML;
+  const SP_TENANT_URL = "$SP_TENANT_URL";
+  const SP_USER_PATH = "$SP_USER_PATH";
+  const SP_RENDER_OPTIONS = parseInt("$SP_RENDER_OPTIONS");
+  const FOLDER = "$FOLDER";
+  const VIEW_XML = \`$VIEW_XML\`;
 
   // Build endpoint URL
   const documentsPath = SP_USER_PATH + '/Documents' + (FOLDER ? '/' + FOLDER : '');
   const encodedPath = encodeURIComponent(documentsPath);
-  const url = `${SP_TENANT_URL}${SP_USER_PATH}/_api/web/GetListUsingPath(DecodedUrl=@a1)/RenderListDataAsStream?@a1='${encodedPath}'&TryNewExperienceSingle=TRUE`;
+  const url = \`\${SP_TENANT_URL}\${SP_USER_PATH}/_api/web/GetListUsingPath(DecodedUrl=@a1)/RenderListDataAsStream?@a1='\${encodedPath}'&TryNewExperienceSingle=TRUE\`;
 
   // Build request parameters
   const params = {

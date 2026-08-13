@@ -115,21 +115,17 @@ echo ""
 # Read file as base64
 FILE_CONTENT=$(base64 < "$LOCAL_FILE")
 
-# Export for JavaScript
-export SP_TENANT_URL
-export FOLDER
-export FILENAME
-export FILE_CONTENT
-export OVERWRITE
+# Strip trailing slash
+SP_TENANT_URL="${SP_TENANT_URL%/}"
 
 # Upload via API
-RESULT=$(cat <<'EOF' | agent-browser --session "$SESSION" eval --stdin
+RESULT=$(cat <<EOF | agent-browser --session "$SESSION" eval --stdin
 (async () => {
-  const SP_TENANT_URL = process.env.SP_TENANT_URL;
-  const FOLDER = process.env.FOLDER;
-  const FILENAME = process.env.FILENAME;
-  const FILE_CONTENT = process.env.FILE_CONTENT;
-  const OVERWRITE = process.env.OVERWRITE === 'true';
+  const SP_TENANT_URL = "$SP_TENANT_URL";
+  const FOLDER = "$FOLDER";
+  const FILENAME = "$FILENAME";
+  const FILE_CONTENT = \`$FILE_CONTENT\`;
+  const OVERWRITE = "$OVERWRITE" === 'true';
 
   // Decode base64
   const binaryString = atob(FILE_CONTENT);
@@ -139,7 +135,7 @@ RESULT=$(cat <<'EOF' | agent-browser --session "$SESSION" eval --stdin
   }
 
   // Upload
-  const uploadUrl = `${SP_TENANT_URL}/_api/web/GetFolderByServerRelativeUrl('${FOLDER}')/Files/add(url='${FILENAME}',overwrite=${OVERWRITE})`;
+  const uploadUrl = \`\${SP_TENANT_URL}/_api/web/GetFolderByServerRelativeUrl('\${FOLDER}')/Files/add(url='\${FILENAME}',overwrite=\${OVERWRITE})\`;
 
   try {
     const response = await fetch(uploadUrl, {

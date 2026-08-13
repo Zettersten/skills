@@ -89,16 +89,16 @@ prompt_site_url() {
     exit 1
   fi
 
+  # Strip trailing slash if present
+  SP_TENANT_URL="${SP_TENANT_URL%/}"
+
   # Detect tenant type from URL
   if [[ "$SP_TENANT_URL" =~ \.sharepoint\.us ]]; then
     TENANT_TYPE="gcc-high"
-    USER_SUFFIX="_onmicrosoft_us"
   elif [[ "$SP_TENANT_URL" =~ \.sharepoint\.com ]]; then
     TENANT_TYPE="commercial"
-    USER_SUFFIX="_com"
   else
     TENANT_TYPE="custom"
-    USER_SUFFIX=""
   fi
 
   echo -e "${GREEN}✓ Site URL: $SP_TENANT_URL${NC}"
@@ -120,24 +120,15 @@ prompt_username() {
     exit 1
   fi
 
-  # Extract username part (before @)
+  # Extract username and domain from email
   local username=$(echo "$USER_EMAIL" | cut -d'@' -f1 | tr '.' '_')
+  local domain=$(echo "$USER_EMAIL" | cut -d'@' -f2 | tr '.' '_')
 
-  # Extract domain from SharePoint URL
-  local tenant_name=$(echo "$SP_TENANT_URL" | sed 's|https://||' | sed 's|-my\.sharepoint.*||' | sed 's|\.sharepoint.*||')
+  # Build user path from email (not from tenant URL)
+  # Example: erik.zettersten@he360.com -> /personal/erik_zettersten_he360_com
+  SP_USER_PATH="/personal/${username}_${domain}"
 
-  # Build user path based on site type
-  if [[ "$SP_TENANT_URL" =~ -my\.sharepoint ]]; then
-    # Personal OneDrive site - extract from URL
-    SP_USER_PATH=$(echo "$SP_TENANT_URL" | sed 's|https://[^/]*/||' | sed 's|/$||')
-    if [[ -z "$SP_USER_PATH" ]]; then
-      # If no path in URL, construct from username
-      SP_USER_PATH="/personal/${username}_${tenant_name}${USER_SUFFIX}"
-    fi
-  else
-    # Regular site or tenant root - construct personal path
-    SP_USER_PATH="/personal/${username}_${tenant_name}${USER_SUFFIX}"
-  fi
+  # Note: If path is wrong, it will be auto-detected during authentication validation
 
   echo -e "${GREEN}✓ Username: $USER_EMAIL${NC}"
   echo -e "${GREEN}✓ User path: $SP_USER_PATH${NC}"
@@ -228,10 +219,10 @@ test_profile() {
 
   # Test authentication
   local test_result
-  test_result=$(cat <<'SCRIPT' | agent-browser --session "$session_id" --profile "$SP_PROFILE_PATH" eval --stdin 2>&1 || echo "error"
+  test_result=$(cat <<SCRIPT | agent-browser --session "$session_id" --profile "$SP_PROFILE_PATH" eval --stdin 2>&1 || echo "error"
 (async () => {
   try {
-    const response = await fetch(process.env.SP_TENANT_URL, { method: 'HEAD' });
+    const response = await fetch("$SP_TENANT_URL", { method: 'HEAD' });
     return JSON.stringify({ ok: response.ok, status: response.status });
   } catch (e) {
     return JSON.stringify({ ok: false, error: e.message });

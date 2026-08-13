@@ -2,6 +2,48 @@
 
 Common errors and solutions for SharePoint API automation.
 
+## JavaScript Errors
+
+### process.env is not defined
+
+**Error:**
+```
+✗ Evaluation error: ReferenceError: process is not defined
+    at <anonymous>:2:25
+```
+
+**Cause:**
+
+Script uses `process.env.VARIABLE` in JavaScript sent to agent-browser. Browser JavaScript doesn't have `process.env` (Node.js API).
+
+**Solution:**
+
+Use bash template substitution instead of `process.env`:
+
+```bash
+# ❌ Wrong - will fail
+export VAR="value"
+cat <<'EOF' | agent-browser eval --stdin
+const v = process.env.VAR;  // ERROR: process not defined
+EOF
+
+# ✅ Correct - works
+VAR="value"
+cat <<EOF | agent-browser eval --stdin
+const v = "$VAR";  // Bash substitutes before sending
+EOF
+```
+
+**Key points:**
+- Use `<<EOF` (no quotes) to enable bash substitution
+- Use `<<'EOF'` (with quotes) to prevent substitution  
+- Browser has `fetch()`, `window` but NOT `process`, `Buffer`, `require()`
+- All skill scripts use template substitution (fixed in v1.0+)
+
+**Affected files (if customizing):**
+- Any custom scripts using agent-browser eval
+- Modified versions of bundled scripts
+
 ## Profile Lock Errors
 
 ### Symptom

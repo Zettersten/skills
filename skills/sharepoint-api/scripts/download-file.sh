@@ -117,10 +117,9 @@ echo "To: $OUTPUT_FILE"
 echo ""
 
 # Check file exists and get metadata
-export FILE_URL
-METADATA=$(cat <<'EOF' | agent-browser --session "$SESSION" eval --stdin
+METADATA=$(cat <<EOF | agent-browser --session "$SESSION" eval --stdin
 (async () => {
-  const response = await fetch(process.env.FILE_URL, { method: 'HEAD' });
+  const response = await fetch("$FILE_URL", { method: 'HEAD' });
   if (!response.ok) {
     return JSON.stringify({ error: true, status: response.status });
   }
@@ -146,22 +145,28 @@ echo "Content-Type: $CONTENT_TYPE"
 echo "Content-Length: $CONTENT_LENGTH bytes"
 echo ""
 
-# Download file (via curl with cookies from browser session)
+# Download file
 echo "Downloading..."
 
-# Note: This is simplified. Full implementation would extract cookies from
-# agent-browser session and use with curl, or use agent-browser to download
-# and save the blob. For now, instructing user to use agent-browser directly.
+# Note: Using agent-browser screenshot/network features would be better for binary files
+# This approach converts to base64 for text-based transfer
 
-cat <<'EOF' | agent-browser --session "$SESSION" eval --stdin > "$OUTPUT_FILE"
+cat <<EOF | agent-browser --session "$SESSION" eval --stdin > /tmp/download_b64.txt
 (async () => {
-  const response = await fetch(process.env.FILE_URL);
+  const response = await fetch("$FILE_URL");
   const blob = await response.blob();
   const arrayBuffer = await blob.arrayBuffer();
-  const buffer = Buffer.from(arrayBuffer);
-  return buffer.toString('base64');
+  const uint8Array = new Uint8Array(arrayBuffer);
+  // Convert to base64 using browser APIs (not Node.js Buffer)
+  let binary = '';
+  uint8Array.forEach(byte => binary += String.fromCharCode(byte));
+  return btoa(binary);
 })();
 EOF
+
+# Decode base64 to file
+base64 -d /tmp/download_b64.txt > "$OUTPUT_FILE"
+rm -f /tmp/download_b64.txt
 
 # Decode base64 to file
 if command -v base64 >/dev/null 2>&1; then

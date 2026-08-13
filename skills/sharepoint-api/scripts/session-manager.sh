@@ -235,10 +235,11 @@ check_status() {
   if [[ -n "$SP_TENANT_URL" ]]; then
     echo ""
     echo "Verifying authentication..."
-    if cat <<'EOF' | agent-browser --session "$AGENT_BROWSER_SESSION" eval --stdin 2>&1 | grep -q '"ok":true'; then
+    local tenant_url="${SP_TENANT_URL%/}"
+    if cat <<EOF | agent-browser --session "$AGENT_BROWSER_SESSION" eval --stdin 2>&1 | grep -q '"ok":true'; then
 (async () => {
   try {
-    const response = await fetch(process.env.SP_TENANT_URL, { method: 'HEAD' });
+    const response = await fetch("$tenant_url", { method: 'HEAD' });
     return JSON.stringify({ ok: response.ok, status: response.status });
   } catch (e) {
     return JSON.stringify({ ok: false, error: e.message });
