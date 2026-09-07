@@ -2,6 +2,8 @@
 
 A curated collection of AI agent skills following the [Agent Skills](https://agentskills.io/) format.
 
+> **Note**: Public GitHub repository (github.com/Zettersten/skills) mirrored locally for HawkEye360 internal development. Contributions and issues tracked in public repo.
+
 ---
 
 Skills follow the [Agent Skills](https://agentskills.io/) format and work across Warp, Claude Code, Codex, Cursor, Gemini CLI, and other compatible agents.
