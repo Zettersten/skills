@@ -23,7 +23,15 @@
     "design",
     "glass-effect",
     "glassmorphism",
-    "css"
+    "css",
+    "positioning",
+    "messaging",
+    "product-marketing",
+    "customer-research",
+    "weekly-reports",
+    "status-reports",
+    "project-updates",
+    "privacy-safe-writing"
   ],
   "skills": "./skills/",
   "interface": {
@@ -43,7 +51,13 @@
       "Implement iOS 26 glass effect",
       "List my SharePoint files",
       "Download document from OneDrive",
-      "Upload file to SharePoint library"
+      "Upload file to SharePoint library",
+      "Build a positioning and messaging framework",
+      "Grill me on my product positioning",
+      "Create a differentiated value proposition",
+      "Write a friendly weekly report",
+      "Turn my notes into a weekly status update",
+      "Rewrite this weekly report without PII"
     ]
   }
 }

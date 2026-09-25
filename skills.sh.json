@@ -16,6 +16,20 @@
       "skills": [
         "liquid-glass"
       ]
+    },
+    {
+      "title": "Marketing & Strategy",
+      "description": "Skills for customer research, positioning, and product messaging.",
+      "skills": [
+        "positioning-messaging-grill"
+      ]
+    },
+    {
+      "title": "Reporting & Communication",
+      "description": "Skills for clear, consistent, and privacy-safe written updates.",
+      "skills": [
+        "weekly-report-writer"
+      ]
     }
   ]
 }

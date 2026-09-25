@@ -52,6 +52,18 @@ git clone https://github.com/Zettersten/skills ~/.agents/skills/zettersten
 |-------|------|--------------|
 | `sharepoint-api` | agent-browser + SharePoint REST API | Automate SharePoint/OneDrive operations — list files, download/upload documents, filter with CAML queries, discover APIs via HAR capture |
 
+### Marketing & Strategy
+
+| Skill | Focus | What It Does |
+|-------|-------|--------------|
+| `positioning-messaging-grill` | Customer research and messaging | Grills users to build a differentiated positioning and messaging framework with evidence, outcomes, benefits, and proof points |
+
+### Reporting & Communication
+
+| Skill | Focus | What It Does |
+|-------|-------|--------------|
+| `weekly-report-writer` | Weekly updates and status reports | Structures friendly, concise, privacy-safe weekly reports with clear guidance for tone, length, verbosity, risks, and next steps |
+
 ### UI & Visual Effects
 
 | Skill | Tool | What It Does |
@@ -77,6 +89,10 @@ skills/
 │   │   ├── assets/
 │   │   ├── references/
 │   │   └── scripts/
+│   ├── positioning-messaging-grill/
+│   │   └── SKILL.md
+│   ├── weekly-report-writer/
+│   │   └── SKILL.md
 │   └── sharepoint-api/
 │       ├── SKILL.md
 │       ├── scripts/
