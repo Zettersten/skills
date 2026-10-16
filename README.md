@@ -70,6 +70,12 @@ git clone https://github.com/Zettersten/skills ~/.agents/skills/zettersten
 |-------|------|--------------|
 | `liquid-glass` | CSS / SVG | Implement Apple's Liquid Glass UI effect (iOS 26 / macOS 26) using SVG displacement filters and backdrop-filter |
 
+### Games & Modding
+
+| Skill | Tool | What It Does |
+|-------|------|--------------|
+| `daoc-xml-ui` | Dark Age of Camelot XML UI | Author, modify, debug and restyle DAoC custom UIs (ui\custom, WindowTemplates, adapters, events, custom windows) with verified syntax, 999-adapter/280-event references rebuilt from working 1.127 UIs, a linter, and a self-contained example mod |
+
 ## Repository Structure
 
 ```
@@ -82,6 +88,12 @@ skills/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── skills/
+│   ├── daoc-xml-ui/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   ├── scripts/
+│   │   ├── examples/
+│   │   └── evals/
 │   ├── httpie/
 │   │   └── SKILL.md
 │   ├── liquid-glass/

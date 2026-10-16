@@ -1,0 +1,196 @@
+{
+ "_source": "https://www.darkageofcamelot.com/xml-user-interface/ (Trials of Atlantis era). Ranges like name{0-7} expand to name0..name7; group_{0-7}icon{0-5} expands both.",
+ "adapters": {
+  "text": [
+   "timer_text", "interact_text", "interact_title", "quest_text", "info_text", "info_title",
+   "mini_friends_text", "group_name{0-7}", "group_class{0-7}", "mini_craft_title",
+   "mini_info_string{0-7}", "chat_tab{0-4}", "chat_entry", "chat_config_title",
+   "chat_config_channel{0-15}", "chat_config_current_output", "chat_config_output_label",
+   "train_skill_points", "train_realm_skill_points", "merchant_title", "merchant_page_display",
+   "merchant_mithril", "merchant_platinum", "merchant_gold", "merchant_silver", "merchant_copper",
+   "merchant_quantity", "summary_title", "summary_target", "summary_hit_label", "stats_name",
+   "stats_race", "stats_base_class", "stats_profession", "stats_title", "craft_title", "guild_name",
+   "guild_rank", "realm_title", "realm_rank", "siege_title", "master_list", "master_title",
+   "mini_pet_title", "alb_low_pop_rp_bonus", "mid_low_pop_rp_bonus", "hib_low_pop_rp_bonus"
+  ],
+  "scalar": [
+   "group_power{0-7}", "group_status{0-7}", "group_health{0-7}", "group_level{0-7}",
+   "group_{0-7}icon{0-5}", "group_number", "group_mode", "mini_info_title_color", "mini_info_icon",
+   "concentration", "compass_heading", "merchant_max_pages", "summary_player_hits",
+   "summary_player_end", "summary_player_power", "summary_exp_fine", "summary_exp_coarse",
+   "summary_target_hits", "stats_level", "stats_realm_points", "stats_weapon_damage",
+   "stats_weapon_skill", "stats_hitpoints", "stats_armor_factor", "stats_strength",
+   "stats_constitution", "stats_dexterity", "stats_quickness", "stats_empathy", "stats_piety",
+   "stats_intelligence", "stats_charisma", "realm_rank", "realm_level", "realm_skillpoints",
+   "bounty_points", "house_lot", "max_encumberance", "cur_encumberance", "realm_exp_fine",
+   "realm_exp_coarse", "performance_meter", "lag_meter", "framerate_meter", "master_exp",
+   "master_rp", "master_rank", "mini_pet_effect{0-5}", "mini_pet_life", "mini_pet_combat{0-2}",
+   "mini_pet_movement{0-3}", "new_quest_opt_reward_state{0-7}", "time_of_day"
+  ],
+  "color": [
+   "group_color{0-7}", "chat{0-63}_color", "system{0-63}_color", "summary_target_color",
+   "stats_strength_color", "stats_constitution_color", "stats_dexterity_color",
+   "stats_quickness_color", "stats_empathy_color", "stats_piety_color",
+   "stats_intelligence_color", "stats_charisma_color"
+  ],
+  "list": [
+   "conc_list", "train_skills", "train_realm", "merchant_page{0-4}", "stats_additional_info",
+   "siege_ammo"
+  ],
+  "chat_buffer": ["chat", "system"]
+ },
+ "adapter_notes": {
+  "realm_rank": "listed twice in the doc, as text and as scalar; bind with a LabelDef or ScalarLabelDef accordingly",
+  "mini_info_title_color": "listed as scalar in the doc although the name suggests a color adapter",
+  "time_of_day": "the special time-of-day scalar; a LabelDef bound to it renders the clock text (observed in clock_window.xml)",
+  "chat": "special chat buffer used by ChatControlDef <BufferName>",
+  "system": "special chat buffer used by ChatControlDef <BufferName>",
+  "conc_list": "icon list adapter",
+  "merchant_page{0-4}": "icon list adapter",
+  "siege_ammo": "icon list adapter",
+  "train_skills": "two-column list adapter",
+  "train_realm": "two-column list adapter",
+  "stats_additional_info": "two-column list adapter",
+  "status bars": "StatusBarDef, VerticalStatusBarDef and StatusIconDef require a scalar adapter in the range 0-100"
+ },
+ "events": {
+  "Command Window": {
+   "ToggleAttackMode": "Toggles player attack mode", "Realm": "Shows the /realm display",
+   "Sprint": "Toggles sprint mode", "ToggleSitting": "Toggles sitting mode",
+   "Task": "Toggles task display", "Follow": "Toggles auto-follow mode",
+   "Stick": "Toggles auto-stick mode", "Afk": "Toggles AFK mode", "Face": "Toggles auto-face mode",
+   "Anon": "Toggles anon mode", "Pray": "Issues the /pray command", "Help": "Shows the Help Window",
+   "Release": "Issues the /release command", "Relic": "Shows the /relic display",
+   "Bonuses": "Shows the /bonus display (resists)",
+   "ShowKeyboardConfig": "Shows the keyboard configuration display",
+   "Journal": "Shows the Quest Journal Window", "Friends": "Shows the Mini-Friends Window",
+   "Bind": "Issues the /bind command",
+   "ToggleCompass": "Toggles compass mode between off, small, and large",
+   "Quit": "Issues the /quit command"
+  },
+  "Interact Window": {
+   "Interact": "Issues an interact event for the clicked hotspot; requires extra data"
+  },
+  "Group and Mini-Group Window": {
+   "SelectGroupMember{0-7}": "Selects group member N (0 = leader)",
+   "GroupQuerySolo": "Sends a looking-for-group query as a solo player",
+   "GroupQueryGroup": "Sends a looking-for-group query as a group leader",
+   "GroupSoloSeeking": "Sets a solo player's looking-for-group flag",
+   "GroupSoloNotSeeking": "Removes a solo player's looking-for-group flag",
+   "GroupSeekingNone": "Sets a group's seeking-members flag to none",
+   "GroupSeekingAll": "Sets a group's seeking-members flag to all",
+   "GroupSeekingFighter": "Sets seeking flag to fighter", "GroupSeekingMage": "Sets seeking flag to mage",
+   "GroupSeekingHealer": "Sets seeking flag to healer", "GroupSeekingRogue": "Sets seeking flag to rogue",
+   "GroupInvite": "Issues the /invite command", "GroupDisband": "Issues the /disband command"
+  },
+  "Mini-Craft Window": {
+   "Repair": "Issues the /repair command", "Craft": "Issues the /craft command",
+   "Salvage": "Issues the /salvage command"
+  },
+  "Concentration Window": {
+   "RemoveConc": "Removes the selected concentration buff (needs the window's selection)",
+   "ConcQuickDesc": "Shows the Mini-Info Window for the selected concentration buff"
+  },
+  "Train Window": {
+   "Train": "Trains the selected skill or realm ability (needs the window's selection)",
+   "TrainInfo": "Gets info on the selected skill or realm ability"
+  },
+  "Merchant Window": {
+   "MerchantBuy": "Buys the selected item (needs the window's selection)",
+   "MerchantSell": "Sells the selected inventory object",
+   "MerchantAppraise": "Appraises the selected inventory object",
+   "MerchantQuickDesc": "Shows the Mini-Info Window for the selected merchant item"
+  },
+  "Chat Window": {
+   "ChatChannelsChanged": "Tells the server to filter chat channels"
+  },
+  "Siege Window": {
+   "SiegeArm": "Issues a siege arm command",
+   "SiegeLoad": "Issues a siege load command using the selected (or first) ammo",
+   "SiegeAim": "Issues a siege aim command", "SiegeFire": "Issues a siege fire command"
+  },
+  "Pet Window": {
+   "PetSetMoveState": "Sets pet move state to the current state (needs the window's state)",
+   "PetSetCombatState": "Sets pet combat state to the current state (needs the window's state)",
+   "PetAttack": "Pet attack command", "PetRelease": "Release pet command", "PetTarget": "Target pet command"
+  },
+  "Random": {
+   "ShowWindow": "Shows a window (extra data needed)", "HideWindow": "Hides a window (extra data needed)",
+   "ToggleWindow": "Toggles a window (extra data needed)"
+  }
+ },
+ "window_fields": {
+  "Name": "name of the window, lowercase with underscores; not case sensitive",
+  "CloseButton": "(bool) close button in the upper right corner",
+  "MoveButton": "(bool) move button in the upper left corner",
+  "TopRightResizeButton": "(bool) cannot coexist with CloseButton",
+  "BottomRightResizeButton": "(bool) supersedes ResizeableTwoWay*",
+  "BottomLeftResizeButton": "(bool) supersedes ResizeableTwoWay*",
+  "ResizeButtonOffsetX": "(number) X offset of the bottom resize buttons",
+  "ResizeButtonOffsetY": "(number) Y offset from the bottom of the bottom resize buttons",
+  "Width": "(number) pixels", "Height": "(number) pixels",
+  "TitleWidth": "(number) drag area width; 0 disables title dragging",
+  "TitleHeight": "(number) drag area height; 0 disables title dragging",
+  "ResizeableWidth": "(number) width of the horizontal resize zone; background needs GrowWidth",
+  "ResizeableHeight": "(number) height of the vertical resize zone; background needs GrowHeight",
+  "ResizeableTwoWayWidth": "(number) legacy corner resize width, replaced by resize buttons",
+  "ResizeableTwoWayHeight": "(number) legacy corner resize height, replaced by resize buttons",
+  "WindowId": "(id) window id; mostly a label, used by the client for debugging",
+  "MinWidth": "(number) minimum width; too small causes visual errors",
+  "MinHeight": "(number) minimum height; too small causes visual errors"
+ },
+ "templates": {
+  "ButtonTemplate": ["Name", "Size", "Font{Name,ColorNormal,ColorPressed,ColorHighlit,ColorDisabled}", "Texture{TextureName,Normal,Pressed,NormalHighlit,PressedHighlit,Disabled}"],
+  "VerticalResizeImageTemplate": ["Name", "Width", "TopHeight", "RepeatHeight", "BottomHeight", "Texture{TextureName,Top,Repeat,Bottom}"],
+  "HorizontalResizeImageTemplate": ["Name", "Height", "LeftWidth", "RepeatWidth", "RightWidth", "Texture{TextureName,Left,Repeat,Right}"],
+  "FullResizeImageTemplate": ["Name", "TopHeight", "MiddleHeight", "BottomHeight", "LeftWidth", "MiddleWidth", "RightWidth", "Texture{TextureName,TopLeft,TopMiddle,TopRight,MiddleLeft,MiddleMiddle,MiddleRight,BottomLeft,BottomMiddle,BottomRight}"],
+  "VerticalScrollbarTemplate": ["Name", "ThumbVResizeTemplate", "UpButtonTemplate", "DownButtonTemplate", "GutterVResizeTemplate", "Width", "UpButtonOffset", "DownButtonOffset", "ThumbOffset", "ActiveZoneOffset"],
+  "ListBoxTemplate": ["Name", "LinePadding", "CellPadding", "LabelLength", "ScrollbarTemplate", "ScrollbarTopOffset", "ScrollbarBottomOffset", "ScrollbarRightOffset", "BackgroundTemplate", "TextFont{Name,ColorNormal,ColorHighlit,ColorGreyed}", "TextLeftOffset", "TextTopOffset", "TextBottomOffset", "LineOffset"],
+  "TextAreaTemplate": ["Name", "ScrollbarTemplate", "LinePadding", "BackgroundTemplate", "Font{Name,ColorNormal,ColorActive}", "TextOffset", "ScrollbarOffset", "ScrollbarSizeOffset"],
+  "StatusBarTemplate": ["Name", "BackgroundHResizeTemplate", "ForegroundHResizeTemplate", "Height", "ForegroundOffset"],
+  "ImageAreaTemplate": ["Name", "TextureName", "Size", "TopLeft"],
+  "StatusIconTemplate": ["Name", "TextureName", "Width", "Height", "MaxLevels", "Horizontal", "TextureStart"],
+  "IconTemplate": ["Name", "Size", "FontName", "FontColor", "IconSize"],
+  "ChatControlTemplate": ["Name", "FontName", "BackgroundTemplate", "ScrollbarTemplate"],
+  "CheckBoxTemplate": ["Name", "Size", "Font{Name,ColorNormal,ColorPressed,ColorHighlit,ColorDisabled}", "TextOffset", "TextAlignment", "ChangeFontColor", "Texture{TextureName,Normal,Pressed,NormalHighlit,PressedHighlit,Disabled}"],
+  "VerticalStatusBarTemplate": ["Name", "BackgroundImage", "ForegroundImage", "Width", "ForegroundOffset"],
+  "CompassControlTemplate": ["Name", "Texture"],
+  "MenuTemplate": [], "ComboBoxTemplate": []
+ },
+ "defs": {
+  "_common": ["ControlId", "Position{X,Y}", "Alignment{TopLeft,CenterHorizontally,CenterVertically,OffsetBottom,OffsetRight,GrowWidth,GrowHeight}"],
+  "ButtonDef": ["TemplateName", "Label", "OnClickEvent"],
+  "InvisibleButtonDef": ["OnClickEvent", "Width", "Height"],
+  "ComboBoxDef": ["TemplateName", "OnChangeEvent", "AdapterName"],
+  "ListBoxDef": ["TemplateName", "AdapterName", "Sorting", "Columns", "Width", "Height"],
+  "StaticFileImageDef": ["CanvasName"],
+  "StatusBarDef": ["TemplateName", "AdapterName", "Width"],
+  "LabelDef": ["FontName", "Adapter", "ColorAdapter", "Width", "Height", "MaxCharacters", "Color", "Data", "EndAligned"],
+  "FullResizeImageDef": ["TemplateName", "Width", "Height"],
+  "TextAreaDef": ["TemplateName", "AdapterName", "HasHotspots", "MaxCharacters", "Width", "Height"],
+  "ImageAreaDef": ["TemplateName"],
+  "StatusIconDef": ["TemplateName", "AdapterName"],
+  "IconDef": ["IconId", "Data", "TemplateName", "AdapterName"],
+  "ChatControlDef": ["TemplateName", "LinePadding", "BufferName", "TextOffset", "Width", "Height"],
+  "HorizontalResizeImageDef": ["TemplateName", "Width"],
+  "CheckBoxDef": ["TemplateName", "AdapterName", "TextAdapterName", "Data", "LabelWidth"],
+  "VerticalStatusBarDef": ["TemplateName", "AdapterName", "Height"],
+  "CompassControlDef": ["TemplateName", "AdapterName", "Height", "Width"],
+  "ScalarLabelDef": ["FontName", "Adapter", "ColorAdapter", "Width", "Height", "MaxCharacters", "Color", "Data", "EndAligned"]
+ },
+ "top_level": ["Include", "Font", "Texture", "Canvas", "WindowTemplate"],
+ "oldstyle_textures": {
+  "vault.bmp": "Bank", "dialog_sm.bmp": "Dialog", "emblempick.bmp": "Emblem picker",
+  "npctalk.bmp": "Group picker (LFG), Help, Housing big dialog",
+  "leftbot.bmp": "Alpha picker, Value picker (coin, alpha), Housing interior rotation",
+  "options.bmp": "Options, Housing internal/external options, market query, market results, friend permissions, housing friend list",
+  "hbar_horz.bmp": "Quickbar", "hbar_min.bmp": "Quickbar", "hbar_vert.bmp": "Quickbar",
+  "pperdoll.bmp": "Inventory", "hldbrite.bmp": "Inventory", "sacks.bmp": "Inventory",
+  "magicsheet.bmp": "Spells", "combstylesheet.bmp": "Styles", "skillsheet.bmp": "Abilities",
+  "trade.bmp": "Trade", "interact.bmp": "Tradeskills", "edit_box.bmp": "Housing market query",
+  "garden.bmp": "Housing garden placement", "consignment.bmp": "Housing player merchant",
+  "minipet.bmp": "Housing money selector", "scrlbtns.bmp": "All old style scroll buttons",
+  "listicon1.bmp": "All old style checkboxes (Atlantis/data)",
+  "buttons.bmp": "Old style buttons", "buttons2.bmp": "Old style buttons", "buttons3.bmp": "Old style buttons"
+ }
+}

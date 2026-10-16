@@ -1,0 +1,2677 @@
+{
+ "Afk": {
+  "count": 1,
+  "windows": [
+   "command_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "Anon": {
+  "count": 1,
+  "windows": [
+   "command_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "AssistTarget": {
+  "count": 1,
+  "windows": [
+   "float_target_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "Bind": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "Bonuses": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ChatRenameCancel": {
+  "count": 1,
+  "windows": [
+   "chatrename.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ChatRenameOK": {
+  "count": 1,
+  "windows": [
+   "chatrename.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComAllianceMemberSelected": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnClickEvent": 1
+  }
+ },
+ "ComAllianceMembersNext": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComAllianceMembersPrev": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComAllianceMembersShowOffline": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "CheckBoxDef.OnClickEvent": 1
+  }
+ },
+ "ComAllianceMembersSort": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnHeaderClickEvent": 1
+  }
+ },
+ "ComAllianceSend": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComFriendsMemberSelected": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnClickEvent": 1
+  }
+ },
+ "ComFriendsMembersSort": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnHeaderClickEvent": 1
+  }
+ },
+ "ComFriendsSend": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildBannerDeploy": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildCommands": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildDemote": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildMemberSelected": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnClickEvent": 1
+  }
+ },
+ "ComGuildMembersNext": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildMembersPrev": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildMembersShowOffline": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "CheckBoxDef.OnClickEvent": 1
+  }
+ },
+ "ComGuildMembersSort": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnHeaderClickEvent": 1
+  }
+ },
+ "ComGuildNote": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildPromote": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildSend": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComGuildWithdraw": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComLFGuildInvite": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComLFGuildMemberSelected": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnClickEvent": 1
+  }
+ },
+ "ComLFGuildMembersSort": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ListBoxDef.OnHeaderClickEvent": 1
+  }
+ },
+ "ComLFGuildSend": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ComTabChanged": {
+  "count": 4,
+  "windows": [
+   "community_window.xml",
+   "custom13_window.xml",
+   "custom17_window.xml",
+   "options_window.xml"
+  ],
+  "fired_by": {
+   "TabsDef.onCLickEvent": 4
+  }
+ },
+ "ComTabRefresh": {
+  "count": 5,
+  "windows": [
+   "community_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 5
+  }
+ },
+ "Community": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ContextOnAddChatWindow": {
+  "count": 2,
+  "windows": [
+   "context_chat_main.xml",
+   "context_chat_sub.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ContextOnDefaultChannel": {
+  "count": 4,
+  "windows": [
+   "context_chat_main.xml",
+   "context_chat_main2.xml",
+   "context_chat_sub.xml",
+   "context_chat_sub2.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 4
+  }
+ },
+ "ContextOnDeleteChatWindow": {
+  "count": 2,
+  "windows": [
+   "context_chat_sub.xml",
+   "context_chat_sub2.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ContextOnFontAlpha": {
+  "count": 6,
+  "windows": [
+   "context_chat_main.xml",
+   "context_chat_main2.xml",
+   "context_chat_sub.xml",
+   "context_chat_sub2.xml",
+   "context_default.xml",
+   "context_emoticon.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 6
+  }
+ },
+ "ContextOnMessageAndChannel": {
+  "count": 4,
+  "windows": [
+   "context_chat_main.xml",
+   "context_chat_main2.xml",
+   "context_chat_sub.xml",
+   "context_chat_sub2.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 4
+  }
+ },
+ "ContextOnRenameChatWindow": {
+  "count": 2,
+  "windows": [
+   "context_chat_sub.xml",
+   "context_chat_sub2.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ContextOnWindowAlpha": {
+  "count": 6,
+  "windows": [
+   "context_chat_main.xml",
+   "context_chat_main2.xml",
+   "context_chat_sub.xml",
+   "context_chat_sub2.xml",
+   "context_default.xml",
+   "context_emoticon.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 6
+  }
+ },
+ "ContextSetDefaultChannel": {
+  "count": 8,
+  "windows": [
+   "context_default_chat_channel.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeImageButtonDef.Onclickevent": 8
+  }
+ },
+ "ContextSetFontAlpha": {
+  "count": 1,
+  "windows": [
+   "context_font_alpha.xml"
+  ],
+  "fired_by": {
+   "VerticalSliderDef.OnClickEvent": 1
+  }
+ },
+ "ContextSetFontSize": {
+  "count": 10,
+  "windows": [
+   "context_font_size.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeImageButtonDef.Onclickevent": 10
+  }
+ },
+ "ContextSetWindowAlpha": {
+  "count": 1,
+  "windows": [
+   "context_window_alpha.xml"
+  ],
+  "fired_by": {
+   "VerticalSliderDef.OnClickEvent": 1
+  }
+ },
+ "Craft": {
+  "count": 1,
+  "windows": [
+   "minicraft_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "Delve": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "Face": {
+  "count": 11,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "command_window.xml",
+   "concentration_window.xml",
+   "custom10_window.xml",
+   "custom1_window.xml",
+   "custom4_window.xml",
+   "float_target_window.xml",
+   "group_buffs.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 6,
+   "ButtonDef.onClickEvent": 4,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "Follow": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom10_window.xml",
+   "float_target_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "Friends": {
+  "count": 1,
+  "windows": [
+   "command_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "GroupDisband": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "GroupFind": {
+  "count": 2,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "GroupInvite": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "float_target_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "HookpointStoreBP": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "HookpointStoreBuy": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "HookpointStoreCoin": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "HookpointStoreContract": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "HookpointStoreGBP": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "InGameKeyConfigAccept": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "InGameKeyConfigCancel": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "InGameKeyConfigClearKey": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "InGameKeyConfigResetFPS": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "InGameKeyConfigResetMMO": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "InGameKeyConfigResetRPG": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "KeepStatusHookpoints": {
+  "count": 1,
+  "windows": [
+   "keep_status_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "KeepStatusRepair": {
+  "count": 2,
+  "windows": [
+   "keep_status_window.xml",
+   "siegetower_status_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "KeepUpgradeCancel": {
+  "count": 1,
+  "windows": [
+   "keep_upgrade_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "KeepUpgradeRelease": {
+  "count": 1,
+  "windows": [
+   "keep_upgrade_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "MasterLevelPageNext": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "MasterLevelPagePrevious": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "MenuBarToggleExp": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "MinoRelicDrop": {
+  "count": 1,
+  "windows": [
+   "mino_relic_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "Mount": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "NewQuestAccept": {
+  "count": 1,
+  "windows": [
+   "new_quest_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "NewQuestContinue": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "NewQuestDecline": {
+  "count": 1,
+  "windows": [
+   "new_quest_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "NewQuestFinish": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward0": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward1": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward2": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward3": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward4": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward5": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward6": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewQuestSelectOptReward7": {
+  "count": 1,
+  "windows": [
+   "new_quest_finish_window.xml"
+  ],
+  "fired_by": {
+   "IconDef.OnClickEvent": 1
+  }
+ },
+ "NewTrain": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "NewTrainInfo": {
+  "count": 8,
+  "windows": [
+   "training_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 8
+  }
+ },
+ "NewTrainRealmInfo": {
+  "count": 14,
+  "windows": [
+   "training_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 14
+  }
+ },
+ "PetAttack": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "PetRelease": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "PetTarget": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "Pray": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "QuickBind": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "Quit": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "main_menu_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "QuiverAdd0": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverAdd1": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverAdd2": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverAdd3": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverSelect0": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverSelect1": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverSelect2": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "QuiverSelect3": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "Realm": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "Release": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "custom10_window.xml",
+   "release_window.xml",
+   "timer_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ReleaseToBind": {
+  "count": 1,
+  "windows": [
+   "release_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ReleaseToCity": {
+  "count": 1,
+  "windows": [
+   "release_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ReleaseToHouse": {
+  "count": 1,
+  "windows": [
+   "release_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "Relic": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "RemoveQuest": {
+  "count": 2,
+  "windows": [
+   "new_quest_journal_window.xml",
+   "quest_window_orig.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "Repair": {
+  "count": 1,
+  "windows": [
+   "minicraft_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "RespecAll": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "RespecBuy": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "RespecRealm": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "Salvage": {
+  "count": 1,
+  "windows": [
+   "minicraft_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "SelectGroupMember0": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember1": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember2": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember3": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember4": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember5": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember6": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "SelectGroupMember7": {
+  "count": 13,
+  "windows": [
+   "HHelperCubeWindow1.xml",
+   "HHelperHorizWindow1.xml",
+   "HHelperHorizWindow2.xml",
+   "HHelperHorizWindow3.xml",
+   "HHelperHorizWindow4.xml",
+   "HHelperVertWindow1.xml",
+   "HHelperVertWindow2.xml",
+   "HHelperVertWindow3.xml",
+   "HHelperVertWindow4.xml",
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 11,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "ShowKeyboardConfig": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "main_menu_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ShowWarMap": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "menu_bar_window.xml",
+   "stats_combat_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ShowWarmap": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "SiegeAim": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "SiegeFire": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "SiegeMove": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "SiegeRelease": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "SiegeRepair": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "SiegeSalvage": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "Sprint": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom10_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "Stick": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "custom10_window.xml",
+   "custom1_window.xml",
+   "custom4_window.xml",
+   "float_target_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "SubclassDelve": {
+  "count": 1,
+  "windows": [
+   "daoc_subclass_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "Task": {
+  "count": 1,
+  "windows": [
+   "command_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleAttackMode": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "float_target_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleCasualGroupFinder": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleClock": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleCommandWindow": {
+  "count": 2,
+  "windows": [
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleCompass": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCompassWindow": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleConcentration": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "stats_spells_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 4,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleCustom0": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "interface_elements_window.xml",
+   "main_menu_window.xml",
+   "stats_index_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom1": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "summary.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "CheckBoxDef.OnClickEvent": 1
+  }
+ },
+ "ToggleCustom10": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom11": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "summary.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "ToggleCustom12": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom13": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "quiver_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "ToggleCustom14": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom15": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom16": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom17": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "custom11_window.xml",
+   "custom17_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "ToggleCustom18": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom19": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom2": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "summary.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "CheckBoxDef.OnClickEvent": 1
+  }
+ },
+ "ToggleCustom3": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "summary.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "CheckBoxDef.OnClickEvent": 1
+  }
+ },
+ "ToggleCustom4": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "summary.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "CheckBoxDef.OnClickEvent": 1
+  }
+ },
+ "ToggleCustom5": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom6": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom7": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleCustom8": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 2
+  }
+ },
+ "ToggleCustom9": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "ToggleFloatChampXP": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleFloatLevelXP": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleFloatRealmXP": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleFloatTarget": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleGroupBuffs": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleGroupOptions": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleHelp": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "main_menu_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleInterfaceElements": {
+  "count": 2,
+  "windows": [
+   "interface_elements_window.xml",
+   "main_menu_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleJournal": {
+  "count": 6,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "custom11_window.xml",
+   "interface_elements_window.xml",
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleMainMenu": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleMap": {
+  "count": 5,
+  "windows": [
+   "clock_window.xml",
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 2,
+   "InvisibleButtonDef.OnClickEvent": 1
+  }
+ },
+ "ToggleMasterLevel": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "custom11_window.xml",
+   "interface_elements_window.xml",
+   "master_level_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "InvisibleButtonDef.OnClickEvent": 1,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleMenuBar": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleMiniFriends": {
+  "count": 2,
+  "windows": [
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleMiniGroup": {
+  "count": 5,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 4,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleMiniPet": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "stats_spells_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleMount": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleNewGroup": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleNewSummary": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleOptions": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "main_menu_window.xml",
+   "options_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "TogglePerformanceMeter": {
+  "count": 3,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleQuiver": {
+  "count": 4,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "stats_combat_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleSitting": {
+  "count": 2,
+  "windows": [
+   "command_window.xml",
+   "custom10_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "ToggleStatsAttributes": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleStatsGroup": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleStatsInventory": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleStatsSkills": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleStatsSpells": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleStatsStyles": {
+  "count": 1,
+  "windows": [
+   "menu_bar_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleSummary": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleTitle": {
+  "count": 1,
+  "windows": [
+   "interface_elements_window.xml"
+  ],
+  "fired_by": {
+   "HorizontalResizeButtonDef.onClickEvent": 1
+  }
+ },
+ "ToggleWarmapKey": {
+  "count": 5,
+  "windows": [
+   "custom0_window.xml",
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 4,
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "Train": {
+  "count": 2,
+  "windows": [
+   "daoc_subclass_window.xml",
+   "train.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 2
+  }
+ },
+ "TrainInfo": {
+  "count": 1,
+  "windows": [
+   "train.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ValueChooserAccept": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ValueChooserCancel": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ValueChooserDecrease": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ValueChooserIncrease": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ValueChooserShiftDecrease": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "ValueChooserShiftIncrease": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "WarmapKeepSelect0": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapKeepSelect1": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapKeepSelect2": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapKeepSelect3": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapKeepSelect4": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapKeepSelect5": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapKeepSelect6": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapPowerBorderSelect": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapPowerRelicSelect": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapPowerRelicTownSelect": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapStrengthBorderSelect": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapStrengthRelicSelect": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapStrengthRelicTownSelect": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTeleportRequest": {
+  "count": 8,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 6,
+   "ButtonDef.OnClickEvent": 2
+  }
+ },
+ "WarmapTowerSelect0": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect1": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect10": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect11": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect12": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapTowerSelect13": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapTowerSelect14": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 4
+  }
+ },
+ "WarmapTowerSelect15": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect16": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect17": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect18": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect19": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect2": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect20": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect21": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect22": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect23": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect24": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect25": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect26": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect27": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect3": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect4": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect5": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect6": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect7": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect8": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapTowerSelect9": {
+  "count": 3,
+  "windows": [
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "InvisibleButtonDef.OnClickEvent": 3
+  }
+ },
+ "WarmapUpdateBattles": {
+  "count": 4,
+  "windows": [
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 3,
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "WarmapUpdateBonuses": {
+  "count": 7,
+  "windows": [
+   "command_window.xml",
+   "custom0_window.xml",
+   "interface_elements_window.xml",
+   "realmwar_agramon.xml",
+   "realmwar_alb.xml",
+   "realmwar_hib.xml",
+   "realmwar_mid.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 5,
+   "HorizontalResizeButtonDef.onClickEvent": 1,
+   "ButtonDef.OnClickEvent": 1
+  }
+ },
+ "craft": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "face": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "follow": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "repair": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "salvage": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ },
+ "stick": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "fired_by": {
+   "ButtonDef.onClickEvent": 1
+  }
+ }
+}

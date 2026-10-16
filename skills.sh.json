@@ -30,6 +30,13 @@
       "skills": [
         "weekly-report-writer"
       ]
+    },
+    {
+      "title": "Games & Modding",
+      "description": "Skills for modding game clients and their data-driven user interfaces.",
+      "skills": [
+        "daoc-xml-ui"
+      ]
     }
   ]
 }

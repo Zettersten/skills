@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Root_Element ID="DAOCUi">
+
+  <!-- MyMod: floating target bar in user slot 1.
+       Opened/closed by the event ToggleCustom1 (see command_window.snippet.xml).
+       The template Name MUST be custom1_window; WindowId is a free label.
+       Draw order is XML order: background first, click areas last. -->
+
+  <WindowTemplate>
+    <Name>custom1_window</Name>
+    <WindowId>MyMod Target Bar</WindowId>
+    <CloseButton>true</CloseButton>
+    <MoveButton>true</MoveButton>
+    <TopRightResizeButton>false</TopRightResizeButton>
+    <BottomRightResizeButton>false</BottomRightResizeButton>
+    <BottomLeftResizeButton>false</BottomLeftResizeButton>
+    <ResizeButtonOffsetX>0</ResizeButtonOffsetX>
+    <ResizeButtonOffsetY>0</ResizeButtonOffsetY>
+    <TitleWidth>170</TitleWidth>
+    <TitleHeight>16</TitleHeight>
+    <Width>170</Width>
+    <Height>44</Height>
+    <ResizeableWidth>0</ResizeableWidth>
+    <ResizeableHeight>0</ResizeableHeight>
+    <ResizeableTwoWayWidth>0</ResizeableTwoWayWidth>
+    <ResizeableTwoWayHeight>0</ResizeableTwoWayHeight>
+    <MinWidth>170</MinWidth>
+    <MinHeight>44</MinHeight>
+    <ContextTemplateName></ContextTemplateName>
+
+    <!-- 1. background (first = drawn under everything) -->
+    <FullResizeImageDef>
+      <ControlId></ControlId>
+      <Position><X>0</X><Y>0</Y></Position>
+      <Alignment></Alignment>
+      <TemplateName>fresizeimage_mymod_dlg</TemplateName>
+      <Width>170</Width>
+      <Height>44</Height>
+    </FullResizeImageDef>
+
+    <!-- 2. target name, coloured by con (grey/green/blue/yellow/orange/red/purple) -->
+    <LabelDef>
+      <ControlId></ControlId>
+      <Position><X>6</X><Y>4</Y></Position>
+      <Alignment></Alignment>
+      <FontName>arial11</FontName>
+      <Width>158</Width>
+      <Height>12</Height>
+      <MaxCharacters>48</MaxCharacters>
+      <Color><R>200</R><G>200</G><B>200</B><A>255</A></Color>
+      <ColorAdapter>summary_target_color</ColorAdapter>
+      <Data>No target</Data>
+      <Adapter>summary_target</Adapter>
+      <EndAligned>false</EndAligned>
+      <TextCentered>true</TextCentered>
+    </LabelDef>
+
+    <!-- 3. health bar: summary_target_hits is a 0-100 scalar, exactly what a StatusBar needs -->
+    <StatusBarDef>
+      <ControlId></ControlId>
+      <Position><X>6</X><Y>22</Y></Position>
+      <Alignment></Alignment>
+      <TemplateName>statusbar_mymod_red</TemplateName>
+      <AdapterName>summary_target_hits</AdapterName>
+      <Width>118</Width>
+    </StatusBarDef>
+
+    <!-- 4. digital readout of the same scalar; hidden when there is no target (-1) -->
+    <ScalarLabelDef>
+      <ControlId></ControlId>
+      <Position><X>128</X><Y>20</Y></Position>
+      <Alignment></Alignment>
+      <FontName>arial11</FontName>
+      <Adapter>summary_target_hits</Adapter>
+      <ColorAdapter></ColorAdapter>
+      <Width>26</Width>
+      <Height>14</Height>
+      <MaxCharacters>4</MaxCharacters>
+      <Color><R>255</R><G>255</G><B>255</B><A>255</A></Color>
+      <Data></Data>
+      <EndAligned>true</EndAligned>
+      <TextCentered>false</TextCentered>
+      <DontDrawWhenZero>false</DontDrawWhenZero>
+      <DontDrawWhenNegOne>true</DontDrawWhenNegOne>
+    </ScalarLabelDef>
+
+    <LabelDef>
+      <ControlId></ControlId>
+      <Position><X>155</X><Y>20</Y></Position>
+      <Alignment></Alignment>
+      <FontName>arial11</FontName>
+      <Width>10</Width>
+      <Height>14</Height>
+      <MaxCharacters>2</MaxCharacters>
+      <Color><R>255</R><G>255</G><B>255</B><A>255</A></Color>
+      <ColorAdapter></ColorAdapter>
+      <Data>%</Data>
+      <Adapter></Adapter>
+      <EndAligned>false</EndAligned>
+      <TextCentered>false</TextCentered>
+    </LabelDef>
+
+    <!-- 5. click the name row to /face the target. Last, so it sits on top of the label. -->
+    <InvisibleButtonDef>
+      <ControlId></ControlId>
+      <Position><X>0</X><Y>0</Y></Position>
+      <Alignment></Alignment>
+      <Label></Label>
+      <OnClickEvent>Face</OnClickEvent>
+      <Width>170</Width>
+      <Height>18</Height>
+    </InvisibleButtonDef>
+
+  </WindowTemplate>
+
+</Root_Element>

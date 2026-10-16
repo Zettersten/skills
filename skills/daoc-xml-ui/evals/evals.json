@@ -1,0 +1,71 @@
+{
+  "skill_name": "daoc-xml-ui",
+  "evals": [
+    {
+      "id": 0,
+      "name": "new-floating-player-bars",
+      "prompt": "I play Dark Age of Camelot on the live servers (1.129) with the plain stock Atlantis UI, no custom UI installed yet. I want a small floating window that shows my own health, endurance and power as three horizontal bars with the percentage as a number next to each bar, plus two little buttons for /stick and /face. Please give me every file I need, tell me exactly where each file goes under the game folder and how to open the window in game. Write the files into the outputs folder I gave you.",
+      "expected_output": "A customN_window.xml whose WindowTemplate Name is customN_window (N in 0..19), bound to summary_player_hits / summary_player_end / summary_player_power with StatusBarDef + ScalarLabelDef, buttons firing Stick and Face, a toggle button firing ToggleCustomN added to a copied stock window (or an included file), an <Include> for the new file placed in a file the user overrides, install steps (ui\\custom, Custom skin at character select), no edits to uimain.xml, and no instruction to create a bare assets.xml from scratch.",
+      "files": [],
+      "assertions": [
+        "An output XML defines a WindowTemplate whose Name is customN_window with N between 0 and 19",
+        "The XML binds all three player percentage adapters summary_player_hits, summary_player_end and summary_player_power (exact case)",
+        "Bars use StatusBarDef and the numbers use ScalarLabelDef (at least 3 of each)",
+        "Buttons fire the Stick and Face events via OnClickEvent",
+        "A toggle button fires ToggleCustomN with the same N as the window template name",
+        "The new window file is loaded via an <Include> and the answer never instructs editing uimain.xml",
+        "Install steps say to put files in ui\\custom and to select the Custom skin at character select",
+        "Does not create a from-scratch assets.xml that would replace the stock one (or explicitly says to copy the stock atlantis/assets.xml first)",
+        "Every XML file written to outputs parses as well-formed XML"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "debug-button-does-nothing",
+      "prompt": "My DAoC custom UI is in E:\\games\\daoc\\ui\\custom. I added a 'Custom' button to my command_window.xml that is supposed to open my custom3 window (custom3_window.xml exists, it is included from my assets.xml, and the window template inside is named custom3_window). The button draws fine but clicking it does absolutely nothing. The file is attached as inputs/command_window.xml. What is wrong and what exactly do I change?",
+      "expected_output": "Finds both planted bugs: (1) the InvisibleButtonDef listed after the new button covers it and swallows clicks because controls receive input in XML order, so move the button after it or shrink the invisible button; (2) the event is ToggleCustom4 but the window is custom3_window, so it must be ToggleCustom3. Does not blame uimain.xml or suggest reinstalling.",
+      "files": [
+        "inputs/command_window.xml"
+      ],
+      "assertions": [
+        "Identifies that the button's event ToggleCustom4 does not match the custom3_window and must be ToggleCustom3",
+        "Identifies that the InvisibleButtonDef listed after the button covers it and intercepts the click (input follows XML order)",
+        "Corrected command_window.xml fires ToggleCustom3 and no longer contains ToggleCustom4",
+        "In the corrected file, no InvisibleButtonDef that comes after the Custom button covers its position",
+        "Corrected file parses and keeps all eight original buttons (Stick, Face, Follow, Sprint, Sit, Map, Journal, Custom)",
+        "Does not blame uimain.xml or recommend reinstalling"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "triage-logic-request",
+      "prompt": "For Dark Age of Camelot (Eden server) I want to mod my UI so that my group members' buff icons show a countdown timer in seconds on each icon, and the member's health bar turns bright red and flashes when they drop under 25%. Can you write the XML for that? I'm comfortable editing files in ui\\custom.",
+      "expected_output": "Explains clearly that the XML UI system cannot do logic (no timers, no conditionals, no computed colours): it can only bind controls to existing adapters and fire existing events. Points to daochook (Lua/ImGui client hook) as the route for countdowns and conditional colouring, with the caveat about server rules. Offers what XML CAN do instead (group buff icons via the existing group_buffs/concentration windows, group_health0-7 bars with digital readouts, con colour via group_color adapters). Does not invent fake XML attributes such as thresholds, conditions or timers.",
+      "files": [],
+      "assertions": [
+        "States that the DAoC XML UI cannot implement countdown timers or conditional (threshold-based) colouring",
+        "Names daochook as the way to get Lua/ImGui logic in the client",
+        "Does not present fabricated XML elements for logic (Threshold, Condition, Timer, Countdown, Flash, Blink, If, When, Script...)",
+        "Offers a real XML alternative using existing adapters (group_health0-7 bars/readouts, group buff icons, group_color)",
+        "Mentions that daochook is a client modification and that server rules should be checked"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "debug-blank-window-subtle-faults",
+      "prompt": "I made a little vitals window for DAoC (live, stock Atlantis base) in ui\\\\custom\\\\custom2_window.xml, included from my copy of assets.xml, with a ToggleCustom2 button that works (the window opens and I can drag it). But the window is just the frame: no name, no bars, no numbers show up. Attached as inputs/custom2_window.xml. Please find everything that is wrong and give me the fixed file.",
+      "expected_output": "Finds the background FullResizeImageDef listed last (covers everything; must be first), the adapter case error Summary_Player_Hits (adapters are case sensitive), the template-name typo statusbar_blu (undefined, bar never renders) and ideally MinWidth 4 being below the 9-slice cap size for a resizable window. Uses or recommends the linter. Returns a corrected file with the background first and names fixed, without inventing new adapters.",
+      "files": [
+        "evals/files/eval3_custom2_window.xml"
+      ],
+      "assertions": [
+        "Identifies that the background FullResizeImageDef is listed last and covers the other controls (draw order)",
+        "Identifies the adapter case error Summary_Player_Hits -> summary_player_hits",
+        "Identifies statusbar_blu as an undefined/misspelled template name",
+        "Mentions MinWidth 4 is too small for a resizable window with a 9-slice background",
+        "Corrected file parses, has the background as the first def, uses summary_player_hits and a plausible template name",
+        "Uses or recommends scripts/daoc_ui_lint.py"
+      ]
+    }
+  ]
+}

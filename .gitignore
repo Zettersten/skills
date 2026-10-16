@@ -1,0 +1,5 @@
+# eval scratch workspaces created by the create-skill loop
+skills/*-workspace/
+__pycache__/
+*.pyc
+

@@ -31,7 +31,12 @@
     "weekly-reports",
     "status-reports",
     "project-updates",
-    "privacy-safe-writing"
+    "privacy-safe-writing",
+    "daoc",
+    "dark-age-of-camelot",
+    "game-modding",
+    "xml-ui",
+    "custom-ui"
   ],
   "skills": "./skills/",
   "interface": {
@@ -57,7 +62,10 @@
       "Create a differentiated value proposition",
       "Write a friendly weekly report",
       "Turn my notes into a weekly status update",
-      "Rewrite this weekly report without PII"
+      "Rewrite this weekly report without PII",
+      "Add a digital health readout to my DAoC group window",
+      "Make a new floating target window for Dark Age of Camelot",
+      "Why does my DAoC custom UI button do nothing?"
     ]
   }
 }

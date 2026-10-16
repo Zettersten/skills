@@ -1,0 +1,23 @@
+{
+ "Name": 114,
+ "CloseButton": 114,
+ "MoveButton": 114,
+ "TitleWidth": 114,
+ "TitleHeight": 114,
+ "Width": 114,
+ "Height": 114,
+ "ResizeableWidth": 114,
+ "ResizeableHeight": 114,
+ "ResizeableTwoWayWidth": 114,
+ "ResizeableTwoWayHeight": 114,
+ "MinWidth": 114,
+ "MinHeight": 114,
+ "TopRightResizeButton": 113,
+ "BottomRightResizeButton": 113,
+ "BottomLeftResizeButton": 113,
+ "ResizeButtonOffsetX": 113,
+ "ResizeButtonOffsetY": 113,
+ "WindowId": 111,
+ "ContextTemplateName": 64,
+ "TabName": 5
+}

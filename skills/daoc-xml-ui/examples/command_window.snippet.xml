@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- NOT a complete file. Two pieces to paste into YOUR copy of command_window.xml
+     (copy <game>\ui\atlantis\command_window.xml to <game>\ui\custom\command_window.xml first).
+
+     Why here? Every file in custom/ replaces its stock twin, and you are editing the command
+     window anyway to add a button. Putting the <Include>s in it means you do not have to copy
+     and maintain the much larger assets.xml. (BobsUI puts them in assets.xml instead; both work.) -->
+<Root_Element ID="DAOCUi">
+
+  <!-- PIECE 1: top level of the file, next to the existing <Include>s or before <WindowTemplate> -->
+  <Include>MyMod_Assets.xml</Include>
+  <Include>custom1_window.xml</Include>
+
+  <WindowTemplate>
+    <Name>command</Name>
+    <!-- ... keep everything that is already in the stock window ... -->
+
+    <!-- PIECE 2: inside the command <WindowTemplate>, after the background and after any
+         InvisibleButtonDef that would cover this spot. X/Y below assume a 310x99 window (BobsUI's
+         size); read Width/Height from YOUR stock file and move the button to free space. -->
+    <ButtonDef>
+      <ControlId></ControlId>
+      <Position><X>262</X><Y>82</Y></Position>
+      <Alignment></Alignment>
+      <TemplateName>button_mymod_40</TemplateName>
+      <Label>Target</Label>
+      <OnClickEvent>ToggleCustom1</OnClickEvent>
+    </ButtonDef>
+
+  </WindowTemplate>
+
+</Root_Element>

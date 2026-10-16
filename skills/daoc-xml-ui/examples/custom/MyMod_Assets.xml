@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Root_Element ID="DAOCUi">
+
+  <!-- MyMod: texture sheet + templates. Self-contained on purpose: nothing here depends on
+       stock template names, which differ between skins and change between patches.
+       Texture coordinates match examples/make_example_texture.py. -->
+
+  <Texture>
+    <Name>mymod_01</Name>
+    <File>custom/mymod_01.tga</File>
+  </Texture>
+
+  <!-- 9-slice window background: 4px caps, 16px repeating centre -->
+  <FullResizeImageTemplate>
+    <Name>fresizeimage_mymod_dlg</Name>
+    <TopHeight>4</TopHeight>
+    <MiddleHeight>16</MiddleHeight>
+    <BottomHeight>4</BottomHeight>
+    <LeftWidth>4</LeftWidth>
+    <MiddleWidth>16</MiddleWidth>
+    <RightWidth>4</RightWidth>
+    <Texture>
+      <TextureName>mymod_01</TextureName>
+      <TopLeft><X>0</X><Y>0</Y></TopLeft>
+      <TopMiddle><X>4</X><Y>0</Y></TopMiddle>
+      <TopRight><X>20</X><Y>0</Y></TopRight>
+      <MiddleLeft><X>0</X><Y>4</Y></MiddleLeft>
+      <MiddleMiddle><X>4</X><Y>4</Y></MiddleMiddle>
+      <MiddleRight><X>20</X><Y>4</Y></MiddleRight>
+      <BottomLeft><X>0</X><Y>20</Y></BottomLeft>
+      <BottomMiddle><X>4</X><Y>20</Y></BottomMiddle>
+      <BottomRight><X>20</X><Y>20</Y></BottomRight>
+    </Texture>
+  </FullResizeImageTemplate>
+
+  <!-- status bar track (empty) -->
+  <HorizontalResizeImageTemplate>
+    <Name>hresizeimage_mymod_bar_bg</Name>
+    <Height>10</Height>
+    <LeftWidth>1</LeftWidth>
+    <RepeatWidth>16</RepeatWidth>
+    <RightWidth>1</RightWidth>
+    <Texture>
+      <TextureName>mymod_01</TextureName>
+      <Left><X>0</X><Y>28</Y></Left>
+      <Repeat><X>1</X><Y>28</Y></Repeat>
+      <Right><X>17</X><Y>28</Y></Right>
+    </Texture>
+  </HorizontalResizeImageTemplate>
+
+  <!-- status bar fill (red) -->
+  <HorizontalResizeImageTemplate>
+    <Name>hresizeimage_mymod_bar_fg</Name>
+    <Height>10</Height>
+    <LeftWidth>1</LeftWidth>
+    <RepeatWidth>16</RepeatWidth>
+    <RightWidth>1</RightWidth>
+    <Texture>
+      <TextureName>mymod_01</TextureName>
+      <Left><X>0</X><Y>40</Y></Left>
+      <Repeat><X>1</X><Y>40</Y></Repeat>
+      <Right><X>17</X><Y>40</Y></Right>
+    </Texture>
+  </HorizontalResizeImageTemplate>
+
+  <StatusBarTemplate>
+    <Name>statusbar_mymod_red</Name>
+    <BackgroundHResizeTemplate>hresizeimage_mymod_bar_bg</BackgroundHResizeTemplate>
+    <ForegroundHResizeTemplate>hresizeimage_mymod_bar_fg</ForegroundHResizeTemplate>
+    <Height>10</Height>
+    <ForegroundOffset><X>0</X><Y>0</Y></ForegroundOffset>
+  </StatusBarTemplate>
+
+  <!-- 40x12 text button; arial9 is one of the three fonts every client ships -->
+  <ButtonTemplate>
+    <Name>button_mymod_40</Name>
+    <Size><X>40</X><Y>12</Y></Size>
+    <Font>
+      <Name>arial9</Name>
+      <ColorNormal><R>200</R><G>170</G><B>80</B><A>255</A></ColorNormal>
+      <ColorPressed><R>255</R><G>220</G><B>120</B><A>255</A></ColorPressed>
+      <ColorHighlit><R>255</R><G>255</G><B>255</B><A>255</A></ColorHighlit>
+      <ColorDisabled><R>110</R><G>110</G><B>110</B><A>255</A></ColorDisabled>
+    </Font>
+    <Texture>
+      <TextureName>mymod_01</TextureName>
+      <Normal><X>32</X><Y>28</Y></Normal>
+      <Pressed><X>32</X><Y>42</Y></Pressed>
+      <NormalHighlit><X>72</X><Y>28</Y></NormalHighlit>
+      <PressedHighlit><X>32</X><Y>42</Y></PressedHighlit>
+      <Disabled><X>32</X><Y>28</Y></Disabled>
+    </Texture>
+  </ButtonTemplate>
+
+</Root_Element>
