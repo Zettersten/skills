@@ -45,15 +45,17 @@ bundled references were rebuilt from complete working UIs, so trust them over me
 <game>\ui\custom\            <- your files (create it)
 <game>\ui\custom\oldstyle\   <- only for repainting non-XML panels (inventory, quickbars...)
 <game>\ui\atlantis\          <- stock skin: the source of truth for the player's client version; read, never edit
+<game>\ui\uimain.xml         <- the load list (76 includes on 1.130); never edit
 %APPDATA%\Electronic Arts\Dark Age of Camelot\<server>\Name-<id>.ini   <- window positions, per character
 ```
 
-Before editing anything, open the stock copy of the target file in `ui\atlantis\` (or the user's current UI if they
-run BobsUI/Bysan) and `styles.xml`/`assets.xml` to learn the template and font names that skin actually defines.
-Names differ between skins; `references/windows.md` tells you which file holds which window. The sizes and
-ControlIds listed there are BobsUI's, so quote them as "in BobsUI", never as stock dimensions; the stock numbers
-are whatever the player's `ui\atlantis` file says. When you cannot read that file, say so and give positions as
-estimates relative to the window's own `Width`/`Height`.
+Default live install: `C:\Program Files (x86)\Electronic Arts\Dark Age of Camelot`. **Look for it first.** If a
+client is installed on the machine you are working on, its `ui\atlantis` beats every reference in this skill:
+read the target window file there, grep `styles.xml`/`assets.xml` for names, and pass it as `--base` to the
+linter (it is picked up automatically when it sits next to the `custom` folder or at the default path).
+Otherwise `references/stock-templates.md` and the stock table in `references/windows.md` are snapshots of the
+1.130 skin; the BobsUI tables there are that UI's own layouts (its command window is 310x99, stock is 135x216),
+so never quote BobsUI numbers as stock.
 
 ## The model in one screen
 
@@ -83,10 +85,22 @@ Full skeletons with every field: `references/xml-syntax.md`. Field tables: `refe
 ## Recipes
 
 ### Move, resize, recolour, refont a control
-Edit `Position`, `Width`/`Height`, `Color`, `FontName` on the def. Fonts must be declared names (`arial9/11/14`
-exist everywhere; others depend on the skin). Keep text within `Width` or it is clipped at `MaxCharacters`.
+Edit `Position`, `Width`/`Height`, `Color`, `FontName` on the def. Fonts must be declared names: stock ships
+`arial9`, `arial11`, `arial14`, `button_small`, `button_large`, `brit9`, `brit9s`, `title`, `barb10` and the
+TrueType `chat_small`, `chat_large`, `minion`, `myriadbold`. Keep text within `Width` or it is clipped at
+`MaxCharacters`. `OffsetRight`/`OffsetBottom` measure X/Y from the window's right/bottom edge to the control's
+**far** edge (a button with `OffsetRight` and X=3 hugs the right border); `GrowWidth` on a bar stretches it.
+
+### Stock names to reach for (Atlantis, 1.130; full list in `references/stock-templates.md`)
+Bars `red_status`, `green_status`, `blue_status`, `yellow_status` (`*_small`, `red_status_thick`, `exp_bubbles`);
+backgrounds `dlg_sm_title`, `dlg_sm_notitle`, `dlg_background_resize`, insets `dlg_interior_small`; buttons
+`button_small` (60x16), `button_large`, `button_wide`, `button_narrow`, `generic_hr_button`; lists `listbox_bg`,
+`generic_vscroll`; text `generic_textarea`; icons `plain_icon_small`/`plain_icon_large`. Names like
+`statusbar_red` or `fresizeimage_dlg_bg_small` are BobsUI's, not stock.
 
 ### Add a digital readout next to a bar
+(The stock `new_summary_window.xml` draws health as `<StatusBarDef>` with `red_status` + `summary_player_hits`;
+this adds the number beside it.)
 ```xml
 <ScalarLabelDef>
   <ControlId></ControlId>
@@ -161,7 +175,11 @@ Copy `Name-<id>.ini` to `Other-<id>.ini` in the `%APPDATA%` folder while logged 
 
 - Skin not set to Custom; file saved outside `ui\custom`; file not included by anything.
 - Typo in a `TemplateName`/`FontName`/`TextureName`: the control simply does not render. The linter catches it.
+- Template names copied from another UI (BobsUI's `statusbar_red`, `fresizeimage_dlg_bg_small`...) do not exist
+  on a stock base. Use the stock names or ship your own templates.
 - Adapter case: `Summary_Target` is not `summary_target`.
+- `OffsetRight` with a large X pushes the control off the left side: X counts from the right edge to the
+  control's right edge, so a readout meant to sit at the right of a 160 px window wants X around 8, not 122.
 - Draw order: background listed after other controls hides them; invisible button listed before a button eats clicks.
 - A control positioned past `Width`/`Height` of a non-resizable window cannot be clicked.
 - `MinWidth`/`MinHeight` below the background's cap sizes corrupts the image.
@@ -185,14 +203,17 @@ Copy `Name-<id>.ini` to `Other-<id>.ini` in the `%APPDATA%` folder while logged 
 
 - `references/xml-syntax.md` - the file shapes with every field, read first when writing XML.
 - `references/control-templates.md`, `references/control-defs.md` - field tables, official and observed.
-- `references/adapters.md` (999 names), `references/events.md` (280), `references/windows.md` (107 windows,
-  files, sizes, used ControlIds) - look names up here rather than guessing.
+- `references/stock-templates.md` - every template, font, texture and icon-sheet name the stock 1.130 skin
+  defines; the names a stock-based mod may use without defining anything.
+- `references/adapters.md` (1000+ names), `references/events.md` (280+), `references/windows.md` (stock 1.130
+  table with code-bound ControlIds and the `uimain.xml` load order, plus BobsUI's 107 windows) - look names up
+  here rather than guessing.
 - `references/assets-fonts-textures.md` - TGA/DDS, icon sheets, bitmap font format, TTFFont, oldstyle, `.ini`.
 - `references/ecosystem.md` - sources, real UIs to read, tools, communities, client versions, daochook.
 - `examples/` - complete self-contained custom window + install notes.
-- `scripts/daoc_ui_lint.py` - run before every launch. `scripts/build_reference_data.py` + `gen_reference_md.py`
-  rebuild the inventories from any `custom/` or `atlantis/` folder (do this on the player's own stock skin when
-  their client is newer than the data).
+- `scripts/daoc_ui_lint.py` - run before every launch; finds `ui\atlantis` on its own when present.
+  `scripts/build_reference_data.py <atlantis> --out scripts/data/stock` + `gen_reference_md.py` rebuild the
+  inventories from the player's own stock skin when their client is newer than 1.130.
 
 ## Honesty notes
 

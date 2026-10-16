@@ -1,0 +1,122 @@
+{
+ "Canvas": {
+  "count": 55,
+  "extensions": {
+   ".bmp": 55
+  },
+  "names": [
+   "combat1_b",
+   "combat1_s",
+   "combat2_b",
+   "combat2_s",
+   "combat3_b",
+   "combat3_s",
+   "combat4_b",
+   "combat4_s",
+   "combat5_b",
+   "combat5_s",
+   "itm1_b",
+   "itm1_s",
+   "itm2_b",
+   "itm2_s",
+   "itm3_b",
+   "itm3_s",
+   "skill1_b",
+   "skill1_s",
+   "spl10_b",
+   "spl10_s",
+   "spl11_b",
+   "spl11_s",
+   "spl12_b",
+   "spl12_s",
+   "spl13_b",
+   "spl13_s",
+   "spl14_b",
+   "spl14_s",
+   "spl15_b",
+   "spl15_s",
+   "spl1_b",
+   "spl1_s",
+   "spl2_b",
+   "spl2_s",
+   "spl3_b",
+   "spl3_s",
+   "spl4_b",
+   "spl4_s",
+   "spl5_b",
+   "spl5_s",
+   "spl6_b",
+   "spl6_s",
+   "spl7_b",
+   "spl7_s",
+   "spl8_b",
+   "spl8_s",
+   "spl9_b",
+   "spl9_s",
+   "wpns1_b",
+   "wpns1_s",
+   "wpns2_b",
+   "wpns2_s",
+   "wpns3_b",
+   "wpns3_s"
+  ]
+ },
+ "Font": {
+  "count": 9,
+  "extensions": {
+   ".tga": 9
+  },
+  "names": [
+   "arial11",
+   "arial14",
+   "arial9",
+   "barb10",
+   "brit9",
+   "brit9s",
+   "button_large",
+   "button_small",
+   "title"
+  ]
+ },
+ "TTFFont": {
+  "count": 4,
+  "extensions": {
+   ".ttf": 4
+  },
+  "names": [
+   "chat_large",
+   "chat_small",
+   "minion",
+   "myriadbold"
+  ]
+ },
+ "Texture": {
+  "count": 20,
+  "extensions": {
+   ".tga": 16,
+   ".dds": 3,
+   ".bmp": 1
+  },
+  "names": [
+   "compass",
+   "emoticons",
+   "frames_win",
+   "map_icons",
+   "navigation",
+   "no_map",
+   "page1",
+   "page2",
+   "page3",
+   "page4",
+   "page4b",
+   "realm_symbols",
+   "selected_icon",
+   "slider",
+   "small_arrows",
+   "warmap_agramon",
+   "warmap_alb",
+   "warmap_hib",
+   "warmap_mid"
+  ]
+ }
+}

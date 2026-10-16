@@ -43,9 +43,9 @@
 ## Icon sheets
 
 - Spell/style/ability/item icons are 10x10 sheets of 100 icons each, in two sizes: 16x16 per icon and 32x32 per
-  icon. File names are hard-coded by the client (the stock skin declares them from `item_icons.xml`,
-  `combat_icons.xml`, `skill_icons.xml`, `spell_icons.xml`, `weapon_icons.xml`); copy those files and the sheets
-  to `custom/` and edit pixels only.
+  icon. The stock skin declares them as `<Canvas>` assets in `item_icons.xml`, `combat_icons.xml`,
+  `skill_icons.xml`, `spell_icons.xml`, `weapon_icons.xml`, named `spl1_b`/`spl1_s` (big/small) .. `spl15`,
+  `itm1..3`, `combat1..5`, `skill1`, `wpns1..3`; copy those files and the sheets to `custom/` and edit pixels only.
 - Until every old panel is converted (still true), modified icons must also be copied into `custom/oldstyle/`
   so the old-style spell/style sheets pick them up.
 - `IconTemplate.IconSize` is 0 for 16x16, anything else for 32x32; other sizes are not supported.
@@ -75,7 +75,8 @@ may misbehave if they are missing. If you override `assets.xml`, keep them (poin
 ## TrueType fonts (TTFFont)
 
 Modern clients accept `<TTFFont>` with `Height` (pixel size), `Antialiased` (bool) and `Hint` (0-2 hinting level).
-Declare one TTFFont per size you need, e.g. `chat_small` at 10 and `chat_large` at 13 from the same `.ttf`.
+The stock 1.130 `assets.xml` itself declares four: `chat_small`, `chat_large`, `minion`, `myriadbold`, so a
+stock-based mod can use those names directly. Declare one TTFFont per size you need from the same `.ttf`.
 BobsUI exposes "new style" chat fonts with in-game variable sizes this way. Ship the `.ttf` under `custom/`.
 Older/freeshard clients that predate the element ignore it; fall back to a bitmap font if text vanishes.
 

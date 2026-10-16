@@ -55,6 +55,7 @@ from xml.parsers import expat
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 NAME_MAX = 31
+NULL_NAMES = {"", "none"}  # stock files use 'none' to mean "no template / font / texture here"
 
 ADAPTER_FIELDS = {"adaptername", "adapter", "coloradapter", "textadaptername", "buffername",
                   "labeladaptername", "stateadaptername"}
@@ -170,20 +171,22 @@ def load_knowledge() -> dict:
         k["window_fields"].update(f.lower() for f in off["window_fields"])
     k["adapters"] |= k["official_adapters"]
     k["events"] |= k["official_events"]
-    for fname, key in (("adapters.json", "adapters"), ("events.json", "events")):
-        pth = DATA / fname
-        if pth.exists():
-            k[key].update(json.loads(pth.read_text(encoding="utf-8")).keys())
-    for fname, key in (("templates.json", "templates"), ("defs.json", "defs")):
-        pth = DATA / fname
-        if pth.exists():
-            for t, info in json.loads(pth.read_text(encoding="utf-8")).items():
-                if t.startswith("("):
-                    continue
-                k[key].setdefault(t.lower(), set()).update(f.lower() for f in info["fields"])
-    wf = DATA / "window_fields.json"
-    if wf.exists():
-        k["window_fields"].update(f.lower() for f in json.loads(wf.read_text(encoding="utf-8")))
+    # observed inventories: data/ (BobsUI 1.127 corpus) and data/stock/ (stock Atlantis skin, client 1.130)
+    for folder in (DATA, DATA / "stock"):
+        for fname, key in (("adapters.json", "adapters"), ("events.json", "events")):
+            pth = folder / fname
+            if pth.exists():
+                k[key].update(json.loads(pth.read_text(encoding="utf-8")).keys())
+        for fname, key in (("templates.json", "templates"), ("defs.json", "defs")):
+            pth = folder / fname
+            if pth.exists():
+                for t, info in json.loads(pth.read_text(encoding="utf-8")).items():
+                    if t.startswith("("):
+                        continue
+                    k[key].setdefault(t.lower(), set()).update(f.lower() for f in info["fields"])
+        wf = folder / "window_fields.json"
+        if wf.exists():
+            k["window_fields"].update(f.lower() for f in json.loads(wf.read_text(encoding="utf-8")))
     k["events_lower"] = {e.lower(): e for e in k["events"]}
     k["adapters_lower"] = defaultdict(set)
     for a in k["adapters"]:
@@ -211,10 +214,11 @@ class Linter:
         self.k = know
         self.findings: list[Finding] = []
         self.defined: dict[str, list[tuple[str, str, int]]] = defaultdict(list)  # lower name -> [(kind, file, line)]
+        self.defined_typed: dict[tuple[str, str], list[tuple[str, int, bool]]] = defaultdict(list)  # (kind, name) -> [(file, line, in_custom)]
         self.fonts: dict[str, list[tuple[str, int]]] = defaultdict(list)
         self.textures: dict[str, list[tuple[str, int]]] = defaultdict(list)
-        self.windows: dict[str, list[tuple[str, int]]] = defaultdict(list)
-        self.refs: list[tuple[str, str, str, int]] = []  # (kind, name, file, line)
+        self.windows: dict[str, list[tuple[str, int, bool]]] = defaultdict(list)
+        self.refs: list[tuple[str, str, str, int]] = []  # (kind, name, file, line); custom files only
         self.includes: dict[str, list[tuple[str, int]]] = {}
         self.trees: dict[str, Node] = {}
 
@@ -252,6 +256,11 @@ class Linter:
         self.resolve_refs()
         self.check_orphans(files)
 
+    def ref(self, kind: str, name: str, label: str, line: int, in_custom: bool) -> None:
+        """Record a name reference to resolve later; only the user's files are checked."""
+        if in_custom and name.strip().lower() not in NULL_NAMES:
+            self.refs.append((kind, name.strip(), label, line))
+
     def collect(self, root: Node, label: str, rel: str, in_custom: bool) -> None:
         self.includes[rel] = []
         for top in root.children:
@@ -260,18 +269,21 @@ class Linter:
                 self.includes[rel].append((top.text.strip(), top.line))
             elif t in ASSET_TAGS:
                 name = top.value("Name")
-                self.check_name_len(name, label, top.line, top.tag)
+                if in_custom:
+                    self.check_name_len(name, label, top.line, top.tag)
+                    self.check_asset_file(top, label)
                 store = self.fonts if t in ("font", "ttffont") else self.textures
                 store[name.lower()].append((label, top.line))
                 self.defined[name.lower()].append((top.tag, label, top.line))
-                if in_custom:
-                    self.check_asset_file(top, label)
+                self.defined_typed[(t, name.lower())].append((label, top.line, in_custom))
             elif t == "windowtemplate":
                 self.collect_window(top, label, in_custom)
             elif t.endswith("template"):
                 name = top.value("Name")
-                self.check_name_len(name, label, top.line, top.tag)
+                if in_custom:
+                    self.check_name_len(name, label, top.line, top.tag)
                 self.defined[name.lower()].append((top.tag, label, top.line))
+                self.defined_typed[(t, name.lower())].append((label, top.line, in_custom))
                 self.collect_template(top, label, in_custom)
             elif in_custom:
                 self.add("I", "unknown", label, top.line, f"unexpected top-level element <{top.tag}>")
@@ -282,31 +294,28 @@ class Linter:
             fl = f.low
             if known is not None and fl not in known and in_custom:
                 self.add("I", "unknown", label, f.line, f"<{f.tag}> is not a known field of <{tmpl.tag}>")
-            if fl in TEMPLATE_REF_FIELDS and f.text.strip():
-                self.refs.append(("template", f.text.strip(), label, f.line))
-            elif fl in FONT_REF_FIELDS and f.text.strip():
-                self.refs.append(("font", f.text.strip(), label, f.line))
-            elif fl in TEXTURE_REF_FIELDS and f.text.strip():
-                self.refs.append(("texture", f.text.strip(), label, f.line))
+            if fl in TEMPLATE_REF_FIELDS:
+                self.ref("template", f.text, label, f.line, in_custom)
+            elif fl in FONT_REF_FIELDS:
+                self.ref("font", f.text, label, f.line, in_custom)
+            elif fl in TEXTURE_REF_FIELDS:
+                self.ref("texture", f.text, label, f.line, in_custom)
             elif fl == "texture":
                 # nested <Texture> block or a bare texture name (CompassControlTemplate)
                 if f.children:
-                    tn = f.value("TextureName")
-                    if tn:
-                        self.refs.append(("texture", tn, label, f.line))
-                elif f.text.strip():
-                    self.refs.append(("texture", f.text.strip(), label, f.line))
+                    self.ref("texture", f.value("TextureName") or f.value("Name"), label, f.line, in_custom)
+                else:
+                    self.ref("texture", f.text, label, f.line, in_custom)
             elif fl in ("font", "textfont") and f.children:
-                fn = f.value("Name")
-                if fn:
-                    self.refs.append(("font", fn, label, f.line))
+                self.ref("font", f.value("Name"), label, f.line, in_custom)
         if known is None and in_custom:
             self.add("I", "unknown", label, tmpl.line, f"<{tmpl.tag}> is not a known template type")
 
     def collect_window(self, win: Node, label: str, in_custom: bool) -> None:
         name = win.value("Name")
-        self.check_name_len(name, label, win.line, "WindowTemplate")
-        self.windows[name.lower()].append((label, win.line))
+        if in_custom:
+            self.check_name_len(name, label, win.line, "WindowTemplate")
+        self.windows[name.lower()].append((label, win.line, in_custom))
         try:
             w, h = int(win.value("Width") or 0), int(win.value("Height") or 0)
         except ValueError:
@@ -318,9 +327,7 @@ class Linter:
 
         grows_x = flag("ResizeableWidth") or flag("BottomRightResizeButton") or flag("BottomLeftResizeButton") or flag("TopRightResizeButton")
         grows_y = flag("ResizeableHeight") or flag("BottomRightResizeButton") or flag("BottomLeftResizeButton") or flag("TopRightResizeButton")
-        ctx = win.value("ContextTemplateName")
-        if ctx:
-            self.refs.append(("window", ctx, label, win.line))
+        self.ref("window", win.value("ContextTemplateName"), label, win.line, in_custom)
         seen_ids: dict[str, int] = {}
         tab_refs: list[tuple[str, int]] = []
         saw_non_bg = False
@@ -346,12 +353,12 @@ class Linter:
                 val = f.text.strip()
                 if known is not None and fl not in known and fl not in ("tab", "tabcontrol"):
                     self.add("I", "unknown", label, f.line, f"<{f.tag}> is not a known field of <{c.tag}>")
-                if fl in TEMPLATE_REF_FIELDS and val:
-                    self.refs.append(("template", val, label, f.line))
-                elif fl in FONT_REF_FIELDS and val:
-                    self.refs.append(("font", val, label, f.line))
-                elif fl in TEXTURE_REF_FIELDS and val:
-                    self.refs.append(("texture", val, label, f.line))
+                if fl in TEMPLATE_REF_FIELDS:
+                    self.ref("template", val, label, f.line, in_custom)
+                elif fl in FONT_REF_FIELDS:
+                    self.ref("font", val, label, f.line, in_custom)
+                elif fl in TEXTURE_REF_FIELDS:
+                    self.ref("texture", val, label, f.line, in_custom)
                 elif fl in ADAPTER_FIELDS and val:
                     self.check_adapter(val, label, f.line)
                 elif EVENT_FIELD_RE.search(fl) and val:
@@ -432,21 +439,27 @@ class Linter:
                          f"<Include>{target}</Include> not found in custom/" + ("" if self.base else " (ok only if it exists in ui/atlantis)"))
 
     def resolve_refs(self) -> None:
-        for name, defs in self.defined.items():
-            if len(defs) > 1:
+        # Duplicates are keyed by (type, name): stock legitimately reuses a name across types
+        # (Font and ButtonTemplate 'button_small', Texture and CompassControlTemplate 'compass').
+        for (kind, name), defs in self.defined_typed.items():
+            if len(defs) > 1 and any(ic for _, _, ic in defs):
                 first = defs[0]
-                for kind, label, line in defs[1:]:
-                    same_file = label == first[1]
+                for label, line, in_custom in defs[1:]:
+                    if not in_custom and not first[2]:
+                        continue  # both copies are stock: not the user's problem
+                    same_file = label == first[0]
                     self.add("W" if same_file else "I", "dup-name", label, line,
-                             f"{kind} '{name}' already defined as {first[0]} in {first[1]}:{first[2]}; the later definition wins"
-                             + ("" if same_file else " (harmless if only one of the two files is Included)"))
+                             f"{kind} '{name}' already defined in {first[0]}:{first[1]}; the later definition wins"
+                             + ("" if same_file else " (fine if you meant to override it, or if only one file is Included)"))
         for name, locs in self.windows.items():
-            if len(locs) > 1:
-                for label, line in locs[1:]:
+            if len(locs) > 1 and any(ic for _, _, ic in locs):
+                for label, line, in_custom in locs[1:]:
+                    if not in_custom and not locs[0][2]:
+                        continue
                     same_file = label == locs[0][0]
                     self.add("W" if same_file else "I", "dup-name", label, line,
                              f"window '{name}' already defined in {locs[0][0]}:{locs[0][1]}; windows cannot be duplicated"
-                             + ("" if same_file else " (harmless if only one of the two files is Included)"))
+                             + ("" if same_file else " (fine if you meant to override it, or if only one file is Included)"))
         level = "E" if self.base else "W"
         suffix = "" if self.base else " (may be defined in ui/atlantis; pass --base to be sure)"
         stock_fonts = {"arial9", "arial11", "arial14"}  # the client's resize fonts; the doc requires them to exist
@@ -463,7 +476,9 @@ class Linter:
 
     def check_orphans(self, files: dict[str, Path]) -> None:
         included = {t.replace("\\", "/").lower() for incs in self.includes.values() for t, _ in incs}
-        for rel in files:
+        for rel, path in files.items():
+            if self.custom not in path.parents:
+                continue
             if re.fullmatch(r"custom\d+_window\.xml", rel) and rel not in included:
                 self.add("W", "orphan", rel, 0, "custom window file is not <Include>d by any file, so the client will never load it")
 
@@ -482,6 +497,15 @@ def main() -> int:
     if args.base and not args.base.is_dir():
         sys.stderr.write(f"--base is not a directory: {args.base}\n")
         return 2
+    if not args.base:
+        # Prefer the sibling atlantis folder of the custom folder, then the default live install.
+        for cand in (args.custom.resolve().parent / "atlantis",
+                     Path(r"C:\Program Files (x86)\Electronic Arts\Dark Age of Camelot\ui\atlantis")):
+            if (cand / "styles.xml").exists():
+                args.base = cand
+                if not args.json:
+                    print(f"(using --base {cand} found automatically; pass --base to override)")
+                break
     lint = Linter(args.custom.resolve(), args.base.resolve() if args.base else None, load_knowledge())
     lint.run()
     order = {"E": 0, "W": 1, "I": 2}

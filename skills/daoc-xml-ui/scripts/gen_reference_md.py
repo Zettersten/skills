@@ -16,10 +16,16 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
+STOCK = DATA / "stock"  # inventory of a real ui/atlantis folder (client 1.130), authoritative where present
 
 
 def load(name: str) -> dict:
     return json.loads((DATA / name).read_text(encoding="utf-8"))
+
+
+def load_stock(name: str) -> dict:
+    p = STOCK / name
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
 def expand(pattern: str) -> list[str]:
@@ -105,6 +111,14 @@ def prefix_of(name: str) -> str:
 def gen_adapters(out_dir: Path) -> None:
     off = load("official.json")
     obs = load("adapters.json")
+    stock = load_stock("adapters.json")
+    # merge stock bindings into the observed map so types/bindings/files come from both
+    for n, info in stock.items():
+        tgt = obs.setdefault(n, {"count": 0, "windows": [], "bound_by": {}})
+        tgt["count"] += info["count"]
+        tgt["windows"] = sorted(set(tgt["windows"]) | {"atlantis/" + w for w in info["windows"]})
+        for b, c in info["bound_by"].items():
+            tgt["bound_by"][b] = tgt["bound_by"].get(b, 0) + c
     official_type: dict[str, str] = {}
     for typ, names in off["adapters"].items():
         for pat in names:
@@ -122,9 +136,11 @@ def gen_adapters(out_dir: Path) -> None:
         "(`<Adapter>`, `<AdapterName>`, `<ColorAdapter>`, `<TextAdapterName>`, `<BufferName>`, `<LabelAdapterName>`,",
         "`<StateAdapterName>`). **Adapter names are case sensitive** (everything else in the XML is not).",
         "",
-        "Two sources are merged here:",
+        "Three sources are merged here:",
         "",
         "- **official** = listed in the Trials of Atlantis XML UI document (types are authoritative).",
+        "- **stock** = bound by a control in the stock Atlantis skin of the live 1.130 client (`ui/atlantis`). Authoritative",
+        "  for what the current client exposes; files are shown with an `atlantis/` prefix.",
         "- **observed** = bound by a control in a complete, working 1.127-era custom UI",
         "  (CynicalJedi/DAOC-UI-Chooser). The type is inferred from the control that binds it, so treat it as a strong hint.",
         "",
@@ -156,8 +172,11 @@ def gen_adapters(out_dir: Path) -> None:
                 if m in official_type:
                     srcs.add("official")
                     types.add(official_type[m])
+                if m in stock:
+                    srcs.add("stock")
                 if m in obs:
-                    srcs.add("observed")
+                    if m not in stock or obs[m]["count"] > stock[m]["count"]:
+                        srcs.add("observed")
                     for b, c in obs[m]["bound_by"].items():
                         bound[b.split(".")[0]] += c
                     files.update(obs[m]["windows"])
@@ -186,6 +205,11 @@ def gen_adapters(out_dir: Path) -> None:
 def gen_events(out_dir: Path) -> None:
     off = load("official.json")
     obs = load("events.json")
+    stock = load_stock("events.json")
+    for n, info in stock.items():
+        tgt = obs.setdefault(n, {"count": 0, "windows": [], "fired_by": {}})
+        tgt["count"] += info["count"]
+        tgt["windows"] = sorted(set(tgt["windows"]) | {"atlantis/" + w for w in info["windows"]})
     official: dict[str, tuple[str, str]] = {}
     for group, items in off["events"].items():
         for pat, desc in items.items():
@@ -203,7 +227,8 @@ def gen_events(out_dir: Path) -> None:
         "state the window owns (a selected list row, a chosen pet mode) and only make sense inside that window.",
         "",
         "- **official** = in the Trials of Atlantis document, with its description.",
-        "- **observed** = wired to a control in a complete, working 1.127-era custom UI (CynicalJedi/DAOC-UI-Chooser).",
+        "- **observed** = wired to a control in the stock Atlantis skin of the live 1.130 client (files prefixed `atlantis/`)",
+        "  or in a complete, working 1.127-era custom UI (CynicalJedi/DAOC-UI-Chooser).",
         "  No official description exists; the name and the window it is used in are the documentation.",
         "",
         f"Totals: {len(official)} official, {len(obs)} observed, "
@@ -261,19 +286,35 @@ def gen_events(out_dir: Path) -> None:
 
 
 # ----------------------------------------------------------------------------- windows
+def window_rows(w: dict) -> list[str]:
+    rows = []
+    for name, info in sorted(w.items()):
+        ids = info["numeric_control_ids"]
+        if not ids:
+            ids_s = "-"
+        elif len(ids) <= 6:
+            ids_s = ", ".join(map(str, ids))
+        else:
+            ids_s = f"{ids[0]}..{ids[-1]} ({len(ids)} ids)"
+        defs = ", ".join(f"{k}x{v}" for k, v in sorted(info["defs"].items(), key=lambda kv: -kv[1])[:5])
+        rows.append(f"| `{name}` | {info['WindowId'] or '-'} | `{info['file']}` | {info['Width']}x{info['Height']} | {ids_s} | {defs} |")
+    return rows
+
+
 def gen_windows(out_dir: Path) -> None:
     w = load("windows.json")
     inc = load("includes.json")
+    sw = load_stock("windows.json")
+    sinc = load_stock("includes.json")
     lines = [
         "# Window reference",
         "",
-        "Every window template found in a complete 1.127-era custom UI (CynicalJedi/DAOC-UI-Chooser, 107 templates in",
-        f"{len(inc)} files). Use it to answer: what is the file for window X, what is its template `Name`, what size",
-        "does the stock layout assume, and which numeric `ControlId`s are already taken in that window.",
-        "",
-        "**Caveat:** sizes, `WindowId`s and ControlId sets are BobsUI's versions of each window, not the stock Atlantis",
-        "ones. BobsUI resizes and rebuilds many windows (its command window is 310x99 with tabs; stock differs). Use this",
-        "table to find the file and template name, then read the player's own `ui/atlantis/<file>` for stock geometry.",
+        "Two tables. The **stock** table is the Atlantis skin of the live 1.130 client (`ui/atlantis`, 83 files) and is",
+        "authoritative: the sizes are what the game ships, and the numeric `ControlId`s are the ones client code binds",
+        "(do not reuse them when adding controls to that window). The **BobsUI** table is a complete 1.127-era custom UI",
+        "(CynicalJedi/DAOC-UI-Chooser); its sizes and ids are that UI's own choices and it adds 20 custom windows.",
+        "Use both to answer: what is the file for window X, what is its template `Name`, what size does it have, and",
+        "which ids are taken.",
         "",
         "Rules that matter here:",
         "",
@@ -287,25 +328,33 @@ def gen_windows(out_dir: Path) -> None:
         "",
         "## Contents",
         "",
-        "- [Window templates](#window-templates)",
+        "- [Stock windows (Atlantis, client 1.130)](#stock-windows-atlantis-client-1130)",
+        "- [Stock load order (uimain.xml)](#stock-load-order-uimainxml)",
+        "- [BobsUI windows (1.127 custom UI)](#bobsui-windows-1127-custom-ui)",
         "- [Files that are not windows](#files-that-are-not-windows)",
         "- [Include graph](#include-graph)",
         "",
-        "## Window templates",
-        "",
-        "| template Name | WindowId | file | WxH | numeric ControlIds used | control defs |",
-        "|---|---|---|---|---|---|",
     ]
-    for name, info in sorted(w.items()):
-        ids = info["numeric_control_ids"]
-        if not ids:
-            ids_s = "-"
-        elif len(ids) <= 6:
-            ids_s = ", ".join(map(str, ids))
+    if sw:
+        lines += ["## Stock windows (Atlantis, client 1.130)", "",
+                  "| template Name | WindowId | file | WxH | numeric ControlIds (code-bound) | control defs |",
+                  "|---|---|---|---|---|---|"]
+        lines += window_rows(sw)
+        lines.append("")
+        uimain = HERE.parent / "references" / "_uimain_order.txt"
+        lines += ["## Stock load order (uimain.xml)", "",
+                  "`ui/uimain.xml` (never edit) includes these files in this order; `styles.xml` first, `assets.xml` near the end.",
+                  "Each is resolved in `ui/custom/` first, then `ui/atlantis/`. Custom windows are not in this list, which is",
+                  "why they need an `<Include>` from one of these files.", ""]
+        if uimain.exists():
+            lines.append(", ".join(f"`{x}`" for x in uimain.read_text(encoding="utf-8").split()))
         else:
-            ids_s = f"{ids[0]}..{ids[-1]} ({len(ids)} ids)"
-        defs = ", ".join(f"{k}x{v}" for k, v in sorted(info["defs"].items(), key=lambda kv: -kv[1])[:5])
-        lines.append(f"| `{name}` | {info['WindowId'] or '-'} | `{info['file']}` | {info['Width']}x{info['Height']} | {ids_s} | {defs} |")
+            lines.append("(uimain order not captured; read the file in the game folder)")
+        lines.append("")
+    lines += ["## BobsUI windows (1.127 custom UI)", "",
+              "| template Name | WindowId | file | WxH | numeric ControlIds used | control defs |",
+              "|---|---|---|---|---|---|"]
+    lines += window_rows(w)
     lines.append("")
     window_files = {info["file"] for info in w.values()}
     others = sorted(f for f in inc if f not in window_files)
@@ -322,6 +371,49 @@ def gen_windows(out_dir: Path) -> None:
     (out_dir / "windows.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+def gen_stock_templates(out_dir: Path) -> None:
+    st = load_stock("templates.json")
+    sa = load_stock("assets.json")
+    if not st:
+        return
+    lines = [
+        "# Stock template, font and texture names (Atlantis skin, client 1.130)",
+        "",
+        "When a mod builds on the stock skin, these are the names it can reference without defining anything. They come",
+        "from the shipped `ui/atlantis` files (mostly `styles.xml` and `assets.xml`). Names are not case sensitive.",
+        "Templates defined inside a window file (e.g. `generic_editbox` in `bazaar_query.xml`) only exist while that",
+        "file is loaded, which it always is on stock, but a custom override of that file must re-define them.",
+        "",
+        "Quick picks: status bars `red_status` / `green_status` / `blue_status` / `yellow_status` (plus `_small`/`_thick`",
+        "variants, `exp_bubbles`); window backgrounds `dlg_sm_title`, `dlg_sm_notitle`, `dlg_background_resize`,",
+        "`dlg_background_noresize`, insets `dlg_interior_small` / `dlg_interior_large`; buttons `button_small` (60x16),",
+        "`button_large`, `button_wide`, `button_narrow`, `button_nobg`, resizable `generic_hr_button`; fonts `arial9`,",
+        "`arial11`, `arial14`, `button_small`, `button_large`, `brit9`, `title`, `barb10`, TrueType `chat_small`,",
+        "`chat_large`, `minion`, `myriadbold`.",
+        "",
+        "## Contents",
+        "",
+        "- [Fonts and textures](#fonts-and-textures)",
+        "- [Templates by type](#templates-by-type)",
+        "",
+        "## Fonts and textures",
+        "",
+    ]
+    for kind, info in sa.items():
+        lines.append(f"- **{kind}** ({info['count']}, {', '.join(f'{k} x{v}' for k, v in info['extensions'].items())}): "
+                     + ", ".join(f"`{n}`" for n in sorted(info["names"])))
+    lines += ["", "Icon sheets are `<Canvas>` assets named `<sheet>_b` (32px) and `<sheet>_s` (16px): `spl1..`, `itm1..`,",
+              "`combat1..`, `skill1`. Font files live in `ui/fonts/`; texture sheets `page1..page4b` are the Atlantis frame art.", "",
+              "## Templates by type", ""]
+    for t, info in sorted(st.items()):
+        names = sorted(info["names"])
+        lines.append(f"### {t} ({len(names)})")
+        lines.append("")
+        lines.append(", ".join(f"`{n}`" for n in names))
+        lines.append("")
+    (out_dir / "stock-templates.md").write_text("\n".join(lines), encoding="utf-8")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=HERE.parent / "references")
@@ -330,8 +422,10 @@ def main() -> int:
     gen_adapters(args.out)
     gen_events(args.out)
     gen_windows(args.out)
-    for n in ("adapters.md", "events.md", "windows.md"):
-        print(n, len((args.out / n).read_text(encoding="utf-8").splitlines()), "lines")
+    gen_stock_templates(args.out)
+    for n in ("adapters.md", "events.md", "windows.md", "stock-templates.md"):
+        if (args.out / n).exists():
+            print(n, len((args.out / n).read_text(encoding="utf-8").splitlines()), "lines")
     return 0
 
 

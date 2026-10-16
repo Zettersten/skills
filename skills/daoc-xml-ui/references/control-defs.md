@@ -28,6 +28,11 @@ Every def starts with the same three elements (official):
 | Position | point | pixels from the window's top-left; negative allowed |
 | Alignment | flags | `TopLeft`, `CenterHorizontally`, `CenterVertically`, `OffsetBottom`, `OffsetRight`, `GrowWidth`, `GrowHeight`; an empty `<Alignment></Alignment>` means top-left |
 
+Alignment semantics (confirmed in stock files): with `OffsetRight`, `X` is the distance from the window's right
+edge to the control's **right** edge (stock chat window puts a button at X=3 with OffsetRight to hug the border);
+`OffsetBottom` does the same with `Y` and the bottom edges. `GrowWidth`/`GrowHeight` add the window's size delta
+to the control's size; `Center*` ignore the corresponding coordinate.
+
 `ToolTipID` (number, observed) appears on many defs in stock windows; it selects a client-side tooltip string.
 Leave it out of your own controls.
 
@@ -77,6 +82,7 @@ Multi-line scrollable text; supports hotspots (the clickable `[keywords]` in NPC
 | AdapterName | name | official | multi-line text adapter |
 | HasHotspots | bool | official | light up bracketed text |
 | HotspotDelineator | string | observed | the opening bracket character, e.g. `[` |
+| AdvancedStyle | bool | stock 1.130 | richer text styling in the community window's news areas |
 | MaxCharacters | number | official | buffer size (32768 is common) |
 | Width / Height | number | official | |
 
@@ -171,6 +177,19 @@ Game icon by id. Either a fixed `IconId` or a scalar adapter supplying the id.
 ### DockableIconDef (observed)
 Icon slot that accepts drag-and-drop (mount saddlebags). Field: IconTemplateName.
 
+### IconSetDef (stock 1.130)
+A grid of icons fed by a numbered adapter family; the stock group buff display (`group_buffs.xml`).
+
+```xml
+<IconSetDef>
+  <Rows>3</Rows>
+  <Columns>8</Columns>
+  <BaseAdapterName>group_0icon</BaseAdapterName>   <!-- cells bind group_0icon0 .. group_0icon23 -->
+  <TemplateName>group_buffs_iconset</TemplateName> <!-- an IconSetTemplate -->
+  <Position><X>7</X><Y>50</Y></Position>
+</IconSetDef>
+```
+
 ### CompassControlDef (official)
 Strip compass bound to `compass_heading`. Fields: TemplateName, AdapterName, Width, Height.
 
@@ -184,6 +203,7 @@ Fixed-size button from a ButtonTemplate.
 | TemplateName | name | official |
 | Label | string | official |
 | OnClickEvent | event | official |
+| OnShiftClickEvent | event | stock 1.130 (value chooser: shift-click steps by a larger amount) |
 | LabelAlignment | alignment | observed |
 | Adapter / ColorAdapter | name | observed (label text/colour from adapters) |
 
@@ -245,7 +265,8 @@ Slider over a scalar (realm-ability levels in the training window).
 
 ### ComboBoxDef (official + observed)
 Drop-down. The ToA doc lists `OnChangeEvent` and `AdapterName`; modern stock windows set only TemplateName and a
-numeric ControlId (the client fills the list by id).
+numeric ControlId (the client fills the list by id). The stock map window adds `<Priority>` (number), apparently
+the z-order of the opened menu relative to other combo boxes.
 
 ## Lists and containers
 

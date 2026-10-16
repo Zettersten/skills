@@ -53,15 +53,15 @@
     {
       "id": 3,
       "name": "debug-blank-window-subtle-faults",
-      "prompt": "I made a little vitals window for DAoC (live, stock Atlantis base) in ui\\\\custom\\\\custom2_window.xml, included from my copy of assets.xml, with a ToggleCustom2 button that works (the window opens and I can drag it). But the window is just the frame: no name, no bars, no numbers show up. Attached as inputs/custom2_window.xml. Please find everything that is wrong and give me the fixed file.",
-      "expected_output": "Finds the background FullResizeImageDef listed last (covers everything; must be first), the adapter case error Summary_Player_Hits (adapters are case sensitive), the template-name typo statusbar_blu (undefined, bar never renders) and ideally MinWidth 4 being below the 9-slice cap size for a resizable window. Uses or recommends the linter. Returns a corrected file with the background first and names fixed, without inventing new adapters.",
+      "prompt": "I made a little vitals window for DAoC (live, stock Atlantis base) in ui\\custom\\custom2_window.xml, included from my copy of assets.xml, with a ToggleCustom2 button that works (the window opens and I can drag it). But the window is just the frame: no name, no bars, no numbers show up. Attached as inputs/custom2_window.xml. Please find everything that is wrong and give me the fixed file.",
+      "expected_output": "Finds the background FullResizeImageDef listed last (covers everything; must be first), the adapter case error Summary_Player_Hits (adapters are case sensitive), the template-name typo blue_statu (undefined, bar never renders) and ideally MinWidth 4 being below the 9-slice cap size for a resizable window. Uses or recommends the linter. Returns a corrected file with the background first and names fixed, without inventing new adapters.",
       "files": [
         "evals/files/eval3_custom2_window.xml"
       ],
       "assertions": [
         "Identifies that the background FullResizeImageDef is listed last and covers the other controls (draw order)",
         "Identifies the adapter case error Summary_Player_Hits -> summary_player_hits",
-        "Identifies statusbar_blu as an undefined/misspelled template name",
+        "Identifies the misspelled status bar template (statusbar_blu / blue_statu) as undefined",
         "Mentions MinWidth 4 is too small for a resizable window with a 9-slice background",
         "Corrected file parses, has the background as the first def, uses summary_player_hits and a plausible template name",
         "Uses or recommends scripts/daoc_ui_lint.py"

@@ -74,7 +74,7 @@ git clone https://github.com/Zettersten/skills ~/.agents/skills/zettersten
 
 | Skill | Tool | What It Does |
 |-------|------|--------------|
-| `daoc-xml-ui` | Dark Age of Camelot XML UI | Author, modify, debug and restyle DAoC custom UIs (ui\custom, WindowTemplates, adapters, events, custom windows) with verified syntax, 999-adapter/280-event references rebuilt from working 1.127 UIs, a linter, and a self-contained example mod |
+| `daoc-xml-ui` | Dark Age of Camelot XML UI | Author, modify, debug and restyle DAoC custom UIs (ui\custom, WindowTemplates, adapters, events, custom windows) with verified syntax, references rebuilt from the stock 1.130 skin and working custom UIs (1000+ adapters, 280+ events, every stock template name), a linter that checks against the real ui\atlantis, and a self-contained example mod |
 
 ## Repository Structure
 

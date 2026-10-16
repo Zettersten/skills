@@ -10,7 +10,11 @@ Tags: **official** = fully described in the ToA document. **observed** = used by
 Types in the official list that modern UIs also use: Button, VerticalResizeImage, HorizontalResizeImage,
 FullResizeImage, VerticalScrollbar, ListBox, TextArea, StatusBar, ImageArea, StatusIcon, Icon, ChatControl,
 CheckBox, VerticalStatusBar, CompassControl, Menu, ComboBox. Added since: HorizontalResizeButton, EditBox,
-HorizontalSlider, VerticalSlider, IconSet, ListBoxHeader, Tabs, TreeControl.
+HorizontalSlider, VerticalSlider, IconSet, ListBoxHeader, Tabs, TreeControl. All 25 appear in the stock 1.130
+skin; the names it defines for each are listed in `stock-templates.md`.
+
+Stock files sometimes carry `<Parent>none</Parent>` inside templates defined in window files. It is always
+`none` (41 occurrences, no other value); treat it as inert and do not rely on template inheritance.
 
 ## Contents
 

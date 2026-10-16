@@ -1,0 +1,403 @@
+{
+ "ButtonDef": {
+  "count": 243,
+  "fields": {
+   "TemplateName": 245,
+   "Position": 243,
+   "ControlId": 211,
+   "Label": 173,
+   "OnClickEvent": 161,
+   "Alignment": 41,
+   "Coloradapter": 26,
+   "onClickEvent": 9,
+   "LabelAlignment": 3,
+   "ToolTipID": 2,
+   "OnShiftClickEvent": 2,
+   "Adapter": 1
+  }
+ },
+ "ChatControlDef": {
+  "count": 1,
+  "fields": {
+   "ControlId": 1,
+   "Height": 1,
+   "Width": 1,
+   "Alignment": 1,
+   "Position": 1,
+   "TemplateName": 1,
+   "LinePadding": 1,
+   "TextOffset": 1,
+   "BufferName": 1
+  }
+ },
+ "CheckBoxDef": {
+  "count": 166,
+  "fields": {
+   "Position": 166,
+   "ControlId": 166,
+   "TemplateName": 166,
+   "Data": 129,
+   "LabelWidth": 129,
+   "AdapterName": 13,
+   "Alignment": 8,
+   "Font": 7,
+   "ToolTipID": 6,
+   "OnClickEvent": 2
+  }
+ },
+ "ClickableEditBoxDef": {
+  "count": 1,
+  "fields": {
+   "TemplateName": 1,
+   "ControlId": 1,
+   "Position": 1,
+   "Width": 1,
+   "Height": 1,
+   "MaxCharacters": 1
+  }
+ },
+ "ComboBoxDef": {
+  "count": 27,
+  "fields": {
+   "Position": 27,
+   "ControlId": 27,
+   "Templatename": 27,
+   "Priority": 2
+  }
+ },
+ "CompassControlDef": {
+  "count": 2,
+  "fields": {
+   "ControlId": 2,
+   "Position": 2,
+   "AdapterName": 2,
+   "Width": 2,
+   "Height": 2,
+   "TemplateName": 2
+  }
+ },
+ "DockableIconDef": {
+  "count": 7,
+  "fields": {
+   "ControlId": 7,
+   "Position": 7,
+   "Icontemplatename": 7
+  }
+ },
+ "DynamicImageDef": {
+  "count": 2,
+  "fields": {
+   "ControlId": 2,
+   "Position": 2,
+   "TextureName": 2,
+   "TextureCoords": 2,
+   "Dimensions": 2
+  }
+ },
+ "EditBoxDef": {
+  "count": 1,
+  "fields": {
+   "TemplateName": 1,
+   "ControlId": 1,
+   "Position": 1,
+   "Width": 1,
+   "Height": 1,
+   "Alignment": 1,
+   "MaxCharacters": 1,
+   "AdapterName": 1
+  }
+ },
+ "FullResizeImageDef": {
+  "count": 102,
+  "fields": {
+   "Height": 101,
+   "Position": 101,
+   "Width": 100,
+   "TemplateName": 100,
+   "Alignment": 66,
+   "ControlId": 61,
+   "width": 1,
+   "height": 1,
+   "LabelDef": 1
+  }
+ },
+ "HorizontalResizeButtonDef": {
+  "count": 130,
+  "fields": {
+   "Position": 130,
+   "Width": 130,
+   "ControlId": 120,
+   "Label": 99,
+   "TemplateName": 78,
+   "Alignment": 69,
+   "onClickEvent": 60,
+   "Templatename": 52,
+   "Labelalignment": 21,
+   "LabelIndent": 21,
+   "OnClickEvent": 15,
+   "ToolTipID": 12,
+   "Onclickevent": 10,
+   "Controlid": 10
+  }
+ },
+ "HorizontalResizeImageButtonDef": {
+  "count": 103,
+  "fields": {
+   "ImageAreaTemplateName": 103,
+   "HRButtonTemplateName": 103,
+   "Position": 103,
+   "Width": 103,
+   "ImageOffset": 101,
+   "Label": 101,
+   "Onclickevent": 101,
+   "ControlId": 66,
+   "ToolTipID": 58,
+   "Labelalignment": 37,
+   "LabelIndent": 37,
+   "Controlid": 37,
+   "Alignment": 7
+  }
+ },
+ "HorizontalResizeImageDef": {
+  "count": 145,
+  "fields": {
+   "Position": 145,
+   "Width": 145,
+   "TemplateName": 143,
+   "ControlId": 24,
+   "ToolTipID": 17,
+   "Height": 7,
+   "Alignment": 2
+  }
+ },
+ "HorizontalSliderDef": {
+  "count": 22,
+  "fields": {
+   "TemplateName": 22,
+   "ControlId": 22,
+   "Position": 22,
+   "Adaptername": 22,
+   "Width": 22,
+   "Numticks": 22
+  }
+ },
+ "IconDef": {
+  "count": 150,
+  "fields": {
+   "Position": 150,
+   "TemplateName": 150,
+   "AdapterName": 146,
+   "ControlId": 96,
+   "IconID": 88,
+   "Width": 88,
+   "Height": 88,
+   "LabelAdapterName": 88,
+   "ToolTipID": 88,
+   "HideLabel": 88,
+   "IconId": 56,
+   "StateAdapterName": 16,
+   "OnClickEvent": 8
+  }
+ },
+ "IconSetDef": {
+  "count": 8,
+  "fields": {
+   "Rows": 8,
+   "Columns": 8,
+   "BaseAdapterName": 8,
+   "TemplateName": 8,
+   "Position": 8
+  }
+ },
+ "ImageAreaDef": {
+  "count": 322,
+  "fields": {
+   "TemplateName": 322,
+   "Position": 322,
+   "ControlId": 212,
+   "Alignment": 16
+  }
+ },
+ "InvisibleButtonDef": {
+  "count": 204,
+  "fields": {
+   "Position": 204,
+   "OnClickEvent": 196,
+   "ControlId": 172,
+   "width": 140,
+   "height": 140,
+   "Width": 64,
+   "Height": 64,
+   "Alignment": 14,
+   "Label": 9
+  }
+ },
+ "LabelDef": {
+  "count": 499,
+  "fields": {
+   "FontName": 499,
+   "Width": 499,
+   "Height": 499,
+   "MaxCharacters": 499,
+   "Position": 499,
+   "Color": 482,
+   "Data": 448,
+   "Adapter": 274,
+   "ControlId": 144,
+   "ColorAdapter": 139,
+   "Alignment": 125,
+   "EndAligned": 43,
+   "TextCentered": 42,
+   "Controlid": 31,
+   "ToolTipID": 8,
+   "ToolTipId": 1
+  }
+ },
+ "ListBoxDef": {
+  "count": 19,
+  "fields": {
+   "ControlId": 19,
+   "Height": 19,
+   "Width": 19,
+   "TemplateName": 19,
+   "Position": 19,
+   "Sorting": 19,
+   "AdapterName": 19,
+   "IconTemplate": 18,
+   "Alignment": 15,
+   "Columns": 10,
+   "ShowDefaultToolTips": 6,
+   "ShowIndicator": 4,
+   "OnHeaderClickEvent": 4,
+   "OnClickEvent": 4,
+   "Adapter": 3,
+   "FontName": 1
+  }
+ },
+ "ScalarLabelDef": {
+  "count": 159,
+  "fields": {
+   "Color": 159,
+   "FontName": 159,
+   "Width": 159,
+   "Height": 159,
+   "MaxCharacters": 159,
+   "Position": 159,
+   "Adapter": 159,
+   "ControlId": 122,
+   "Data": 77,
+   "ColorAdapter": 59,
+   "TextCentered": 57,
+   "EndAligned": 51,
+   "Alignment": 49,
+   "DontDrawWhenZero": 35,
+   "DontDrawWhenNegOne": 31,
+   "Coloradapter": 27,
+   "ToolTipId": 1
+  }
+ },
+ "StatusBarDef": {
+  "count": 70,
+  "fields": {
+   "Position": 70,
+   "TemplateName": 70,
+   "Width": 70,
+   "Adaptername": 45,
+   "ControlId": 31,
+   "AdapterName": 25,
+   "Alignment": 24,
+   "ToolTipID": 4
+  }
+ },
+ "StatusIconDef": {
+  "count": 397,
+  "fields": {
+   "Position": 397,
+   "TemplateName": 397,
+   "ControlId": 381,
+   "AdapterName": 25,
+   "Alignment": 3
+  }
+ },
+ "TabsDef": {
+  "count": 2,
+  "fields": {
+   "TabControl": 268,
+   "Tab": 8,
+   "TemplateName": 2,
+   "ControlId": 2,
+   "Width": 2,
+   "Height": 2,
+   "Position": 2,
+   "OnClickEvent": 1
+  }
+ },
+ "TextAreaDef": {
+  "count": 15,
+  "fields": {
+   "ControlId": 15,
+   "TemplateName": 15,
+   "Position": 15,
+   "Width": 15,
+   "Height": 15,
+   "MaxCharacters": 15,
+   "AdapterName": 15,
+   "HasHotspots": 14,
+   "Alignment": 12,
+   "AdvancedStyle": 3,
+   "HotspotDelineator": 1
+  }
+ },
+ "TreeControlDef": {
+  "count": 3,
+  "fields": {
+   "TemplateName": 3,
+   "Position": 3,
+   "ControlId": 3,
+   "Column1Width": 3,
+   "Column2Width": 3,
+   "Column1Offset": 3,
+   "Column2Offset": 3,
+   "AdapterName": 3,
+   "Alignment": 2,
+   "width": 2,
+   "height": 2,
+   "Width": 1,
+   "Height": 1
+  }
+ },
+ "VerticalResizeImageDef": {
+  "count": 2,
+  "fields": {
+   "Position": 2,
+   "TemplateName": 2,
+   "Height": 2
+  }
+ },
+ "VerticalSliderDef": {
+  "count": 4,
+  "fields": {
+   "Position": 4,
+   "Height": 4,
+   "Numticks": 4,
+   "Alignment": 2,
+   "Controlid": 2,
+   "OnClickEvent": 2,
+   "Templatename": 2,
+   "TemplateName": 2,
+   "ControlId": 2,
+   "Adaptername": 2
+  }
+ },
+ "VerticalStatusBarDef": {
+  "count": 2,
+  "fields": {
+   "ControlId": 2,
+   "Position": 2,
+   "Alignment": 2,
+   "TemplateName": 2,
+   "AdapterName": 2,
+   "Height": 2
+  }
+ }
+}

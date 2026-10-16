@@ -8,10 +8,11 @@ The XML cannot define new behaviour: an event only works if the client implement
 state the window owns (a selected list row, a chosen pet mode) and only make sense inside that window.
 
 - **official** = in the Trials of Atlantis document, with its description.
-- **observed** = wired to a control in a complete, working 1.127-era custom UI (CynicalJedi/DAOC-UI-Chooser).
+- **observed** = wired to a control in the stock Atlantis skin of the live 1.130 client (files prefixed `atlantis/`)
+  or in a complete, working 1.127-era custom UI (CynicalJedi/DAOC-UI-Chooser).
   No official description exists; the name and the window it is used in are the documentation.
 
-Totals: 66 official, 253 observed, 280 distinct.
+Totals: 66 official, 257 observed, 282 distinct.
 
 ## Contents
 
@@ -37,42 +38,42 @@ menu window) to get a launcher. Names are what the client ships; the table shows
 
 | event | fired from |
 |---|---|
-| `ToggleCasualGroupFinder` | stats_group_window.xml |
-| `ToggleClock` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleCommandWindow` | custom0_window.xml, interface_elements_window.xml |
-| `ToggleCompassWindow` | interface_elements_window.xml |
-| `ToggleConcentration` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleFloatChampXP` | interface_elements_window.xml |
-| `ToggleFloatLevelXP` | interface_elements_window.xml |
-| `ToggleFloatRealmXP` | interface_elements_window.xml |
-| `ToggleFloatTarget` | interface_elements_window.xml |
-| `ToggleGroupBuffs` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleGroupOptions` | stats_group_window.xml |
-| `ToggleHelp` | command_window.xml, custom0_window.xml, main_menu_window.xml |
-| `ToggleInterfaceElements` | interface_elements_window.xml, main_menu_window.xml |
-| `ToggleJournal` | command_window.xml, custom0_window.xml, custom11_window.xml |
-| `ToggleMainMenu` | menu_bar_window.xml |
-| `ToggleMap` | clock_window.xml, command_window.xml, custom0_window.xml |
-| `ToggleMasterLevel` | command_window.xml, custom0_window.xml, custom11_window.xml |
-| `ToggleMenuBar` | interface_elements_window.xml |
-| `ToggleMiniFriends` | custom0_window.xml, interface_elements_window.xml |
-| `ToggleMiniGroup` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleMiniPet` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleMount` | interface_elements_window.xml |
-| `ToggleNewGroup` | interface_elements_window.xml |
-| `ToggleNewSummary` | interface_elements_window.xml |
-| `ToggleOptions` | command_window.xml, custom0_window.xml, main_menu_window.xml |
-| `TogglePerformanceMeter` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleQuiver` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
-| `ToggleStatsAttributes` | menu_bar_window.xml |
-| `ToggleStatsGroup` | menu_bar_window.xml |
-| `ToggleStatsInventory` | menu_bar_window.xml |
-| `ToggleStatsSkills` | menu_bar_window.xml |
-| `ToggleStatsSpells` | menu_bar_window.xml |
-| `ToggleStatsStyles` | menu_bar_window.xml |
-| `ToggleSummary` | interface_elements_window.xml |
-| `ToggleTitle` | interface_elements_window.xml |
-| `ToggleWarmapKey` | custom0_window.xml, realmwar_agramon.xml, realmwar_alb.xml |
+| `ToggleCasualGroupFinder` | atlantis/stats_group_window.xml, stats_group_window.xml |
+| `ToggleClock` | atlantis/command_window.xml, atlantis/interface_elements_window.xml, command_window.xml |
+| `ToggleCommandWindow` | atlantis/interface_elements_window.xml, custom0_window.xml, interface_elements_window.xml |
+| `ToggleCompassWindow` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleConcentration` | atlantis/interface_elements_window.xml, atlantis/stats_spells_window.xml, command_window.xml |
+| `ToggleFloatChampXP` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleFloatLevelXP` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleFloatRealmXP` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleFloatTarget` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleGroupBuffs` | atlantis/interface_elements_window.xml, command_window.xml, custom0_window.xml |
+| `ToggleGroupOptions` | atlantis/stats_group_window.xml, stats_group_window.xml |
+| `ToggleHelp` | atlantis/main_menu_window.xml, command_window.xml, custom0_window.xml |
+| `ToggleInterfaceElements` | atlantis/main_menu_window.xml, interface_elements_window.xml, main_menu_window.xml |
+| `ToggleJournal` | atlantis/interface_elements_window.xml, atlantis/menu_bar_window.xml, command_window.xml |
+| `ToggleMainMenu` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleMap` | atlantis/command_window.xml, atlantis/interface_elements_window.xml, atlantis/menu_bar_window.xml |
+| `ToggleMasterLevel` | atlantis/interface_elements_window.xml, command_window.xml, custom0_window.xml |
+| `ToggleMenuBar` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleMiniFriends` | atlantis/interface_elements_window.xml, custom0_window.xml, interface_elements_window.xml |
+| `ToggleMiniGroup` | atlantis/interface_elements_window.xml, command_window.xml, custom0_window.xml |
+| `ToggleMiniPet` | atlantis/interface_elements_window.xml, atlantis/stats_spells_window.xml, command_window.xml |
+| `ToggleMount` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleNewGroup` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleNewSummary` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleOptions` | atlantis/main_menu_window.xml, command_window.xml, custom0_window.xml |
+| `TogglePerformanceMeter` | atlantis/interface_elements_window.xml, command_window.xml, custom0_window.xml |
+| `ToggleQuiver` | atlantis/interface_elements_window.xml, atlantis/stats_combat_window.xml, command_window.xml |
+| `ToggleStatsAttributes` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleStatsGroup` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleStatsInventory` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleStatsSkills` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleStatsSpells` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleStatsStyles` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
+| `ToggleSummary` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleTitle` | atlantis/interface_elements_window.xml, interface_elements_window.xml |
+| `ToggleWarmapKey` | atlantis/realmwar_agramon.xml, atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml |
 
 ## Custom windows
 
@@ -95,12 +96,12 @@ This is the only mechanism for adding a brand-new window; see SKILL.md recipe "a
 | `Face` | Toggles auto-face mode | yes |
 | `Anon` | Toggles anon mode | yes |
 | `Pray` | Issues the /pray command | yes |
-| `Help` | Shows the Help Window | - |
+| `Help` | Shows the Help Window | yes |
 | `Release` | Issues the /release command | yes |
 | `Relic` | Shows the /relic display | yes |
 | `Bonuses` | Shows the /bonus display (resists) | yes |
 | `ShowKeyboardConfig` | Shows the keyboard configuration display | yes |
-| `Journal` | Shows the Quest Journal Window | - |
+| `Journal` | Shows the Quest Journal Window | yes |
 | `Friends` | Shows the Mini-Friends Window | yes |
 | `Bind` | Issues the /bind command | yes |
 | `ToggleCompass` | Toggles compass mode between off, small, and large | yes |
@@ -202,229 +203,236 @@ Grouped by prefix. `fired from` lists up to three files from the reference UI.
 
 | event | fired from |
 |---|---|
-| `AssistTarget` | float_target_window.xml |
+| `AssistTarget` | atlantis/float_target_window.xml, atlantis/stats_group_window.xml, float_target_window.xml |
 
 ### Chat
 
 | event | fired from |
 |---|---|
-| `ChatRenameCancel` | chatrename.xml |
-| `ChatRenameOK` | chatrename.xml |
+| `ChatRenameCancel` | atlantis/chatrename.xml, chatrename.xml |
+| `ChatRenameOK` | atlantis/chatrename.xml, chatrename.xml |
 
 ### Com
 
 | event | fired from |
 |---|---|
-| `ComAllianceMemberSelected` | community_window.xml |
-| `ComAllianceMembersNext` | community_window.xml |
-| `ComAllianceMembersPrev` | community_window.xml |
-| `ComAllianceMembersShowOffline` | community_window.xml |
-| `ComAllianceMembersSort` | community_window.xml |
-| `ComAllianceSend` | community_window.xml |
-| `ComFriendsMemberSelected` | community_window.xml |
-| `ComFriendsMembersSort` | community_window.xml |
-| `ComFriendsSend` | community_window.xml |
-| `ComGuildBannerDeploy` | community_window.xml |
-| `ComGuildCommands` | community_window.xml |
-| `ComGuildDemote` | community_window.xml |
-| `ComGuildMemberSelected` | community_window.xml |
-| `ComGuildMembersNext` | community_window.xml |
-| `ComGuildMembersPrev` | community_window.xml |
-| `ComGuildMembersShowOffline` | community_window.xml |
-| `ComGuildMembersSort` | community_window.xml |
-| `ComGuildNote` | community_window.xml |
-| `ComGuildPromote` | community_window.xml |
-| `ComGuildSend` | community_window.xml |
-| `ComGuildWithdraw` | community_window.xml |
-| `ComLFGuildInvite` | community_window.xml |
-| `ComLFGuildMemberSelected` | community_window.xml |
-| `ComLFGuildMembersSort` | community_window.xml |
-| `ComLFGuildSend` | community_window.xml |
-| `ComTabChanged` | community_window.xml, custom13_window.xml, custom17_window.xml |
-| `ComTabRefresh` | community_window.xml |
+| `ComAllianceMemberSelected` | atlantis/community_window.xml, community_window.xml |
+| `ComAllianceMembersNext` | atlantis/community_window.xml, community_window.xml |
+| `ComAllianceMembersPrev` | atlantis/community_window.xml, community_window.xml |
+| `ComAllianceMembersShowOffline` | atlantis/community_window.xml, community_window.xml |
+| `ComAllianceMembersSort` | atlantis/community_window.xml, community_window.xml |
+| `ComAllianceSend` | atlantis/community_window.xml, community_window.xml |
+| `ComFriendsMemberSelected` | atlantis/community_window.xml, community_window.xml |
+| `ComFriendsMembersSort` | atlantis/community_window.xml, community_window.xml |
+| `ComFriendsSend` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildBannerDeploy` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildCommands` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildDemote` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildMemberSelected` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildMembersNext` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildMembersPrev` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildMembersShowOffline` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildMembersSort` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildNote` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildPromote` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildSend` | atlantis/community_window.xml, community_window.xml |
+| `ComGuildWithdraw` | atlantis/community_window.xml, community_window.xml |
+| `ComLFGuildInvite` | atlantis/community_window.xml, community_window.xml |
+| `ComLFGuildMemberSelected` | atlantis/community_window.xml, community_window.xml |
+| `ComLFGuildMembersSort` | atlantis/community_window.xml, community_window.xml |
+| `ComLFGuildSend` | atlantis/community_window.xml, community_window.xml |
+| `ComTabChanged` | atlantis/community_window.xml, community_window.xml, custom13_window.xml |
+| `ComTabRefresh` | atlantis/community_window.xml, community_window.xml |
 
 ### Community
 
 | event | fired from |
 |---|---|
-| `Community` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
+| `Community` | atlantis/interface_elements_window.xml, atlantis/stats_attributes_window.xml, command_window.xml |
 
 ### Context
 
 | event | fired from |
 |---|---|
-| `ContextOnAddChatWindow` | context_chat_main.xml, context_chat_sub.xml |
-| `ContextOnDefaultChannel` | context_chat_main.xml, context_chat_main2.xml, context_chat_sub.xml |
-| `ContextOnDeleteChatWindow` | context_chat_sub.xml, context_chat_sub2.xml |
-| `ContextOnFontAlpha` | context_chat_main.xml, context_chat_main2.xml, context_chat_sub.xml |
-| `ContextOnMessageAndChannel` | context_chat_main.xml, context_chat_main2.xml, context_chat_sub.xml |
-| `ContextOnRenameChatWindow` | context_chat_sub.xml, context_chat_sub2.xml |
-| `ContextOnWindowAlpha` | context_chat_main.xml, context_chat_main2.xml, context_chat_sub.xml |
-| `ContextSetDefaultChannel` | context_default_chat_channel.xml |
-| `ContextSetFontAlpha` | context_font_alpha.xml |
-| `ContextSetFontSize` | context_font_size.xml |
-| `ContextSetWindowAlpha` | context_window_alpha.xml |
+| `ContextOnAddChatWindow` | atlantis/context_window.xml, context_chat_main.xml, context_chat_sub.xml |
+| `ContextOnDefaultChannel` | atlantis/context_window.xml, context_chat_main.xml, context_chat_main2.xml |
+| `ContextOnDeleteChatWindow` | atlantis/context_window.xml, context_chat_sub.xml, context_chat_sub2.xml |
+| `ContextOnFontAlpha` | atlantis/context_window.xml, context_chat_main.xml, context_chat_main2.xml |
+| `ContextOnFontSize` | atlantis/context_window.xml |
+| `ContextOnMessageAndChannel` | atlantis/context_window.xml, context_chat_main.xml, context_chat_main2.xml |
+| `ContextOnRenameChatWindow` | atlantis/context_window.xml, context_chat_sub.xml, context_chat_sub2.xml |
+| `ContextOnWindowAlpha` | atlantis/context_window.xml, context_chat_main.xml, context_chat_main2.xml |
+| `ContextSetDefaultChannel` | atlantis/context_window.xml, context_default_chat_channel.xml |
+| `ContextSetFontAlpha` | atlantis/context_window.xml, context_font_alpha.xml |
+| `ContextSetFontSize` | atlantis/context_window.xml, context_font_size.xml |
+| `ContextSetWindowAlpha` | atlantis/context_window.xml, context_window_alpha.xml |
 
 ### Delve
 
 | event | fired from |
 |---|---|
-| `Delve` | miniinfo_window.xml |
+| `Delve` | atlantis/miniinfo_window.xml, miniinfo_window.xml |
 
 ### Group
 
 | event | fired from |
 |---|---|
-| `GroupFind` | stats_group_window.xml |
+| `GroupFind` | atlantis/stats_group_window.xml, stats_group_window.xml |
 
 ### Hookpoint
 
 | event | fired from |
 |---|---|
-| `HookpointStoreBP` | hookpoint_merchant_window.xml |
-| `HookpointStoreBuy` | hookpoint_merchant_window.xml |
-| `HookpointStoreCoin` | hookpoint_merchant_window.xml |
-| `HookpointStoreContract` | hookpoint_merchant_window.xml |
-| `HookpointStoreGBP` | hookpoint_merchant_window.xml |
+| `HookpointStoreBP` | atlantis/hookpoint_merchant_window.xml, hookpoint_merchant_window.xml |
+| `HookpointStoreBuy` | atlantis/hookpoint_merchant_window.xml, hookpoint_merchant_window.xml |
+| `HookpointStoreCoin` | atlantis/hookpoint_merchant_window.xml, hookpoint_merchant_window.xml |
+| `HookpointStoreContract` | atlantis/hookpoint_merchant_window.xml, hookpoint_merchant_window.xml |
+| `HookpointStoreGBP` | atlantis/hookpoint_merchant_window.xml, hookpoint_merchant_window.xml |
 
 ### In
 
 | event | fired from |
 |---|---|
-| `InGameKeyConfigAccept` | key_config.xml |
-| `InGameKeyConfigCancel` | key_config.xml |
-| `InGameKeyConfigClearKey` | key_config.xml |
-| `InGameKeyConfigResetFPS` | key_config.xml |
-| `InGameKeyConfigResetMMO` | key_config.xml |
-| `InGameKeyConfigResetRPG` | key_config.xml |
+| `InGameKeyConfigAccept` | atlantis/key_config.xml, key_config.xml |
+| `InGameKeyConfigCancel` | atlantis/key_config.xml, key_config.xml |
+| `InGameKeyConfigClearKey` | atlantis/key_config.xml, key_config.xml |
+| `InGameKeyConfigResetFPS` | atlantis/key_config.xml, key_config.xml |
+| `InGameKeyConfigResetMMO` | atlantis/key_config.xml, key_config.xml |
+| `InGameKeyConfigResetRPG` | atlantis/key_config.xml, key_config.xml |
 
 ### Keep
 
 | event | fired from |
 |---|---|
-| `KeepStatusHookpoints` | keep_status_window.xml |
-| `KeepStatusRepair` | keep_status_window.xml, siegetower_status_window.xml |
-| `KeepUpgradeCancel` | keep_upgrade_window.xml |
-| `KeepUpgradeRelease` | keep_upgrade_window.xml |
+| `KeepStatusHookpoints` | atlantis/keep_status_window.xml, keep_status_window.xml |
+| `KeepStatusRepair` | atlantis/keep_status_window.xml, atlantis/siegetower_status_window.xml, keep_status_window.xml |
+| `KeepUpgradeCancel` | atlantis/keep_upgrade_window.xml, keep_upgrade_window.xml |
+| `KeepUpgradeRelease` | atlantis/keep_upgrade_window.xml, keep_upgrade_window.xml |
 
 ### Master
 
 | event | fired from |
 |---|---|
-| `MasterLevelPageNext` | master_level_window.xml |
-| `MasterLevelPagePrevious` | master_level_window.xml |
+| `MasterLevelPageNext` | atlantis/master_level_window.xml, master_level_window.xml |
+| `MasterLevelPagePrevious` | atlantis/master_level_window.xml, master_level_window.xml |
 
 ### Menu
 
 | event | fired from |
 |---|---|
-| `MenuBarToggleExp` | menu_bar_window.xml |
+| `MenuBarToggleExp` | atlantis/menu_bar_window.xml, menu_bar_window.xml |
 
 ### Mino
 
 | event | fired from |
 |---|---|
-| `MinoRelicDrop` | mino_relic_window.xml |
+| `MinoRelicDrop` | atlantis/mino_relic_window.xml, mino_relic_window.xml |
 
 ### Mount
 
 | event | fired from |
 |---|---|
-| `Mount` | stats_attributes_window.xml |
+| `Mount` | atlantis/stats_attributes_window.xml, stats_attributes_window.xml |
 
 ### New
 
 | event | fired from |
 |---|---|
-| `NewQuestAccept` | new_quest_window.xml |
-| `NewQuestContinue` | new_quest_finish_window.xml |
-| `NewQuestDecline` | new_quest_window.xml |
-| `NewQuestFinish` | new_quest_finish_window.xml |
-| `NewQuestSelectOptReward{0-7}` | new_quest_finish_window.xml |
-| `NewTrain` | training_window.xml |
-| `NewTrainInfo` | training_window.xml |
-| `NewTrainRealmInfo` | training_window.xml |
+| `NewQuestAccept` | atlantis/new_quest_window.xml, new_quest_window.xml |
+| `NewQuestContinue` | atlantis/new_quest_finish_window.xml, new_quest_finish_window.xml |
+| `NewQuestDecline` | atlantis/new_quest_window.xml, new_quest_window.xml |
+| `NewQuestFinish` | atlantis/new_quest_finish_window.xml, new_quest_finish_window.xml |
+| `NewQuestSelectOptReward{0-7}` | atlantis/new_quest_finish_window.xml, new_quest_finish_window.xml |
+| `NewTrain` | atlantis/training_window.xml, training_window.xml |
+| `NewTrainInfo` | atlantis/training_window.xml, training_window.xml |
+| `NewTrainRealmInfo` | atlantis/training_window.xml, training_window.xml |
 
 ### Quick
 
 | event | fired from |
 |---|---|
-| `QuickBind` | key_config.xml |
+| `QuickBind` | atlantis/key_config.xml, key_config.xml |
 
 ### Quiver
 
 | event | fired from |
 |---|---|
-| `QuiverAdd{0-3}` | quiver_window.xml |
-| `QuiverSelect{0-3}` | quiver_window.xml |
+| `QuiverAdd{0-3}` | atlantis/quiver_window.xml, quiver_window.xml |
+| `QuiverSelect{0-3}` | atlantis/quiver_window.xml, quiver_window.xml |
 
 ### Release
 
 | event | fired from |
 |---|---|
-| `ReleaseToBind` | release_window.xml |
-| `ReleaseToCity` | release_window.xml |
-| `ReleaseToHouse` | release_window.xml |
+| `ReleaseToBind` | atlantis/release_window.xml, release_window.xml |
+| `ReleaseToCity` | atlantis/release_window.xml, release_window.xml |
+| `ReleaseToHouse` | atlantis/release_window.xml, release_window.xml |
 
 ### Remove
 
 | event | fired from |
 |---|---|
-| `RemoveQuest` | new_quest_journal_window.xml, quest_window_orig.xml |
+| `RemoveQuest` | atlantis/new_quest_journal_window.xml, atlantis/quest_window.xml, new_quest_journal_window.xml |
 
 ### Respec
 
 | event | fired from |
 |---|---|
-| `RespecAll` | training_window.xml |
-| `RespecBuy` | training_window.xml |
-| `RespecRealm` | training_window.xml |
+| `RespecAll` | atlantis/training_window.xml, training_window.xml |
+| `RespecBuy` | atlantis/training_window.xml, training_window.xml |
+| `RespecRealm` | atlantis/training_window.xml, training_window.xml |
 
 ### Show
 
 | event | fired from |
 |---|---|
-| `ShowWarMap` | command_window.xml, custom0_window.xml, menu_bar_window.xml |
-| `ShowWarmap` | interface_elements_window.xml |
+| `ShowWarMap` | atlantis/menu_bar_window.xml, command_window.xml, custom0_window.xml |
+| `ShowWarmap` | atlantis/interface_elements_window.xml, atlantis/stats_group_window.xml, interface_elements_window.xml |
 
 ### Siege
 
 | event | fired from |
 |---|---|
-| `SiegeMove` | siege_window.xml |
-| `SiegeRelease` | siege_window.xml |
-| `SiegeRepair` | siege_window.xml |
-| `SiegeSalvage` | siege_window.xml |
+| `SiegeMove` | atlantis/siege_window.xml, siege_window.xml |
+| `SiegeRelease` | atlantis/siege_window.xml, siege_window.xml |
+| `SiegeRepair` | atlantis/siege_window.xml, siege_window.xml |
+| `SiegeSalvage` | atlantis/siege_window.xml, siege_window.xml |
 
 ### Subclass
 
 | event | fired from |
 |---|---|
-| `SubclassDelve` | daoc_subclass_window.xml |
+| `SubclassDelve` | atlantis/daoc_subclass_window.xml, daoc_subclass_window.xml |
+
+### Summary
+
+| event | fired from |
+|---|---|
+| `SummaryToggleExp` | atlantis/summary.xml |
 
 ### Value
 
 | event | fired from |
 |---|---|
-| `ValueChooserAccept` | value_chooser.xml |
-| `ValueChooserCancel` | value_chooser.xml |
-| `ValueChooserDecrease` | value_chooser.xml |
-| `ValueChooserIncrease` | value_chooser.xml |
-| `ValueChooserShiftDecrease` | value_chooser.xml |
-| `ValueChooserShiftIncrease` | value_chooser.xml |
+| `ValueChooserAccept` | atlantis/value_chooser.xml, value_chooser.xml |
+| `ValueChooserCancel` | atlantis/value_chooser.xml, value_chooser.xml |
+| `ValueChooserDecrease` | atlantis/value_chooser.xml, value_chooser.xml |
+| `ValueChooserIncrease` | atlantis/value_chooser.xml, value_chooser.xml |
+| `ValueChooserShiftDecrease` | atlantis/value_chooser.xml, value_chooser.xml |
+| `ValueChooserShiftIncrease` | atlantis/value_chooser.xml, value_chooser.xml |
 
 ### Warmap
 
 | event | fired from |
 |---|---|
-| `WarmapKeepSelect{0-6}` | realmwar_agramon.xml, realmwar_alb.xml, realmwar_hib.xml |
-| `WarmapPowerBorderSelect` | realmwar_alb.xml, realmwar_hib.xml, realmwar_mid.xml |
-| `WarmapPowerRelicSelect` | realmwar_alb.xml, realmwar_hib.xml, realmwar_mid.xml |
-| `WarmapPowerRelicTownSelect` | realmwar_alb.xml, realmwar_hib.xml, realmwar_mid.xml |
-| `WarmapStrengthBorderSelect` | realmwar_alb.xml, realmwar_hib.xml, realmwar_mid.xml |
-| `WarmapStrengthRelicSelect` | realmwar_alb.xml, realmwar_hib.xml, realmwar_mid.xml |
-| `WarmapStrengthRelicTownSelect` | realmwar_alb.xml, realmwar_hib.xml, realmwar_mid.xml |
-| `WarmapTeleportRequest` | realmwar_agramon.xml, realmwar_alb.xml, realmwar_hib.xml |
-| `WarmapTowerSelect{0-27}` | realmwar_agramon.xml, realmwar_alb.xml, realmwar_hib.xml |
-| `WarmapUpdateBattles` | realmwar_agramon.xml, realmwar_alb.xml, realmwar_hib.xml |
-| `WarmapUpdateBonuses` | command_window.xml, custom0_window.xml, interface_elements_window.xml |
+| `WarmapKeepSelect{0-6}` | atlantis/realmwar_agramon.xml, atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml |
+| `WarmapPowerBorderSelect` | atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml, atlantis/realmwar_mid.xml |
+| `WarmapPowerRelicSelect` | atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml, atlantis/realmwar_mid.xml |
+| `WarmapPowerRelicTownSelect` | atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml, atlantis/realmwar_mid.xml |
+| `WarmapStrengthBorderSelect` | atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml, atlantis/realmwar_mid.xml |
+| `WarmapStrengthRelicSelect` | atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml, atlantis/realmwar_mid.xml |
+| `WarmapStrengthRelicTownSelect` | atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml, atlantis/realmwar_mid.xml |
+| `WarmapTeleportRequest` | atlantis/realmwar_agramon.xml, atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml |
+| `WarmapTowerSelect{0-27}` | atlantis/realmwar_agramon.xml, atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml |
+| `WarmapUpdateBattles` | atlantis/realmwar_agramon.xml, atlantis/realmwar_alb.xml, atlantis/realmwar_hib.xml |
+| `WarmapUpdateBonuses` | atlantis/interface_elements_window.xml, atlantis/realmwar_agramon.xml, atlantis/realmwar_alb.xml |

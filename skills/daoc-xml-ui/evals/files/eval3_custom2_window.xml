@@ -62,7 +62,7 @@
       <Alignment>
         <GrowWidth>true</GrowWidth>
       </Alignment>
-      <TemplateName>statusbar_red</TemplateName>
+      <TemplateName>red_status</TemplateName>
       <AdapterName>Summary_Player_Hits</AdapterName>
       <Width>110</Width>
     </StatusBarDef>
@@ -103,7 +103,7 @@
       <Alignment>
         <GrowWidth>true</GrowWidth>
       </Alignment>
-      <TemplateName>statusbar_blu</TemplateName>
+      <TemplateName>blue_statu</TemplateName>
       <AdapterName>summary_player_power</AdapterName>
       <Width>110</Width>
     </StatusBarDef>
@@ -145,7 +145,7 @@
         <GrowWidth>true</GrowWidth>
         <GrowHeight>true</GrowHeight>
       </Alignment>
-      <TemplateName>fresizeimage_dlg_bg_small</TemplateName>
+      <TemplateName>dlg_sm_title</TemplateName>
       <Width>160</Width>
       <Height>60</Height>
     </FullResizeImageDef>

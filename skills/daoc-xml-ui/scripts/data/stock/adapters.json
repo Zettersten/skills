@@ -1,0 +1,6268 @@
+{
+ "RenameChatText": {
+  "count": 1,
+  "windows": [
+   "chatrename.xml"
+  ],
+  "bound_by": {
+   "EditBoxDef.AdapterName": 1
+  }
+ },
+ "alb_low_pop_rp_bonus": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "alliance_member_count": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "alliance_members": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "alliance_members_current_page": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "alliance_members_total_pages": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "alliance_motd": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "alliance_name": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "bounty_points": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "chat": {
+  "count": 1,
+  "windows": [
+   "chat_window.xml"
+  ],
+  "bound_by": {
+   "ChatControlDef.BufferName": 1
+  }
+ },
+ "chat_entry": {
+  "count": 1,
+  "windows": [
+   "chat_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "compass_heading": {
+  "count": 2,
+  "windows": [
+   "compass.xml"
+  ],
+  "bound_by": {
+   "CompassControlDef.AdapterName": 2
+  }
+ },
+ "conc_list": {
+  "count": 2,
+  "windows": [
+   "concentration_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.Adapter": 1,
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "concentration": {
+  "count": 1,
+  "windows": [
+   "concentration_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "font_alpha_value": {
+  "count": 1,
+  "windows": [
+   "context_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "framerate_meter": {
+  "count": 3,
+  "windows": [
+   "menu_bar_window.xml",
+   "performance_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 3
+  }
+ },
+ "friends_members": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "group_0icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_0icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_0icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_0icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_0icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_0icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_1icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_1icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_1icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_1icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_1icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_1icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_2icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_2icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_2icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_2icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_2icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_2icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_3icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_3icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_3icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_3icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_3icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_3icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_4icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_4icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_4icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_4icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_4icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_4icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_5icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_5icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_5icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_5icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_5icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_5icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_6icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_6icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_6icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_6icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_6icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_6icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_7icon0": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_7icon1": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_7icon2": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_7icon3": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_7icon4": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_7icon5": {
+  "count": 1,
+  "windows": [
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "group_class0": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class1": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class2": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class3": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class4": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class5": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class6": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_class7": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "group_color0": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color1": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color2": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color3": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color4": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color5": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color6": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_color7": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 4
+  }
+ },
+ "group_endurance0": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance1": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance2": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance3": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance4": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance5": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance6": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_endurance7": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_health0": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 2,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_health1": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_health2": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_health3": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_health4": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_health5": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_health6": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_health7": {
+  "count": 4,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2,
+   "StatusBarDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "group_level0": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level1": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level2": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level3": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level4": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level5": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level6": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_level7": {
+  "count": 3,
+  "windows": [
+   "group_buffs.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "group_name0": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name1": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name2": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name3": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name4": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name5": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name6": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_name7": {
+  "count": 4,
+  "windows": [
+   "group_buffs.xml",
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 4
+  }
+ },
+ "group_power0": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power1": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power2": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power3": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power4": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power5": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power6": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_power7": {
+  "count": 3,
+  "windows": [
+   "minigroup_window.xml",
+   "new_group_window.xml",
+   "stats_group_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 1,
+   "ScalarLabelDef.Adapter": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "group_results": {
+  "count": 1,
+  "windows": [
+   "group_results_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "guild_banner_status": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "guild_bounty_points": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_bp": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_dues": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "guild_house_lot": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_level": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_member_count": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_members": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "guild_members_current_page": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_members_total_pages": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_merit_points": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "guild_money": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Adapter": 1
+  }
+ },
+ "guild_motd": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "guild_name": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "guild_realm_points": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "help_text": {
+  "count": 1,
+  "windows": [
+   "help_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "hib_low_pop_rp_bonus": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "hookpoint_store_list": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "hookpoint_store_title": {
+  "count": 1,
+  "windows": [
+   "hookpoint_merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "index_color_0": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_1": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_10": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_11": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_12": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_13": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_14": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_15": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_16": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_17": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_18": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_19": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_2": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_20": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_21": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_22": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_23": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_24": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_25": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_3": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_4": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_5": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_6": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_7": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_8": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "index_color_9": {
+  "count": 1,
+  "windows": [
+   "chat_config_window.xml"
+  ],
+  "bound_by": {
+   "ButtonDef.Coloradapter": 1
+  }
+ },
+ "info_text": {
+  "count": 1,
+  "windows": [
+   "info_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "info_title": {
+  "count": 1,
+  "windows": [
+   "info_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "interact_text": {
+  "count": 1,
+  "windows": [
+   "interact_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "interact_title": {
+  "count": 1,
+  "windows": [
+   "interact_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "keep_status_claimed": {
+  "count": 1,
+  "windows": [
+   "keep_status_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "keep_status_level": {
+  "count": 1,
+  "windows": [
+   "keep_status_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "keep_status_target": {
+  "count": 1,
+  "windows": [
+   "keep_status_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "keep_status_title": {
+  "count": 1,
+  "windows": [
+   "keep_status_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "keep_status_type": {
+  "count": 1,
+  "windows": [
+   "keep_status_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "keep_upgrade_level": {
+  "count": 1,
+  "windows": [
+   "keep_upgrade_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "keep_upgrade_target": {
+  "count": 1,
+  "windows": [
+   "keep_upgrade_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "keep_upgrade_title": {
+  "count": 1,
+  "windows": [
+   "keep_upgrade_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "key_config": {
+  "count": 1,
+  "windows": [
+   "key_config.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "lag_meter": {
+  "count": 3,
+  "windows": [
+   "menu_bar_window.xml",
+   "performance_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 3
+  }
+ },
+ "lfg_max_level": {
+  "count": 1,
+  "windows": [
+   "lfg_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "lfg_min_level": {
+  "count": 1,
+  "windows": [
+   "lfg_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "lfg_title": {
+  "count": 1,
+  "windows": [
+   "lfg_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "lfguild_members": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "map_info": {
+  "count": 1,
+  "windows": [
+   "map_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "map_info0": {
+  "count": 1,
+  "windows": [
+   "map_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "map_title": {
+  "count": 1,
+  "windows": [
+   "map_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "master_exp": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "bound_by": {
+   "VerticalStatusBarDef.AdapterName": 1
+  }
+ },
+ "master_list": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "master_rank": {
+  "count": 3,
+  "windows": [
+   "master_level_window.xml",
+   "new_summary_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "master_rp": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "bound_by": {
+   "VerticalStatusBarDef.AdapterName": 1
+  }
+ },
+ "master_title": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "master_window_title": {
+  "count": 1,
+  "windows": [
+   "master_level_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "merchant_copper": {
+  "count": 3,
+  "windows": [
+   "hookpoint_merchant_window.xml",
+   "menu_bar_window.xml",
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "merchant_gold": {
+  "count": 3,
+  "windows": [
+   "hookpoint_merchant_window.xml",
+   "menu_bar_window.xml",
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "merchant_mithril": {
+  "count": 2,
+  "windows": [
+   "hookpoint_merchant_window.xml",
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "merchant_page0": {
+  "count": 1,
+  "windows": [
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "merchant_page_display": {
+  "count": 1,
+  "windows": [
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "merchant_platinum": {
+  "count": 3,
+  "windows": [
+   "hookpoint_merchant_window.xml",
+   "menu_bar_window.xml",
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "merchant_quantity": {
+  "count": 1,
+  "windows": [
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "merchant_silver": {
+  "count": 3,
+  "windows": [
+   "hookpoint_merchant_window.xml",
+   "menu_bar_window.xml",
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "merchant_title": {
+  "count": 1,
+  "windows": [
+   "merchant_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mid_low_pop_rp_bonus": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_craft_title": {
+  "count": 1,
+  "windows": [
+   "minicraft_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_friends_text": {
+  "count": 1,
+  "windows": [
+   "minifriends_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "mini_info_string0": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string1": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string2": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string3": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string4": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string5": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string6": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_string7": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mini_info_use_list": {
+  "count": 1,
+  "windows": [
+   "miniinfo_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_combat0": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_combat1": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_combat2": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_effect0": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "mini_pet_effect1": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "mini_pet_effect2": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "mini_pet_effect3": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "mini_pet_effect4": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "mini_pet_effect5": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "mini_pet_life": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "mini_pet_movement0": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_movement1": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_movement2": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_movement3": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "CheckBoxDef.AdapterName": 1
+  }
+ },
+ "mini_pet_title": {
+  "count": 1,
+  "windows": [
+   "minipet_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mino_relic_time_percent": {
+  "count": 1,
+  "windows": [
+   "mino_relic_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "mount_encumbrance": {
+  "count": 1,
+  "windows": [
+   "mount_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mount_name": {
+  "count": 1,
+  "windows": [
+   "mount_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mount_saddlebag_slot_1": {
+  "count": 1,
+  "windows": [
+   "mount_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mount_saddlebag_slot_2": {
+  "count": 1,
+  "windows": [
+   "mount_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mount_saddlebag_slot_3": {
+  "count": 1,
+  "windows": [
+   "mount_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "mount_saddlebag_slot_4": {
+  "count": 1,
+  "windows": [
+   "mount_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "new_quest_copper": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "new_quest_exp_coarse": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2
+  }
+ },
+ "new_quest_exp_fine": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 2
+  }
+ },
+ "new_quest_gold": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "new_quest_journal_entries": {
+  "count": 1,
+  "windows": [
+   "new_quest_journal_window.xml"
+  ],
+  "bound_by": {
+   "TreeControlDef.AdapterName": 1
+  }
+ },
+ "new_quest_opt_reward0": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward1": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward2": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward3": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward4": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward5": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward6": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward7": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_count": {
+  "count": 3,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "new_quest_opt_reward_desc0": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc1": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc2": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc3": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc4": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc5": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc6": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_desc7": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state0": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state1": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state2": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state3": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state4": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state5": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state6": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_opt_reward_state7": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.StateAdapterName": 2
+  }
+ },
+ "new_quest_platinum": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "new_quest_reward0": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward1": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward2": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward3": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward4": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward5": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward6": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward7": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 2
+  }
+ },
+ "new_quest_reward_desc0": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc1": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc2": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc3": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc4": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc5": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc6": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_reward_desc7": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 2
+  }
+ },
+ "new_quest_silver": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "new_quest_text": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 2
+  }
+ },
+ "new_quest_title": {
+  "count": 2,
+  "windows": [
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "news_pve_text": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "news_rvr_global_text": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "news_rvr_local_text": {
+  "count": 1,
+  "windows": [
+   "community_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "none": {
+  "count": 51,
+  "windows": [
+   "chat_config_window.xml",
+   "minifriends_window.xml",
+   "minigroup_window.xml",
+   "new_quest_finish_window.xml",
+   "new_quest_window.xml",
+   "stats_index_window.xml",
+   "stats_spec_abil_window.xml",
+   "train.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 45,
+   "CheckBoxDef.AdapterName": 6
+  }
+ },
+ "performance_meter": {
+  "count": 3,
+  "windows": [
+   "menu_bar_window.xml",
+   "performance_window.xml"
+  ],
+  "bound_by": {
+   "StatusIconDef.AdapterName": 3
+  }
+ },
+ "quest_text": {
+  "count": 1,
+  "windows": [
+   "quest_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "quiver_count_string0": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "quiver_count_string1": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "quiver_count_string2": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "quiver_count_string3": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "quiver_icon0": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "quiver_icon1": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "quiver_icon2": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "quiver_icon3": {
+  "count": 1,
+  "windows": [
+   "quiver_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "realm_bonus_color10": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color11": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color12": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color13": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color2": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color3": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color4": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color5": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color6": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color7": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color8": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_bonus_color9": {
+  "count": 2,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 2
+  }
+ },
+ "realm_color": {
+  "count": 3,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 3
+  }
+ },
+ "realm_cost0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost8": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_cost9": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_df_color": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "realm_df_text": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_exp_coarse": {
+  "count": 1,
+  "windows": [
+   "float_realm_exp_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "realm_exp_fine": {
+  "count": 1,
+  "windows": [
+   "float_realm_exp_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "realm_keep_text": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_level": {
+  "count": 1,
+  "windows": [
+   "new_summary_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level0": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level1": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level10": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level11": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level12": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level13": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level2": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level3": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level4": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level5": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level6": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level7": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level8": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level9": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "realm_level_color0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color8": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_level_color9": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "realm_name0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name8": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_name9": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_power_color0": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "realm_power_color1": {
+  "count": 3,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 3
+  }
+ },
+ "realm_power_color2": {
+  "count": 3,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 3
+  }
+ },
+ "realm_power_text": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realm_rank": {
+  "count": 2,
+  "windows": [
+   "float_realm_exp_window.xml",
+   "new_summary_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 2
+  }
+ },
+ "realm_slider": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "VerticalSliderDef.Adaptername": 1
+  }
+ },
+ "realm_strength_color0": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "realm_strength_color1": {
+  "count": 3,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 3
+  }
+ },
+ "realm_strength_color2": {
+  "count": 3,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 3
+  }
+ },
+ "realm_strength_text": {
+  "count": 1,
+  "windows": [
+   "realm_bonuses.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_agramon": {
+  "count": 6,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 6
+  }
+ },
+ "realmwar_info_agramon0": {
+  "count": 1,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_agramon1": {
+  "count": 1,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_agramon2": {
+  "count": 1,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_agramon3": {
+  "count": 1,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_agramon4": {
+  "count": 1,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_agramon5": {
+  "count": 1,
+  "windows": [
+   "realmwar_agramon.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_alb": {
+  "count": 6,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 6
+  }
+ },
+ "realmwar_info_alb0": {
+  "count": 1,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_alb1": {
+  "count": 1,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_alb2": {
+  "count": 1,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_alb3": {
+  "count": 1,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_alb4": {
+  "count": 1,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_alb5": {
+  "count": 1,
+  "windows": [
+   "realmwar_alb.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_hib": {
+  "count": 6,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 6
+  }
+ },
+ "realmwar_info_hib0": {
+  "count": 1,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_hib1": {
+  "count": 1,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_hib2": {
+  "count": 1,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_hib3": {
+  "count": 1,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_hib4": {
+  "count": 1,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_hib5": {
+  "count": 1,
+  "windows": [
+   "realmwar_hib.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_mid": {
+  "count": 6,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 6
+  }
+ },
+ "realmwar_info_mid0": {
+  "count": 1,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_mid1": {
+  "count": 1,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_mid2": {
+  "count": 1,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_mid3": {
+  "count": 1,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_mid4": {
+  "count": 1,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "realmwar_info_mid5": {
+  "count": 1,
+  "windows": [
+   "realmwar_mid.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "release_timer_text": {
+  "count": 1,
+  "windows": [
+   "release_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "release_timer_time": {
+  "count": 1,
+  "windows": [
+   "release_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "siege_ammo": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "siege_hits": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "siege_timer": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "siege_timer_label": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "siege_title": {
+  "count": 1,
+  "windows": [
+   "siege_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "siegetower_status_title": {
+  "count": 1,
+  "windows": [
+   "siegetower_status_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_icon0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon14": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon15": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon16": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon17": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon18": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon19": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon8": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon9": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "spec_icon_desc0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc14": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc15": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc16": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc17": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc18": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc19": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc8": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_icon_desc9": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "spec_level0": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level1": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level2": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level3": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level4": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level5": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level6": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level7": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "HorizontalSliderDef.Adaptername": 1,
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "spec_level_color0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_level_color7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "spec_name0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name4": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name5": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name6": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "spec_name7": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_abil": {
+  "count": 1,
+  "windows": [
+   "stats_spec_abil_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "stats_additional_info": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "stats_armor_factor": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_body": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_body_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_charisma": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_charisma_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_cold": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_cold_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_combat": {
+  "count": 1,
+  "windows": [
+   "stats_combat_window.xml"
+  ],
+  "bound_by": {
+   "TreeControlDef.AdapterName": 1
+  }
+ },
+ "stats_constitution": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_constitution_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_crush": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_crush_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_dexterity": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_dexterity_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_empathy": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_empathy_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_energy": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_energy_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_heat": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_heat_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_hitpoints": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_intelligence": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_intelligence_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_level": {
+  "count": 3,
+  "windows": [
+   "float_level_exp_window.xml",
+   "new_summary_window.xml",
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3
+  }
+ },
+ "stats_matter": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_matter_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_name": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_piety": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_piety_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_quickness": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_quickness_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_realm_points": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_slash": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_slash_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_spec_points": {
+  "count": 1,
+  "windows": [
+   "stats_spec_abil_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_specs": {
+  "count": 1,
+  "windows": [
+   "stats_spec_abil_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "stats_spells": {
+  "count": 1,
+  "windows": [
+   "stats_spells_window.xml"
+  ],
+  "bound_by": {
+   "TreeControlDef.AdapterName": 1
+  }
+ },
+ "stats_spirit": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_spirit_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_strength": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_strength_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_thrust": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "stats_thrust_color": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 1
+  }
+ },
+ "stats_trades": {
+  "count": 1,
+  "windows": [
+   "stats_spec_abil_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "stats_weapon_damage": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "stats_weapon_skill": {
+  "count": 1,
+  "windows": [
+   "stats_attributes_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_amount0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_amount1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_amount2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_amount3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_champ_exp_coarse": {
+  "count": 1,
+  "windows": [
+   "float_champ_exp_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "summary_champ_exp_fine": {
+  "count": 1,
+  "windows": [
+   "float_champ_exp_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 1
+  }
+ },
+ "summary_champ_level": {
+  "count": 2,
+  "windows": [
+   "float_champ_exp_window.xml",
+   "new_summary_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 2
+  }
+ },
+ "summary_exp_coarse": {
+  "count": 3,
+  "windows": [
+   "float_level_exp_window.xml",
+   "menu_bar_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 2,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "summary_exp_fine": {
+  "count": 3,
+  "windows": [
+   "float_level_exp_window.xml",
+   "menu_bar_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.AdapterName": 2,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "summary_icon00": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon01": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon02": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon03": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon04": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon05": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon06": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon07": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon08": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon14": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon15": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon16": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon17": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon18": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon20": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon21": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon22": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon23": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon24": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon25": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon26": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon27": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon28": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon30": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon31": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon32": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon33": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon34": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon35": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon36": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon37": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon38": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.AdapterName": 1
+  }
+ },
+ "summary_icon_desc00": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc01": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc02": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc03": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc04": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc05": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc06": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc07": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc08": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc10": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc11": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc12": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc13": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc14": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc15": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc16": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc17": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc18": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc20": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc21": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc22": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc23": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc24": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc25": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc26": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc27": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc28": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc30": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc31": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc32": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc33": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc34": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc35": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc36": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc37": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_icon_desc38": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "IconDef.LabelAdapterName": 1
+  }
+ },
+ "summary_label0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "summary_label1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "summary_label2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "summary_label3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "summary_level0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_level1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_level2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_level3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_page0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_page1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_page2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_page3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_player_end": {
+  "count": 4,
+  "windows": [
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 2,
+   "StatusBarDef.AdapterName": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "summary_player_hits": {
+  "count": 5,
+  "windows": [
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3,
+   "StatusBarDef.AdapterName": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "summary_player_power": {
+  "count": 4,
+  "windows": [
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 2,
+   "StatusBarDef.AdapterName": 1,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "summary_skill_amount0": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_skill_amount1": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_skill_amount2": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_skill_amount3": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "summary_slider": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "VerticalSliderDef.Adaptername": 1
+  }
+ },
+ "summary_target": {
+  "count": 3,
+  "windows": [
+   "float_target_window.xml",
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 3
+  }
+ },
+ "summary_target_color": {
+  "count": 3,
+  "windows": [
+   "float_target_window.xml",
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "LabelDef.ColorAdapter": 3
+  }
+ },
+ "summary_target_hits": {
+  "count": 6,
+  "windows": [
+   "float_target_window.xml",
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 3,
+   "StatusBarDef.AdapterName": 2,
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "summary_title": {
+  "count": 2,
+  "windows": [
+   "new_summary_window.xml",
+   "summary.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 2
+  }
+ },
+ "time_of_day": {
+  "count": 1,
+  "windows": [
+   "clock_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "timer_text": {
+  "count": 1,
+  "windows": [
+   "timer_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "timer_time": {
+  "count": 1,
+  "windows": [
+   "timer_window.xml"
+  ],
+  "bound_by": {
+   "StatusBarDef.Adaptername": 1
+  }
+ },
+ "titles_available_titles": {
+  "count": 1,
+  "windows": [
+   "title_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "titles_stats": {
+  "count": 1,
+  "windows": [
+   "title_window.xml"
+  ],
+  "bound_by": {
+   "TextAreaDef.AdapterName": 1
+  }
+ },
+ "train_min_level": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "train_min_level_color": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 1
+  }
+ },
+ "train_realm": {
+  "count": 2,
+  "windows": [
+   "train.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.Adapter": 1,
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "train_realm_skill_points": {
+  "count": 1,
+  "windows": [
+   "train.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "train_skill_points": {
+  "count": 1,
+  "windows": [
+   "train.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "train_skills": {
+  "count": 2,
+  "windows": [
+   "train.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.Adapter": 1,
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "training_realm_avail": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "training_realm_color": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 2
+  }
+ },
+ "training_realm_needed": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "training_realm_remaining": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "training_spec_avail": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "training_spec_color": {
+  "count": 2,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Coloradapter": 2
+  }
+ },
+ "training_spec_needed": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "training_spec_remaining": {
+  "count": 1,
+  "windows": [
+   "training_window.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "value_chooser_qty": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "bound_by": {
+   "ScalarLabelDef.Adapter": 1
+  }
+ },
+ "value_item_title": {
+  "count": 1,
+  "windows": [
+   "value_chooser.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "vault_items": {
+  "count": 1,
+  "windows": [
+   "vault_window.xml"
+  ],
+  "bound_by": {
+   "ListBoxDef.AdapterName": 1
+  }
+ },
+ "vault_page": {
+  "count": 1,
+  "windows": [
+   "vault_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ },
+ "window_alpha_value": {
+  "count": 1,
+  "windows": [
+   "context_window.xml"
+  ],
+  "bound_by": {
+   "LabelDef.Adapter": 1
+  }
+ }
+}

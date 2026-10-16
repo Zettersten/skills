@@ -1,0 +1,701 @@
+{
+ "ButtonTemplate": {
+  "count": 33,
+  "fields": {
+   "Name": 33,
+   "Size": 33,
+   "Font": 33,
+   "Texture": 33,
+   "Parent": 4
+  },
+  "names": [
+   "button_bag",
+   "button_barb10",
+   "button_checkbox",
+   "button_down",
+   "button_large",
+   "button_large_new",
+   "button_large_tab",
+   "button_left",
+   "button_money",
+   "button_narrow",
+   "button_nobg",
+   "button_right",
+   "button_small",
+   "button_tab",
+   "button_up",
+   "button_wide",
+   "button_wide_barb10",
+   "chat_scale",
+   "chat_vscroll_down",
+   "chat_vscroll_up",
+   "color_button",
+   "color_highlight_button",
+   "combo_label",
+   "resize_bottom_left",
+   "resize_bottom_right",
+   "resize_top_right",
+   "scroll_down",
+   "scroll_down_no_gutter",
+   "scroll_up",
+   "scroll_up_no_gutter",
+   "window_close",
+   "window_minimize",
+   "window_move"
+  ]
+ },
+ "ChatControlTemplate": {
+  "count": 1,
+  "fields": {
+   "Name": 1,
+   "FontName": 1,
+   "BackgroundTemplate": 1,
+   "ScrollbarTemplate": 1
+  },
+  "names": [
+   "chat"
+  ]
+ },
+ "CheckBoxTemplate": {
+  "count": 15,
+  "fields": {
+   "Name": 15,
+   "Size": 15,
+   "Font": 15,
+   "Texture": 15
+  },
+  "names": [
+   "abilities_tab",
+   "chat_config_check",
+   "chat_config_checkbox",
+   "chat_tab",
+   "generic_check",
+   "group_tab",
+   "inventory_tab",
+   "narrow_font_check",
+   "realmwar_tab",
+   "simple_check",
+   "small_font_check",
+   "spells_tab",
+   "stats_tab",
+   "styles_tab",
+   "tree_check"
+  ]
+ },
+ "ComboBoxTemplate": {
+  "count": 3,
+  "fields": {
+   "Name": 3,
+   "DownButtonTemplate": 3,
+   "LabelButtonTemplate": 3,
+   "MenuTemplate": 3,
+   "Menuoffset": 2,
+   "MenuOffset": 1
+  },
+  "names": [
+   "combobox_thin",
+   "generic_combobox",
+   "generic_combobox_scroll"
+  ]
+ },
+ "CompassControlTemplate": {
+  "count": 1,
+  "fields": {
+   "Name": 1,
+   "Texture": 1
+  },
+  "names": [
+   "compass"
+  ]
+ },
+ "EditBoxTemplate": {
+  "count": 2,
+  "fields": {
+   "Name": 2,
+   "Parent": 2,
+   "LinePadding": 2,
+   "BackgroundTemplate": 2,
+   "TextOffset": 2,
+   "Font": 2,
+   "ScrollbarOffset": 2,
+   "ScrollbarSizeOffset": 2
+  },
+  "names": [
+   "generic_editbox"
+  ]
+ },
+ "FullResizeImageTemplate": {
+  "count": 17,
+  "fields": {
+   "Name": 17,
+   "TopHeight": 17,
+   "MiddleHeight": 17,
+   "BottomHeight": 17,
+   "LeftWidth": 17,
+   "MiddleWidth": 17,
+   "RightWidth": 17,
+   "Texture": 17,
+   "Parent": 1
+  },
+  "names": [
+   "chat_entry",
+   "chat_int",
+   "dlg_background_noresize",
+   "dlg_background_resize",
+   "dlg_interior_large",
+   "dlg_interior_small",
+   "dlg_lg_notitle_noresize",
+   "dlg_lg_title_noresize",
+   "dlg_sm_notitle",
+   "dlg_sm_title",
+   "dlg_sm_title_noresize",
+   "inner_frame",
+   "listbox_header_background",
+   "menu_background_noresize",
+   "normal_bg",
+   "selection_box",
+   "tool_tip_background"
+  ]
+ },
+ "HorizontalResizeButtonTemplate": {
+  "count": 12,
+  "fields": {
+   "Name": 12,
+   "Height": 12,
+   "Font": 12,
+   "Normal": 12,
+   "Pressed": 12,
+   "NormalHighlit": 12,
+   "PressedHighlit": 12,
+   "Disabled": 12
+  },
+  "names": [
+   "context_hr_button",
+   "context_hr_button_wtext",
+   "context_hr_button_wtext_barb10",
+   "generic_hr_button",
+   "generic_hr_button_arial9",
+   "generic_hr_button_barb10",
+   "generic_hr_button_small",
+   "generic_hr_button_title",
+   "hr_button",
+   "listbox_hrbutton",
+   "simple_hr_button",
+   "tab_button"
+  ]
+ },
+ "HorizontalResizeImageTemplate": {
+  "count": 34,
+  "fields": {
+   "Name": 34,
+   "Height": 34,
+   "LeftWidth": 34,
+   "RepeatWidth": 34,
+   "RightWidth": 34,
+   "Texture": 34,
+   "Parent": 6
+  },
+  "names": [
+   "Hslider",
+   "blue_back",
+   "blue_full",
+   "context_hr_image_divider",
+   "context_hr_image_highlit",
+   "dialog_inset",
+   "exp_high",
+   "exp_low",
+   "generic_hr_image_disabled",
+   "generic_hr_image_normal",
+   "generic_hr_image_normalhighlight",
+   "generic_hr_image_pressed",
+   "green_back",
+   "green_back_small",
+   "green_full",
+   "green_full_small",
+   "hr_image_highlit",
+   "hr_image_normal",
+   "hr_image_pressed",
+   "listbox_header",
+   "listbox_row_bg",
+   "listbox_selected_bg",
+   "paperdoll_back",
+   "red_back",
+   "red_back_thick",
+   "red_full",
+   "red_full_thick",
+   "simple_hr_image_highlit",
+   "tab_button_highlit",
+   "tab_button_normal",
+   "yellow_back",
+   "yellow_back_small",
+   "yellow_full",
+   "yellow_full_small"
+  ]
+ },
+ "HorizontalSliderTemplate": {
+  "count": 1,
+  "fields": {
+   "Name": 1,
+   "ImageAreaTemplate": 1,
+   "BackgroundHResizeTemplate": 1,
+   "Height": 1
+  },
+  "names": [
+   "generic_horizontal_slider"
+  ]
+ },
+ "IconSetTemplate": {
+  "count": 1,
+  "fields": {
+   "Name": 1,
+   "CellPadding": 1,
+   "LinePadding": 1,
+   "IconTemplate": 1
+  },
+  "names": [
+   "group_buffs_iconset"
+  ]
+ },
+ "IconTemplate": {
+  "count": 2,
+  "fields": {
+   "Name": 2,
+   "Size": 2,
+   "FontName": 2,
+   "FontColor": 2,
+   "IconSize": 2
+  },
+  "names": [
+   "plain_icon_large",
+   "plain_icon_small"
+  ]
+ },
+ "ImageAreaTemplate": {
+  "count": 143,
+  "fields": {
+   "Name": 143,
+   "Size": 143,
+   "TopLeft": 143,
+   "TextureName": 143,
+   "Parent": 6
+  },
+  "names": [
+   "Hslider_indicator",
+   "Vslider_indicator",
+   "alb_symbol",
+   "angry",
+   "arrow",
+   "bang",
+   "battle_symbol",
+   "beckon",
+   "beg",
+   "blush",
+   "bottom_endcap",
+   "bow",
+   "brandish",
+   "bridge_symbol",
+   "channel_button",
+   "charge",
+   "check_mark",
+   "cheer",
+   "clap",
+   "confuse",
+   "copper_decal",
+   "courbette",
+   "cower",
+   "cry",
+   "curtsey",
+   "dance",
+   "destination_symbol",
+   "diabolical",
+   "dismiss",
+   "dock_symbol",
+   "doh",
+   "drink",
+   "dungeon_symbol",
+   "emote_button",
+   "endcap_thick_left",
+   "endcap_thick_right",
+   "flex",
+   "gold_decal",
+   "graze",
+   "green1_back_stat",
+   "green2_back_stat",
+   "group_location",
+   "halt",
+   "hib_symbol",
+   "horse_nod",
+   "horse_rear",
+   "howl",
+   "hug",
+   "icon_socket_large",
+   "icon_socket_large_active",
+   "icon_socket_small",
+   "icon_socket_small_active",
+   "impasse_symbol",
+   "induct",
+   "keep_symbol",
+   "kiss",
+   "knock",
+   "laugh",
+   "loco",
+   "lookfar",
+   "master_title",
+   "mememe",
+   "mgclosed_symbol",
+   "mgopen_symbol",
+   "mid_symbol",
+   "military_salute",
+   "mino_relic_1",
+   "mino_relic_2",
+   "mino_relic_3",
+   "mithril_decal",
+   "monty",
+   "no",
+   "pet",
+   "platinum_decal",
+   "player_location",
+   "point",
+   "ponder",
+   "present",
+   "quest_completer",
+   "quest_giver",
+   "quest_title",
+   "quest_title_left",
+   "quest_title_right",
+   "quest_waypoint",
+   "raise",
+   "realmwar_destination",
+   "realmwar_selection",
+   "realmwar_siege",
+   "red_back_left",
+   "red_back_right",
+   "red_back_stat",
+   "relic_symbol",
+   "reward_frame_template",
+   "rofl",
+   "rude",
+   "salute",
+   "selection_symbol",
+   "shiver",
+   "shrug",
+   "siege_symbol",
+   "silver_decal",
+   "slap",
+   "slit",
+   "sm_horiz_endcap_left",
+   "sm_horiz_endcap_left_thin",
+   "sm_horiz_endcap_right",
+   "sm_horiz_endcap_right_thin",
+   "smile",
+   "stagger",
+   "startle",
+   "startled",
+   "stats_index_background",
+   "stench",
+   "surrender",
+   "sweat",
+   "talk",
+   "taunt",
+   "tiny_horiz_endcap_left",
+   "tiny_horiz_endcap_right",
+   "top_endcap",
+   "tower_symbol",
+   "tricks",
+   "victory",
+   "warmap_agramon",
+   "warmap_breifine",
+   "warmap_collory",
+   "warmap_cruachon",
+   "warmap_emain",
+   "warmap_hadrians",
+   "warmap_jamtland",
+   "warmap_odins",
+   "warmap_pennine",
+   "warmap_sauvage",
+   "warmap_snowdonia",
+   "warmap_uppland",
+   "warmap_yggdra",
+   "wave",
+   "worship",
+   "yawn",
+   "yes"
+  ]
+ },
+ "ListBoxHeaderTemplate": {
+  "count": 8,
+  "fields": {
+   "Name": 8,
+   "Parent": 8,
+   "Texture": 8,
+   "TextFont": 8
+  },
+  "names": [
+   "listboxheader_banner",
+   "listboxheader_class",
+   "listboxheader_group",
+   "listboxheader_level",
+   "listboxheader_name",
+   "listboxheader_note",
+   "listboxheader_rank",
+   "listboxheader_zone"
+  ]
+ },
+ "ListBoxTemplate": {
+  "count": 24,
+  "fields": {
+   "Name": 24,
+   "LinePadding": 24,
+   "CellPadding": 24,
+   "LabelLength": 24,
+   "ScrollbarTemplate": 24,
+   "DrawScroll": 24,
+   "Sorting": 24,
+   "BackgroundTemplate": 24,
+   "IconTemplate": 24,
+   "TextFont": 24,
+   "IconSize": 24,
+   "ScrollbarTopOffset": 22,
+   "ScrollbarBottomOffset": 22,
+   "ScrollbarRightOffset": 22,
+   "HeaderControl": 19,
+   "Parent": 9,
+   "HeaderHorizResizeTemplate": 3,
+   "HeaderLeftOffset": 3,
+   "HeaderRightOffset": 3,
+   "HeaderTopOffset": 3,
+   "HeaderHeight": 3,
+   "HeaderBackgroundTemplate": 3,
+   "AlternateRowName": 3,
+   "DisplayAlternateRow": 3,
+   "AlternateRowOffset": 3,
+   "SelectedRowName": 3,
+   "SelectedRowOffset": 3,
+   "ShowDefaultToolTips": 3
+  },
+  "names": [
+   "keyconfig_listbox",
+   "listbox_alliance",
+   "listbox_bg",
+   "listbox_bg_icons",
+   "listbox_bg_nw_font",
+   "listbox_bg_nw_white_font",
+   "listbox_bg_sm_bright",
+   "listbox_bg_sm_font",
+   "listbox_combat_bg",
+   "listbox_friends_lfguild",
+   "listbox_gr",
+   "listbox_green_bg",
+   "listbox_guild",
+   "listbox_nobg",
+   "listbox_nobg_nw_font",
+   "listbox_nobg_nw_white_font",
+   "listbox_nobg_sm_bright",
+   "listbox_nobg_sm_grey",
+   "listbox_skill_bg",
+   "listbox_small_bg"
+  ]
+ },
+ "MenuTemplate": {
+  "count": 3,
+  "fields": {
+   "Name": 3,
+   "Width": 3,
+   "Height": 3,
+   "LabelLength": 3,
+   "Font": 3,
+   "Texture": 3,
+   "MaxVisibleItems": 2,
+   "ScrollbarTemplate": 1
+  },
+  "names": [
+   "generic_menu",
+   "generic_menu_scroll",
+   "menu_thin"
+  ]
+ },
+ "StatusBarTemplate": {
+  "count": 8,
+  "fields": {
+   "Name": 8,
+   "BackgroundHResizeTemplate": 8,
+   "ForegroundHResizeTemplate": 8,
+   "Height": 8,
+   "ForegroundOffset": 8,
+   "Parent": 2
+  },
+  "names": [
+   "blue_status",
+   "exp_bubbles",
+   "green_status",
+   "green_status_small",
+   "red_status",
+   "red_status_thick",
+   "yellow_status",
+   "yellow_status_small"
+  ]
+ },
+ "StatusIconTemplate": {
+  "count": 17,
+  "fields": {
+   "Name": 17,
+   "Width": 17,
+   "Height": 17,
+   "MaxLevels": 17,
+   "Horizontal": 17,
+   "TextureName": 17,
+   "TextureStart": 17
+  },
+  "names": [
+   "framerate_icon_large",
+   "lag_icon_large",
+   "mini_group_endurance",
+   "mini_group_power",
+   "performance_icon_large",
+   "performance_icon_small",
+   "realmwar_battle_large",
+   "realmwar_battle_medium",
+   "realmwar_battle_small",
+   "realmwar_keep",
+   "realmwar_milegate",
+   "realmwar_ruined_keep",
+   "realmwar_ruined_tower",
+   "realmwar_scouting_large",
+   "realmwar_scouting_medium",
+   "realmwar_scouting_small",
+   "realmwar_tower"
+  ]
+ },
+ "TabsTemplate": {
+  "count": 2,
+  "fields": {
+   "Name": 2,
+   "ControlAreaFullResizeImageTemplate": 2,
+   "TabButtonTemplate": 2,
+   "TabXOffset": 2,
+   "TabYOffset": 2,
+   "Parent": 1
+  },
+  "names": [
+   "generic_tabs",
+   "large_tabs"
+  ]
+ },
+ "TextAreaTemplate": {
+  "count": 6,
+  "fields": {
+   "Name": 6,
+   "ScrollbarTemplate": 6,
+   "LinePadding": 6,
+   "BackgroundTemplate": 6,
+   "TextOffset": 6,
+   "Font": 6,
+   "ScrollbarOffset": 5,
+   "ScrollbarSizeOffset": 5,
+   "Parent": 1
+  },
+  "names": [
+   "generic_textarea",
+   "generic_textarea_nobg",
+   "generic_textarea_sm",
+   "generic_textarea_sm_nobg",
+   "map_textarea",
+   "nobg_textarea"
+  ]
+ },
+ "TreeControlTemplate": {
+  "count": 5,
+  "fields": {
+   "Name": 5,
+   "BackgroundTemplate": 5,
+   "CheckBoxTemplate": 5,
+   "IconTemplate": 5,
+   "ScrollbarTemplate": 5,
+   "FontName": 5,
+   "FontColor": 5,
+   "LinePadding": 5,
+   "OffsetX": 5,
+   "OffsetY": 5,
+   "TextOffset": 5
+  },
+  "names": [
+   "combat_tree_control",
+   "generic_tree_control",
+   "quest_tree_control",
+   "spell_tree_control"
+  ]
+ },
+ "VerticalResizeImageTemplate": {
+  "count": 13,
+  "fields": {
+   "Name": 13,
+   "Width": 13,
+   "TopHeight": 13,
+   "RepeatHeight": 13,
+   "BottomHeight": 13,
+   "Texture": 13,
+   "Parent": 1
+  },
+  "names": [
+   "Vslider",
+   "bag_bg",
+   "blue_back",
+   "blue_full",
+   "chat_vscroll_gutter",
+   "chat_vscroll_thumb",
+   "red_back",
+   "red_full",
+   "scroll_gutter",
+   "scroll_gutter_no_gutter",
+   "scroll_thumb",
+   "scroll_thumb_no_gutter",
+   "vault_blank"
+  ]
+ },
+ "VerticalScrollbarTemplate": {
+  "count": 3,
+  "fields": {
+   "Name": 3,
+   "UpButtonTemplate": 3,
+   "DownButtonTemplate": 3,
+   "ThumbVResizeTemplate": 3,
+   "GutterVResizeTemplate": 3,
+   "Width": 3,
+   "UpButtonOffset": 3,
+   "DownButtonOffset": 3,
+   "ThumbOffset": 3,
+   "ActiveZoneOffset": 3
+  },
+  "names": [
+   "chat_vscroll",
+   "generic_vscroll",
+   "vscroll_no_gutter"
+  ]
+ },
+ "VerticalSliderTemplate": {
+  "count": 1,
+  "fields": {
+   "Name": 1,
+   "ImageAreaTemplate": 1,
+   "BackgroundVResizeTemplate": 1,
+   "Width": 1
+  },
+  "names": [
+   "generic_vertical_slider"
+  ]
+ },
+ "VerticalStatusBarTemplate": {
+  "count": 2,
+  "fields": {
+   "Name": 2,
+   "ForegroundImage": 2,
+   "BackgroundImage": 2,
+   "Width": 2,
+   "ForegroundOffset": 2
+  },
+  "names": [
+   "vstatus_blue",
+   "vstatus_red"
+  ]
+ }
+}

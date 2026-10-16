@@ -75,9 +75,11 @@ the stock skins and by every working custom UI (BobsUI/UI Chooser, Bysan, Lym), 
 ```
 
 - Texture formats seen working: `.tga` (most common, alpha supported), `.bmp`, `.dds` (DXT1/3/5; maps and large
-  sheets). The ToA doc only lists BMP/TGA; DDS has worked since about 1.71.
-- `File` paths in shipping UIs are written relative to `ui/` (`custom/...`, `atlantis/...`). Some older mods use
-  paths relative to the skin folder (`fonts/x.tga`) and also work, because of the fallback lookup. Prefer `custom/...`.
+  sheets). The ToA doc only lists BMP/TGA; DDS has worked since about 1.71 and the stock 1.130 skin uses it.
+- `File` paths are relative to `ui/`: the stock `assets.xml` uses `fonts/arial09.tga` (there is a `ui/fonts/`
+  folder) and custom UIs use `custom/...`. Prefer `custom/...` for your own files.
+- The stock 1.130 `assets.xml` declares 9 bitmap fonts, 4 `TTFFont`s, 20 textures and 55 `Canvas` icon sheets;
+  see `stock-templates.md` for the names.
 - Texture coordinates used by templates are pixel offsets into these sheets, origin top-left, no scaling.
 - Fonts/textures are usually declared in `assets.xml` (or files it includes), but any loaded file may declare them.
   The names `arial9`, `arial11`, `arial14` are the client's resize fonts; the doc says they must exist.
@@ -277,7 +279,7 @@ See `control-defs.md` for every def type and field.
 | Bool | `true` / `false` | anything else parses as false |
 | Color | `<R/><G/><B/><A/>` 0-255 each | A=255 is opaque |
 | Point / Size / TextureCoordinate | `<X/><Y/>` | Position may be negative; Size must be positive; texture coords are integer pixel offsets from the sheet's top-left |
-| Alignment | child flags, each `true`/`false` | `TopLeft` (default), `CenterHorizontally`, `CenterVertically`, `OffsetBottom`, `OffsetRight`, `GrowWidth`, `GrowHeight`. `Offset*` make the position count from the right/bottom edge; `Grow*` resize the control with the window |
+| Alignment | child flags, each `true`/`false` | `TopLeft` (default), `CenterHorizontally`, `CenterVertically`, `OffsetBottom`, `OffsetRight`, `GrowWidth`, `GrowHeight`. `OffsetRight`: X is the gap between the window's right edge and the control's right edge (X=3 hugs the border); `OffsetBottom` likewise for Y. `Grow*` resize the control with the window |
 
 ## Rules the parser enforces (and does not)
 
